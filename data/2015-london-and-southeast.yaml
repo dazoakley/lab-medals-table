@@ -1,0 +1,54 @@
+---
+year: 2015
+competition: London & Southeast
+winners:
+  - name: Lee Immins
+    flight:
+      gold: 1
+      silver: 1
+      bronze: 1
+  - name: Ken Bazley
+    flight:
+      silver: 1
+    bos:
+      silver: 1
+  - name: Rich Lock
+    flight:
+      silver: 1
+      bronze: 1
+  - name: Mick Harrison
+    flight:
+      gold: 1
+      bronze: 1
+    bos:
+      bronze: 1
+  - name: Josh Smith
+    flight:
+      silver: 1
+      bronze: 1
+  - name: Mike Carter
+    flight:
+      gold: 1
+  - name: Paul Spearman
+    flight:
+      gold: 1
+      bronze: 1
+  - name: Drew Wnek
+    flight:
+      bronze: 1
+  - name: Jonathan Finch
+    flight:
+      silver: 1
+      bronze: 1
+  - name: Sean Cummins
+    flight:
+      silver: 1
+  - name: Joshua Walker
+    flight:
+      gold: 1
+  - name: Paul Evans
+    flight:
+      bronze: 1
+  - name: Alex Allen
+    flight:
+      bronze: 1

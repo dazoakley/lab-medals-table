@@ -1,0 +1,53 @@
+---
+year: 2015
+competition: Black Friday
+winners:
+  - name: Phill Turner
+    flight:
+      silver: 1
+  - name: Lee Immins
+    flight:
+      gold: 2
+    bos:
+      bronze: 1
+  - name: Rich Lock
+    flight:
+      gold: 1
+    bos:
+      silver: 1
+  - name: Jeremiah Petersen
+    flight:
+      gold: 1
+      bronze: 1
+    bos:
+      gold: 1
+  - name: Mike Carter
+    flight:
+      silver: 1
+  - name: Sean Cummins
+    flight:
+      silver: 1
+  - name: Nick Reese
+    flight:
+      bronze: 1
+  - name: Jonathan Goulding
+    flight:
+      gold: 1
+  - name: Todd Buchanan
+    flight:
+      gold: 1
+  - name: Barry Watts
+    flight:
+      gold: 1
+  - name: Manmohan Birdi
+    flight:
+      silver: 1
+  - name: John Lathouwers
+    flight:
+      silver: 1
+  - name: Steven Foster
+    flight:
+      silver: 1
+  - name: Claire Russell
+    flight:
+      bronze: 1

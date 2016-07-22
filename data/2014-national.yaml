@@ -1,0 +1,23 @@
+---
+year: 2014
+competition: National
+winners:
+  - name: Phill Turner
+    flight:
+      gold: 2
+      silver: 3
+    bos:
+      silver: 1
+  - name: Lee Immins
+    flight:
+      gold: 1
+  - name: Rich Lock
+    flight:
+      gold: 2
+  - name: Andrew Drinkwater
+    flight:
+      gold: 1
+      bronze: 1
+  - name: Paul Spearman
+    flight:
+      bronze: 1
