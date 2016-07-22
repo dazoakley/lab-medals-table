@@ -1,0 +1,22 @@
+---
+year: 2010
+competition: London & Southeast
+winners:
+  - name: Mick Harrison
+    flight:
+      silver: 1
+  - name: Pete Hughes
+    flight:
+      gold: 1
+    bos:
+      gold: 1
+  - name: Rob Case
+    flight:
+      silver: 1
+  - name: Nick Addington
+    flight:
+      gold: 1
+      silver: 1
+  - name: Nick Reese
+    flight:
+      gold: 1

@@ -1,0 +1,32 @@
+---
+year: 2011
+competition: London & Southeast
+winners:
+  - name: Mick Harrison
+    flight:
+      bronze: 2
+  - name: Tom Greasley
+    flight:
+      gold: 1
+    bos:
+      gold: 1
+  - name: Rob Case
+    flight:
+      gold: 1
+      bronze: 1
+  - name: David Wilton
+    flight:
+      silver: 1
+  - name: Gregg Irwin
+    flight:
+      gold: 1
+      silver: 1
+  - name: Paul Henderson
+    flight:
+      gold: 1
+  - name: Simon Poffley
+    flight:
+      gold: 1
+  - name: Bryan Spooner
+    flight:
+      silver: 1
