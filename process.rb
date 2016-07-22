@@ -94,7 +94,13 @@ end
 def html_table
   html = <<TXT
 <html>
-  <head><head>
+  <head>
+    <style type="text/css">
+      td.gold   { background-color: gold; }
+      td.silver { background-color: silver; }
+      td.bronze { background-color: #cd7f32; }
+    </style>
+  <head>
   <body>
     <table>
       <thead>
@@ -120,12 +126,11 @@ TXT
   html << %(       <tr>\n)
 
   (competitions.count + 1).times do
-    html << %(         <th>Gold</th>\n)
-    html << %(         <th>Silver</th>\n)
-    html << %(         <th>Bronze</th>\n)
-    html << %(         <th>Gold</th>\n)
-    html << %(         <th>Silver</th>\n)
-    html << %(         <th>Bronze</th>\n)
+    2.times do
+      html << %(         <th>Gold</th>\n)
+      html << %(         <th>Silver</th>\n)
+      html << %(         <th>Bronze</th>\n)
+    end
   end
 
   html << %(       </tr>\n)
