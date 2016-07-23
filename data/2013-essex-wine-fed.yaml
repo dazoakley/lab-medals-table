@@ -1,8 +1,19 @@
 ---
 year: 2013
-competition: Essex Wine Fed.
+abbr_name: Essex Wine Fed.
+full_name: Essex Wine Federation Annual Show
+location: Ingatestone
+guidelines: NGWBJ
 winners:
   - name: Ken Bazley
     flight:
-      gold: 3
-      silver: 1
+      gold:
+        - name: Admiral IPA
+          style: IPA
+        - name: Hop Gun
+          style: Pale Ale
+        - name: Extra Stout
+          style: Dry Stout
+      silver:
+        - name: Boho Pils
+          style: Lager

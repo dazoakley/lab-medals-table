@@ -1,56 +1,86 @@
 ---
 year: 2013
-competition: London & Southeast
+full_name: London & Southeast
+location: Westbourne Park
+guidelines: BJCP 2008
 winners:
   - name: Dave Halse
     flight:
-      gold: 2
-      silver: 2
-      bronze: 1
+      gold:
+        - name: Stout
+        - name: Barley Wine
+      silver:
+        - name: Belgian Pale Ale
+        - name: Belgian Dark Star
+      bronze:
+        - name: Am Pils
     bos:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Barley Wine
+      bronze:
+        - name: Stout
   - name: Phill Turner
     flight:
-      silver: 1
+      silver:
+        - name: Amazin’ Saisin
   - name: Lee Immins
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Campfire Stout
+      bronze:
+        - name: Emergency Summer IPA
   - name: Rich Lock
     flight:
-      gold: 1
+      gold:
+        - name: Hop You (IPA)
   - name: Mick Harrison
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Farmgirl Saison
+      silver:
+        - name: Choccy Woccy Stout
   - name: Pete Hughes
     flight:
-      bronze: 1
+      bronze:
+        - name: Better Than Dave’s Porter
   - name: Andy Ortega
     flight:
-      silver: 1
+      silver:
+        - name: Easy Drinker
+          style: American Brown Ale
   - name: Darren Oakley
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: American Pale (Citra, Simcoe)
+          style: 10A
+      silver:
+        - name: Late Summer Blonde
+          style: 6B
     bos:
-      silver: 1
+      silver:
+        - name: American Pale (Citra, Simcoe)
+          style: 10A
   - name: Jonathan Stewart
     flight:
-      gold: 1
+      gold:
+        - name: Urban Fox Black IPA
   - name: Mike Carter
     flight:
-      silver: 1
+      silver:
+        - name: X Wye Z (ESB)
   - name: Mark Vincent
     flight:
-      gold: 1
+      gold:
+        - name: Spring Heeled Jack (Bitter)
   - name: Drew Wnek
     flight:
-      bronze: 1
+      bronze:
+        - name: Naturale De Cherry
   - name: Sean Cummins
     flight:
-      bronze: 1
+      bronze:
+        - name: Smooth Black (Stout)
   - name: Andy Parker
     flight:
-      silver: 1
+      silver:
+        - name: Imperial IPA

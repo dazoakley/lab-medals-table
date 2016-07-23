@@ -1,9 +1,14 @@
 ---
 year: 2015
-competition: Bexley
+abbr_name: Bexley
+full_name: Bexley Festival
+location: Bexley
+guidelines: NGWBJ
 winners:
   - name: Dave Halse
     flight:
-      gold: 1
+      gold:
+        - name: Smoked Porter
     bos:
-      gold: 1
+      gold:
+        - name: Smoked Porter

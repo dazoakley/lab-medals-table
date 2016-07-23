@@ -1,33 +1,46 @@
 ---
 year: 2012
-competition: London & Southeast
+full_name: London & Southeast
+location: Morden
+guidelines: BJCP 2008
 winners:
   - name: Dave Halse
     flight:
-      gold: 1
-      silver: 1
-      bronze: 1
+      gold:
+        - name: Smoked Porter
+      silver:
+        - name: Belgian Pale Ale
+      bronze:
+        - name: Wood-aged Chocolate Stout
   - name: Ken Bazley
     flight:
-      gold: 1
+      gold:
+        - name: Polish Bitter
   - name: Rob Case
     flight:
-      gold: 1
+      gold:
+        - name: Robust Porter
   - name: Paul Spearman
     flight:
-      bronze: 1
+      bronze:
+        - name: ESB
   - name: Drew Wnek
     flight:
-      gold: 1
+      gold:
+        - name: Happy Thanksgiving London
   - name: Paul Henderson
     flight:
-      bronze: 1
+      bronze:
+        - name: Mild
   - name: Andy Parker
     flight:
-      bronze: 1
+      bronze:
+        - name: American IPA
   - name: Peter Bamford
     flight:
-      silver: 1
+      silver:
+        - name: Coconut Porter
   - name: Tom Johnstone
     flight:
-      bronze: 1
+      bronze:
+        - name: Kolsch

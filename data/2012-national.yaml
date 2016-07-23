@@ -1,31 +1,58 @@
 ---
 year: 2012
-competition: National
+abbr_name: National
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2008
 winners:
   - name: Dave Halse
     flight:
-      gold: 1
-      silver: 1
-      bronze: 1
+      gold:
+        - name: Mystrawraspb
+          style: 20A
+      silver:
+        - name: Mybarleywine
+          style: 19B
+      bronze:
+        - name: Mysmokedporter
+          style: 22B
     bos:
-      bronze: 1
+      bronze:
+        - name: Mystrawraspb
+          style: 20A
   - name: Ken Bazley
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Coconut Porter
+          style: 19
+      bronze:
+        - name: Altbier
+          style: 7A
   - name: Tom Greasley
     flight:
-      bronze: 1
+      bronze:
+        - name: The Red Scare
+          style: 10B
   - name: Richard Pearce
     flight:
-      bronze: 1
+      bronze:
+        - name: Strong Bitter
+          style: 8C
   - name: Matt Barker
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Disconnecty Belgian IPA
+          style: 16E
+      silver:
+        - name: Prodigal American Pale Ale
+          style: 10A
   - name: Mark Charlwood
     flight:
-      silver: 1
+      silver:
+        - name: Summer Pale
+          style: 30A
   - name: Bryan Spooner
     flight:
-      bronze: 1
+      bronze:
+        - name: Sadako Imperial Stout
+          style: 13F

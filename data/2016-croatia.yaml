@@ -1,10 +1,17 @@
 ---
 year: 2016
-competition: Croatia
+abbr_name: Croatia
+full_name: V. Hrvatsko Homebrew Prvenstvo
+location: Croatia
+guidelines: BJCP 2015
 winners:
   - name: Lee Immins
     flight:
-      bronze: 1
+      bronze:
+        - name: Ooldveek Tripel
+          style: 26C
   - name: Rich Lock
     flight:
-      gold: 1
+      gold:
+        - name: Retribution Barrel-Aged Imp Brown Stout
+          style: 33B

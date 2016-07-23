@@ -1,11 +1,21 @@
 ---
 year: 2015
-competition: Croatia
+abbr_name: Croatia
+full_name: IV. Hrvatsko Homebrew Prvenstvo
+location: Croatia
+guidelines: BJCP 2008
 winners:
   - name: Lee Immins
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Imperious Old Bastard
+          style: 22B
+      bronze:
+        - name: Black Ryeday Rye Stout
+          style: 23A
   - name: Manmohan Birdi
     flight:
-      bronze: 1
+      bronze:
+        - name: Man's IBS
+          style: 13F
+          asst_brewer: Lee Immins

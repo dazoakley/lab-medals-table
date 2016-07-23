@@ -1,22 +1,30 @@
 ---
 year: 2010
-competition: London & Southeast
+full_name: London & Southeast
+guidelines: NGWBJ
 winners:
   - name: Mick Harrison
     flight:
-      silver: 1
+      silver:
+        - name: Independence Pale Ale
   - name: Pete Hughes
     flight:
-      gold: 1
+      gold:
+        - name: Riwaka APA
     bos:
-      gold: 1
+      gold:
+        - name: Riwaka APA
   - name: Rob Case
     flight:
-      silver: 1
+      silver:
+        - name: Good Companions Old Ale
   - name: Nick Addington
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Hoppiness Is An IPA
+      silver:
+        - name: Simcoe Amber
   - name: Nick Reese
     flight:
-      gold: 1
+      gold:
+        - name: Imperial Stout

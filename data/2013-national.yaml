@@ -1,14 +1,25 @@
 ---
 year: 2013
-competition: National
+abbr_name: National
+full_name: UK National Homebrew Competition
+location: Oxford
+guidelines: BJCP 2008
 winners:
   - name: Dave Halse
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: DHA LAG
+          style: 6C
+      bronze:
+        - name: DHA SP
+          style: 22B
   - name: David Wilton
     flight:
-      silver: 1
+      silver:
+        - name: Summer Citra
+          style: 23A
   - name: Richard Pearce
     flight:
-      silver: 1
+      silver:
+        - name: Bristol Homebrew Comp APA
+          style: 10A

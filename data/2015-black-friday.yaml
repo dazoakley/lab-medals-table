@@ -1,53 +1,95 @@
 ---
 year: 2015
-competition: Black Friday
+abbr_name: Black Friday
+full_name: Black Friday Homebrew Competition
+location: Ubrew
+guidelines: BJCP 2015
 winners:
   - name: Phill Turner
     flight:
-      silver: 1
+      silver:
+        - name: 1835 English Porter
+          style: 35A
   - name: Lee Immins
     flight:
-      gold: 2
+      gold:
+        - name: Tramp Hair Treacle Stout
+          style: 16D
+        - name: Bring Your Daughter To The Porter
+          style: 13C
     bos:
-      bronze: 1
+      bronze:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
   - name: Rich Lock
     flight:
-      gold: 1
+      gold:
+        - name: Imperial Black Rye IPA
+          style: 36A
     bos:
-      silver: 1
+      silver:
+        - name: Imperial Black Rye IPA
+          style: 36A
   - name: Jeremiah Petersen
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Bildungsroman
+          style: 35A
+      bronze:
+        - name: Domestic Tragedy
+          style: 16B
     bos:
-      gold: 1
+      gold:
+        - name: Bildungsroman
+          style: 35A
   - name: Mike Carter
     flight:
-      silver: 1
+      silver:
+        - name: Black Beauty
+          style: 16D
   - name: Sean Cummins
     flight:
-      silver: 1
+      silver:
+        - name: Expresso Stout
+          style: 15B
   - name: Nick Reese
     flight:
-      bronze: 1
+      bronze:
+        - name: White Top
+          style: 9C
   - name: Jonathan Goulding
     flight:
-      gold: 1
+      gold:
+        - name: DW Porter
+          style: 20A
   - name: Todd Buchanan
     flight:
-      gold: 1
+      gold:
+        - name: T Black C
+          style: 15B
   - name: Barry Watts
     flight:
-      gold: 1
+      gold:
+        - name: Black Rod
+          style: 16A
   - name: Manmohan Birdi
     flight:
-      silver: 1
+      silver:
+        - name: Man's IBS
+          style: 20C
+          asst_brewer: Lee Immins
   - name: John Lathouwers
     flight:
-      silver: 1
+      silver:
+        - name: The 1881
+          style: 20A
   - name: Steven Foster
     flight:
-      silver: 1
+      silver:
+        - name: Peckham Porter
+          style: 13C
   - name: Claire Russell
     flight:
-      bronze: 1
+      bronze:
+        - name: Texas Tea
+          style: 20C

@@ -8,20 +8,20 @@ RSpec.describe LAB::Sorter do
       '1st place' => {
         'score' => 40,
         'bos'   => {
-          'gold'   => 1,
-          'silver' => 2
+          'gold'   => [{}],
+          'silver' => [{}, {}]
         }
       },
       '2nd place' => {
         'score' => 20,
         'bos'   => {
-          'silver' => 2
+          'silver' => [{}, {}]
         }
       },
       '3rd place' => {
         'score'  => 20,
         'flight' => {
-          'gold' => 2
+          'gold' => [{}, {}]
         }
       }
     }

@@ -1,24 +1,47 @@
 ---
 year: 2015
-competition: National
+abbr_name: National
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2015
 winners:
   - name: Phill Turner
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Vest Male Tripel
+          style: 26C
+      silver:
+        - name: Gone For An Old Burton
+          style: 17A
+    bos:
+      4th:
+        - name: Vest Male Tripel
+          style: 26C
   - name: Lee Immins
     flight:
-      gold: 1
+      gold:
+        - name: Fox & Groot
+          style: 31A
   - name: Ken Bazley
     flight:
-      silver: 1
+      silver:
+        - name: LARISBRIS
+          style: 33B
   - name: Jonathan Finch
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Three Graces Tripel
+          style: 26C
+      bronze:
+        - name: Camberwell Fuggly
+          style: 11A
   - name: Tim Weenink
     flight:
-      bronze: 1
+      bronze:
+        - name: Velomobile
+          style: 31A
   - name: Jaques Marais
     flight:
-      bronze: 1
+      bronze:
+        - name: Es Weiss Zwei
+          style: 10A

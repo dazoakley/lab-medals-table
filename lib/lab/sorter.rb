@@ -31,7 +31,7 @@ module LAB
 
           LAB.sections.reverse.each do |section|
             LAB.medals.each do |medal|
-              sort_order << data.fetch(section, {}).fetch(medal, 0)
+              sort_order << data.fetch(section, {}).fetch(medal, []).count
             end
           end
 

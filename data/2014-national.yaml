@@ -1,23 +1,50 @@
 ---
 year: 2014
-competition: National
+abbr_name: National
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2008
 winners:
   - name: Phill Turner
     flight:
-      gold: 2
-      silver: 3
+      gold:
+        - name: Vest Male Dubbel
+          style: 18B
+        - name: 1835
+          style: 12B
+      silver:
+        - name: Eva Pils
+          style: 2B
+        - name: Chien Noir
+          style: 11A
+        - name: Essex Barleywine
+          style: 19B
     bos:
-      silver: 1
+      silver:
+        - name: Vest Male Dubbel
+          style: 18B
   - name: Lee Immins
     flight:
-      gold: 1
+      gold:
+        - name: Simian's Wee Heavy
+          style: 9E
   - name: Rich Lock
     flight:
-      gold: 2
+      gold:
+        - name: Retribution RIS
+          style: 13F
+        - name: Retribution IPA
+          style: 14B
   - name: Andrew Drinkwater
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Garden Herb Saison
+          style: 21A
+      bronze:
+        - name: Hello My Name Is Ineta
+          style: 20A
   - name: Paul Spearman
     flight:
-      bronze: 1
+      bronze:
+        - name: Roggenbier
+          style: 15D

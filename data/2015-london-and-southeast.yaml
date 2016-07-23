@@ -1,54 +1,103 @@
 ---
 year: 2015
-competition: London & Southeast
+full_name: London & Southeast
+location: Truman's Brewery
+guidelines: BJCP 2008
+awards:
+  - name: Master Brewer
+    winner: Lee Immins
 winners:
   - name: Lee Immins
     flight:
-      gold: 1
-      silver: 1
-      bronze: 1
+      gold:
+        - name: Marooned Baboon Bitter
+          style: 8B
+      silver:
+        - name: 1823
+          style: 33A
+      bronze:
+        - name: Imperious Old Bastard
+          style: 22B
   - name: Ken Bazley
     flight:
-      silver: 1
+      silver:
+        - name: LARISBRIS
+          style: 22C
     bos:
-      silver: 1
+      silver:
+        - name: LARISBRIS
+          style: 22C
   - name: Rich Lock
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Pale Retribution
+          style: 10A
+      bronze:
+        - name: Retribution Saison
+          style: 16C
   - name: Mick Harrison
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: SpringBock
+          style: 5B
+      bronze:
+        - name: Southwold Pirate
+          style: 10A
     bos:
-      bronze: 1
+      bronze:
+        - name: SpringBock
+          style: 5B
   - name: Josh Smith
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Tesselation IPA
+          style: 14B
+      bronze:
+        - name: Red Ruin & Redemption
+          style: 33A
   - name: Mike Carter
     flight:
-      gold: 1
+      gold:
+        - name: Pick Me Up
+          style: 13D
   - name: Paul Spearman
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Paul's Bierre De Garde
+          style: 16D
+      bronze:
+        - name: Paul's IBS
+          style: 13F
   - name: Drew Wnek
     flight:
-      bronze: 1
+      bronze:
+        - name: Lea Valley Steam
+          style: 7B
   - name: Jonathan Finch
     flight:
-      silver: 1
-      bronze: 1
+      silver:
+        - name: Burton-on-Thames IPA
+          style: 14A
+      bronze:
+        - name: Three Graces IPA
+          style: 14B
   - name: Sean Cummins
     flight:
-      silver: 1
+      silver:
+        - name: Rye Beer
+          style: 6D
   - name: Joshua Walker
     flight:
-      gold: 1
+      gold:
+        - name: Barleywine
+          style: 19B
   - name: Paul Evans
     flight:
-      bronze: 1
+      bronze:
+        - name: St Jude's Lager
+          style: 2A
   - name: Alex Allen
     flight:
-      bronze: 1
+      bronze:
+        - name: Sinead O'Stout
+          style: 13B

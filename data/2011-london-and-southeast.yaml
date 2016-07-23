@@ -1,32 +1,58 @@
 ---
 year: 2011
-competition: London & Southeast
+full_name: London & Southeast
+location: Wimbledon
+guidelines: BJCP 2008
 winners:
   - name: Mick Harrison
     flight:
-      bronze: 2
+      bronze:
+        - name: Street Party Bitter
+          style: Special Bitters Blondes and Pale Ales
+        - name: Howard Hughes Ruby Mild
+          style: Standard bitters and Milds
   - name: Tom Greasley
     flight:
-      gold: 1
+      gold:
+        - name: Sarcastro Stout
+          style: Speciality
     bos:
-      gold: 1
+      gold:
+        - name: Sarcastro Stout
+          style: Speciality
   - name: Rob Case
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Scarecrow Mild
+          style: Standard bitters and Milds
+      bronze:
+        - name: Passing Time
+          style: Imperial Stouts, ESBs, Barleywines, Old Ales
   - name: David Wilton
     flight:
-      silver: 1
+      silver:
+        - name: Little Brother
+          style: Standard bitters and Milds
   - name: Gregg Irwin
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Decadence Stout
+          style: Porters and dry Stouts
+      silver:
+        - name: Roaring Queen
+          style: Belgian, Fruit Beer, Lager
   - name: Paul Henderson
     flight:
-      gold: 1
+      gold:
+        - name: Left Over IPA
+          style: IPAs and Amber Ales
   - name: Simon Poffley
     flight:
-      gold: 1
+      gold:
+        - name: Higham Hill Special
+          style: Special Bitters Blondes and Pale Ales
   - name: Bryan Spooner
     flight:
-      silver: 1
+      silver:
+        - name: Barley One
+          style: Imperial Stouts, ESBs, Barleywines, Old Ales

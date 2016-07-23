@@ -1,9 +1,14 @@
 ---
 year: 2016
-competition: NAWB National, Coventry
+full_name: NAWB National
+location: Coventry
+guidelines: NGWBJ
 winners:
   - name: Phill Turner
     flight:
-      gold: 1
-      silver: 1
-      bronze: 1
+      gold:
+        - name: Barleywine
+      silver:
+        - name: Gone For An Old Burton
+      bronze:
+        - name: Stout

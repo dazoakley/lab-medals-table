@@ -1,62 +1,114 @@
 ---
 year: 2014
-competition: London & Southeast
+full_name: London & Southeast
+location: Beavertown Brewery
+guidelines: BJCP 2008
 winners:
   - name: Phill Turner
     flight:
-      silver: 2
-      bronze: 2
+      silver:
+        - name: Eva Pils
+          style: 2B
+        - name: Essex Barleywine
+          style: 19B
+      bronze:
+        - name: Eltham Special Bitter
+          style: 8C
+        - name: Musketeer
+          style: 16C
   - name: Lee Immins
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Simian's Wee Heavy
+          style: 9E
+      silver:
+        - name: Old Bastard
+          style: 22B
   - name: Rich Lock
     flight:
-      silver: 1
+      silver:
+        - name: Retribution East India Porter
+          style: 12B
   - name: Josh Smith
     flight:
-      gold: 1
+      gold:
+        - name: Sasquatch Black IPA
+          style: 33A
     bos:
-      gold: 1
+      gold:
+        - name: Sasquatch Black IPA
+          style: 33A
   - name: Andy Ortega
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Classic Saison
+          style: 16C
+      bronze:
+        - name: Beauty
+          style: 13A
     bos:
-      silver: 1
+      silver:
+        - name: Classic Saison
+          style: 16C
   - name: Andrew Drinkwater
     flight:
-      gold: 1
-      silver: 1
+      gold:
+        - name: Shepherds Bush Common
+          style: 10A
+      silver:
+        - name: Saison A
+          style: 16C
   - name: Jonathan Stewart
     flight:
-      gold: 1
+      gold:
+        - name: Urban Fox
+          style: 18C
     bos:
-      bronze: 1
+      bronze:
+        - name: Urban Fox
+          style: 18C
   - name: Mark Vincent
     flight:
-      silver: 1
+      silver:
+        - name: 7305 Days of Bliss
+          style: 8C
   - name: Paul Henderson
     flight:
-      bronze: 1
+      bronze:
+        - name: Wisp of Smoke
+          style: 22A
   - name: Joshua Walker
     flight:
-      bronze: 1
+      bronze:
+        - name: Brown Ale
+          style: 10C
   - name: Andy Parker
     flight:
-      silver: 1
+      silver:
+        - name: West Coast IPA
+          style: 14B
   - name: Craig Carmichael
     flight:
-      gold: 1
+      gold:
+        - name: Twos And Threes
+          style: 3B
   - name: Andrew Backwell
     flight:
-      silver: 1
+      silver:
+        - name: Letterbox Oatmeal Stout
+          style: 13C
   - name: Paul Evans
     flight:
-      bronze: 1
+      bronze:
+        - name: Abbaye De Morden Tripel
+          style: 18D
   - name: Alex Gardiner
     flight:
-      bronze: 1
+      bronze:
+        - name: Liberty Cream Ale
+          style: 6A
   - name: Dan Harris
     flight:
-      bronze: 1
+      bronze:
+        - name: String Theory
+          style: 33A

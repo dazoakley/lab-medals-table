@@ -8,7 +8,7 @@ module LAB
       def competitions
         @competitions ||= begin
           Dir[data_glob].map     { |file| YAML.load(File.read(file)) }
-                        .sort_by { |data| [data['year'], data['competition']].join('-') }
+                        .sort_by { |data| [data['year'], (data['abbr_name'] || data['full_name'])].join('-') }
                         .reverse
         end
       end
@@ -39,8 +39,8 @@ module LAB
         score = 0
 
         medals.each do |section, medal_counts|
-          medal_counts.each do |place, count|
-            score += (SCORES.fetch(section).fetch(place) * count)
+          medal_counts.each do |place, medaling_beers|
+            score += (SCORES.fetch(section).fetch(place, 0) * medaling_beers.count)
           end
         end
 
@@ -57,8 +57,8 @@ module LAB
 
           next unless medal_counts
 
-          medal_counts.each do |medal, count|
-            brewer[section][medal] += count
+          medal_counts.each do |medal, medaling_beers|
+            brewer[section][medal] += medaling_beers
           end
         end
       end
@@ -73,8 +73,8 @@ module LAB
 
       def new_brewer_data
         {
-          'flight' => { 'gold' => 0, 'silver' => 0, 'bronze' => 0 },
-          'bos'    => { 'gold' => 0, 'silver' => 0, 'bronze' => 0 }
+          'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [] },
+          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [] }
         }
       end
     end

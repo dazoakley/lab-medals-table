@@ -55,7 +55,7 @@ TXT
 
       def header_competitions
         competitions.map do |competition|
-          %(          <th colspan="6">#{competition['year']} - #{competition['competition']}</th>)
+          %(          <th colspan="6">#{competition['year']} - #{(competition['abbr_name'] || competition['full_name'])}</th>)
         end.join("\n")
       end
 
@@ -120,17 +120,17 @@ TXT
       def medal_data_cells(data)
         LAB.sections.map do |section|
           LAB.medals.map do |medal|
-            count = data.fetch(section, {}).fetch(medal, 0)
+            count = data.fetch(section, {}).fetch(medal, [])
             medal_count_cell(medal, count)
           end.join('')
         end.join('')
       end
 
-      def medal_count_cell(medal, count)
-        if count.zero?
+      def medal_count_cell(medal, medaling_beers)
+        if medaling_beers.empty?
           '<td></td>'
         else
-          %(<td class="#{medal}">#{count}</td>)
+          %(<td class="#{medal}">#{medaling_beers.count}</td>)
         end
       end
     end

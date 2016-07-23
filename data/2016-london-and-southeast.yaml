@@ -1,41 +1,71 @@
 ---
 year: 2016
-competition: London & Southeast
+full_name: London & Southeast
+location: Ubrew
+guidelines: BJCP 2015
 winners:
   - name: Lee Immins
     flight:
-      bronze: 1
+      bronze:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
   - name: Ken Bazley
     flight:
-      gold: 1
+      gold:
+        - name: Pivovar Bobek
+          style: 3B
   - name: Rich Lock
     flight:
-      gold: 1
-      bronze: 1
+      gold:
+        - name: Imperial Cherryade
+          style: 29A
+      bronze:
+        - name: RIS 2014 Batch
+          style: 20C
   - name: Mike Carter
     flight:
-      silver: 1
+      silver:
+        - name: Whim-Wham
+          style: 12A
   - name: Paul Spearman
     flight:
-      silver: 1
+      silver:
+        - name: Paul's Old Ale
+          style: 17B
   - name: Sean Cummins
     flight:
-      bronze: 1
+      bronze:
+        - name: Albino Dubbel
+          style: 25A
   - name: Mark Charlwood
     flight:
-      bronze: 2
+      bronze:
+        - name: APA (Citra, Mosaic)
+          style: 18B
+        - name: Golden Ale
+          style: 12A
   - name: Tim Weenink
     flight:
-      silver: 1
+      silver:
+        - name: Big Black Buddy
+          style: 15C
   - name: Alex Allen
     flight:
-      bronze: 1
+      bronze:
+        - name: VBP
+          style: 33A
   - name: John Kellett
     flight:
-      silver: 1
+      silver:
+        - name: Black Sunset
+          style: 21B
   - name: James Wilson
     flight:
-      bronze: 1
+      bronze:
+        - name: Big Cat
+          style: 22A
   - name: Andrew Senior
     flight:
-      bronze: 1
+      bronze:
+        - name: Roll The Potato
+          style: 13B
