@@ -1,0 +1,68 @@
+---
+year: 2016
+full_name: Brew Brighton
+location: Brighton
+guidelines: BJCP 2015
+winners:
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Cross Roads
+          style: 18B
+        - name: Blue Jay
+          style: 19A
+  - name: Mike Carter
+    flight:
+      gold:
+        - name: Dead Fly In The Wax
+          style: 22C
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Georgijs Voshington Porter
+          style: 20A
+      silver:
+        - name: Not Ranke XX Bitter
+          style: 21B
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Daisycutter
+          style: 1C
+          asst_brewer: Rob Gallagher
+      bronze:
+        - name: Amber Gambler
+          style: 19A
+  - name: Matt Simmons
+    flight:
+      silver:
+        - name: Seven Point Four IPA
+          style: 21A
+  - name: Paul Spearman
+    flight:
+      silver:
+        - name: Paul's AAA
+          style: 19A
+  - name: Mark Charlwood
+    flight:
+      silver:
+        - name: Falconer's Flight
+          style: 44A
+      bronze:
+        - name: New England IPA
+          style: 21B
+  - name: Jeremiah Petersen
+    flight:
+      silver:
+        - name: Magical Realism
+          style: 28A
+  - name: James Wilson
+    flight:
+      bronze:
+        - name: Shot To Nothing
+          style: 18B
+  - name: Jonathan Finch
+    flight:
+      bronze:
+        - name: Winston Salem Wheat
+          style: 1D

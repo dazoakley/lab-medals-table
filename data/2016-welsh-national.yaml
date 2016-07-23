@@ -1,0 +1,35 @@
+---
+year: 2016
+full_name: Welsh National
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Wee Bottled It
+          style: 17C
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Best Mate
+          style: 11C
+      silver:
+        - name: Cross Roads
+          style: 18B
+        - name: Raspberry Wheat
+      bronze:
+        - name: Dragon Slayer
+          style: 22A
+  - name: Rich Lock
+    flight:
+      gold:
+        - name: IBS To My Friends
+          style: 33A
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Georgijs Voshington Porter
+          style: 9C
+      bronze:
+        - name: Green Frog
+          style: 5D
