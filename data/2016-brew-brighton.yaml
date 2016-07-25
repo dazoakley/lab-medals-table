@@ -16,6 +16,10 @@ winners:
       gold:
         - name: Dead Fly In The Wax
           style: 22C
+    bos:
+      bronze:
+        - name: Dead Fly In The Wax
+          style: 22C
   - name: Phill Turner
     flight:
       gold:
@@ -24,6 +28,10 @@ winners:
       silver:
         - name: Not Ranke XX Bitter
           style: 21B
+    bos:
+      gold:
+        - name: Georgijs Voshington Porter
+          style: 20A
   - name: Mark Sanderson
     flight:
       gold:
