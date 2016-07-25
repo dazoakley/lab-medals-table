@@ -5,18 +5,20 @@ module LAB
         [
           header_start,
           header_competitions,
-          header_row_end_start,
+          '       </tr>',
+          '       <tr>',
           header_medal_sections,
-          header_row_end_start,
+          '       </tr>',
+          '       <tr>',
           header_medals,
-          %(       </tr>),
-          %(     </thead>),
-          %(     <tbody>),
+          '       </tr>',
+          '     </thead>',
+          '     <tbody>',
           brewer_rows,
-          %(     </tbody>),
-          %(    </table>),
-          %(  </body>),
-          %(</html>)
+          '     </tbody>',
+          '    </table>',
+          '  </body>',
+          '</html>'
         ].join("\n")
       end
 
@@ -36,10 +38,11 @@ module LAB
       }
       table { border-collapse: collapse; text-align: center; }
       th,td { border: 1px solid grey; padding: 2px 4px; }
-      tr:hover  { background-color: #DAF7A6; }
-      td.gold   { background-color: gold; }
-      td.silver { background-color: silver; }
-      td.bronze { background-color: #CD7F32; }
+      .totals   { background-color: #F0F0F0; }
+      tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
+      td.gold   { background-color: gold !important; }
+      td.silver { background-color: silver !important; }
+      td.bronze { background-color: #CD7F32 !important; }
     </style>
   <head>
   <body>
@@ -48,8 +51,8 @@ module LAB
         <tr>
           <th rowspan="3">Rank</th>
           <th rowspan="3">Member</th>
-          <th rowspan="3">Medal Points</th>
-          <th colspan="6">Total Medals</th>
+          <th rowspan="3" class="totals">Medal Points</th>
+          <th colspan="6" class="totals">Total Medals</th>
 TXT
       end
 
@@ -59,31 +62,34 @@ TXT
         end.join("\n")
       end
 
-      def header_row_end_start
-        [
-          '       </tr>',
-          '       <tr>'
-        ].join("\n")
-      end
-
       def header_medal_sections
+        count = 1
         (competitions.count + 1).times.map do
-          [
-            %(         <th colspan="3">Flight&nbsp;Medals</th>),
-            %(         <th colspan="3">BOS&nbsp;Medals</th>)
+          css_class = count == 1 ? ' class="totals"' : ''
+          data      = [
+            %(         <th colspan="3"#{css_class}>Flight&nbsp;Medals</th>),
+            %(         <th colspan="3"#{css_class}>BOS&nbsp;Medals</th>)
           ]
+
+          count += 1
+          data
         end.flatten.join("\n")
       end
 
       def header_medals
+        count = 1
         (competitions.count + 1).times.map do
-          2.times.map do
+          css_class = count == 1 ? ' class="totals"' : ''
+          data      = 2.times.map do
             [
-              %(         <th>G</th>),
-              %(         <th>S</th>),
-              %(         <th>B</th>)
+              %(         <th#{css_class}>G</th>),
+              %(         <th#{css_class}>S</th>),
+              %(         <th#{css_class}>B</th>)
             ]
           end.join("\n")
+
+          count += 1
+          data
         end.flatten.join("\n")
       end
 
@@ -99,10 +105,10 @@ TXT
             '       <tr>',
             "         <td>#{rank}</td>",
             "         <td>#{brewer_name.sub(' ', '&nbsp;')}</td>",
-            "         <td>#{brewer['score']}</td>"
+            "         <td class=\"totals\">#{brewer['score']}</td>"
           ]
 
-          row << "         #{medal_data_cells(brewer)}"
+          row << "         #{medal_data_cells(brewer, total_count: true)}"
 
           competitions.each do |competition|
             data = competition['winners'].find { |details| details['name'] == brewer_name } || {}
@@ -117,20 +123,26 @@ TXT
         html.flatten.join("\n")
       end
 
-      def medal_data_cells(data)
+      def medal_data_cells(data, total_count: false)
         LAB.sections.map do |section|
           LAB.medals.map do |medal|
             count = data.fetch(section, {}).fetch(medal, [])
-            medal_count_cell(medal, count)
+            medal_count_cell(medal, count, total_count: total_count)
           end.join('')
         end.join('')
       end
 
-      def medal_count_cell(medal, medaling_beers)
+      def medal_count_cell(medal, medaling_beers, total_count: false)
+        css_classes = []
+        css_classes << 'totals' if total_count
+        css_classes << medal if medaling_beers.any?
+
+        css_class = css_classes.any? ? %( class="#{css_classes.join(' ')}") : ''
+
         if medaling_beers.empty?
-          '<td></td>'
+          "<td#{css_class}></td>"
         else
-          %(<td class="#{medal}">#{medaling_beers.count}</td>)
+          %(<td#{css_class}>#{medaling_beers.count}</td>)
         end
       end
     end
