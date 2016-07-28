@@ -42,7 +42,7 @@ RSpec.describe LAB::Sorter do
 
   describe '#ranked_names' do
     it 'should sort the brewers into the correct order' do
-      expected = %w(A B D C) # FIXME: should really be ABCD innit
+      expected = %w(A B C D)
       expect(subject.ranked_names).to eq(expected)
     end
   end
