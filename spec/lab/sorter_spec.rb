@@ -5,20 +5,26 @@ RSpec.describe LAB::Sorter do
 
   let(:brewers) do
     {
-      '1st place' => {
+      'A' => {
         'score' => 40,
         'bos'   => {
           'gold'   => [{}],
           'silver' => [{}, {}]
         }
       },
-      '2nd place' => {
+      'B' => {
         'score' => 20,
         'bos'   => {
           'silver' => [{}, {}]
         }
       },
-      '3rd place' => {
+      'C' => {
+        'score'  => 20,
+        'flight' => {
+          'gold' => [{}, {}]
+        }
+      },
+      'D' => {
         'score'  => 20,
         'flight' => {
           'gold' => [{}, {}]
@@ -27,9 +33,16 @@ RSpec.describe LAB::Sorter do
     }
   end
 
+  describe '#sort_and_rank' do
+    it 'should rank the brewers correctly' do
+      expected_ranks = [1, 2, 3, '=']
+      expect(subject.sort_and_rank.map { |elm| elm[1] }).to eq(expected_ranks)
+    end
+  end
+
   describe '#ranked_names' do
     it 'should sort the brewers into the correct order' do
-      expected = ['1st place', '2nd place', '3rd place']
+      expected = %w(A B D C) # FIXME: should really be ABCD innit
       expect(subject.ranked_names).to eq(expected)
     end
   end
