@@ -5,6 +5,8 @@ require 'awesome_print'
 require 'lab/data_loader'
 require 'lab/sorter'
 require 'lab/html_table_builder'
+require 'lab/roll_of_honour_builder'
+require 'lab/competition_roll_of_honour_builder'
 
 module LAB
   # Scores awarded for each medal
