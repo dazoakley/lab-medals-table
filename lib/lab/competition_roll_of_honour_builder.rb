@@ -18,7 +18,7 @@ module LAB
       [
         competition_title,
         '<dl>',
-        "<dd>Guidelines</dd><dt>#{comp['guidelines']}</dt>",
+        "<dt>Guidelines</dt><dd>#{comp['guidelines']}</dd>",
         best_of_show_section,
         flight_section,
         '</dl>'

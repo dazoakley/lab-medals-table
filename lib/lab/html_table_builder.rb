@@ -32,11 +32,10 @@ module LAB
         <<TXT
 <html>
   <head>
+    <link href="/wp-content/themes/lonbrew-wp/style.css" rel="stylesheet">
     <style type="text/css">
-      html {
-        font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;;
-      }
-      table { border-collapse: collapse; text-align: center; }
+      html { font-size: smaller; padding: 15px }
+      table { border-collapse: collapse; text-align: center; font-size: small; }
       th,td { border: 1px solid grey; padding: 2px 4px; }
       .totals   { background-color: #F0F0F0; }
       tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
@@ -46,6 +45,16 @@ module LAB
     </style>
   <head>
   <body>
+    <h2>London Amateur Brewers - Medals Table Since 2010</h2>
+    <h4>Medal Values</h4>
+    <p>
+      <b>Flight:</b> Gold - #{LAB::SCORES['flight']['gold']}, Silver - #{LAB::SCORES['flight']['silver']}, Bronze - #{LAB::SCORES['flight']['bronze']}<br />
+      <b>Best of Show:</b> Gold - #{LAB::SCORES['bos']['gold']}, Silver - #{LAB::SCORES['bos']['silver']}, Bronze - #{LAB::SCORES['bos']['bronze']}
+    </p>
+    <p>
+      <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
+      Brewers equal after total medal points are ranked then by BoS GSB, then Flight GSB.
+    </p>
     <table>
       <thead>
         <tr>
