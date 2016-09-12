@@ -36,9 +36,7 @@
         <div class="col-md-12">
           <form class="form-horizontal">
 
-            <p>
-              &nbsp;
-            </p>
+            <p>&nbsp;</p>
 
             <div class="form-group">
               <label for="year" class="col-sm-2 control-label">Year</label>
@@ -945,32 +943,18 @@
         counter += 1;
       }
 
-      function init() {
-        // init datepicker
-        $("#date").datepicker({ format: "dd-mm-yyyy" });
-
-        // Add some flight winner slots
-        for (var i = 0; i < 2; i++) {
-          // add_new_winner('flight', flight_result_counter);
-        }
-
-        // init style selectors
-        set_style_selectors();
-        $('#guidelines').change(function() { set_style_selectors() });
-
-        // add a watchers to the buttons
-        $('#add-new-bos-winner').click(function() { add_new_winner('bos', bos_result_counter) });
-        $('#add-new-flight-winner').click(function() { add_new_winner('flight', flight_result_counter) });
-        $('#generate-yaml').click(function() { generate_yaml() });
-      }
-
       function get_winner(target) {
-        return {
+        var data = {
           position: $(target).find('.pos').find(':selected').val(),
           brewer:   $(target).find('.brewer').val(),
-          beer:     $(target).find('.beer').val(),
-          style:    $(target).find('.bjcp-select').find(':selected').val()
+          beer:     $(target).find('.beer').val()
         }
+
+        if (guidelines_to_use()) {
+          data['style'] = $(target).find('.bjcp-select').find(':selected').val();
+        }
+
+        return data;
       }
 
       function get_winners() {
@@ -987,7 +971,10 @@
             brewers[data.brewer]['bos'][data.position] = [];
           }
 
-          brewers[data.brewer]['bos'][data.position].push({ name: data.beer, style: data.style });
+          var detail = { name: data.beer };
+          if (data.style) { detail['style'] = data.style };
+
+          brewers[data.brewer]['bos'][data.position].push(detail);
         });
 
         $('.flight-winner').each(function() {
@@ -1005,7 +992,10 @@
             brewers[data.brewer]['flight'][data.position] = [];
           }
 
-          brewers[data.brewer]['flight'][data.position].push({ name: data.beer, style: data.style });
+          var detail = { name: data.beer };
+          if (data.style) { detail['style'] = data.style };
+
+          brewers[data.brewer]['flight'][data.position].push(detail);
         });
 
         return brewers;
@@ -1034,15 +1024,36 @@
         data['winners']    = []
 
         $.each(winners, function(name, result) {
-          var obj = { name: name };
+          if (name) {
+            var obj = { name: name };
 
-          if (result['bos'])    { obj['bos']    = result.bos }
-          if (result['flight']) { obj['flight'] = result.flight }
+            if (result['bos'])    { obj['bos']    = result.bos }
+            if (result['flight']) { obj['flight'] = result.flight }
 
-          data['winners'].push(obj);
+            data['winners'].push(obj);
+          }
         });
 
         $('#yaml').text("---\n" + jsyaml.dump(data));
+      }
+
+      function init() {
+        // init datepicker
+        $("#date").datepicker({ format: "dd-mm-yyyy" });
+
+        // Add some flight winner slots
+        for (var i = 0; i < 2; i++) {
+          // add_new_winner('flight', flight_result_counter);
+        }
+
+        // init style selectors
+        set_style_selectors();
+        $('#guidelines').change(function() { set_style_selectors() });
+
+        // add a watchers to the buttons
+        $('#add-new-bos-winner').click(function() { add_new_winner('bos', bos_result_counter) });
+        $('#add-new-flight-winner').click(function() { add_new_winner('flight', flight_result_counter) });
+        $('#generate-yaml').click(function() { generate_yaml() });
       }
 
       init();
