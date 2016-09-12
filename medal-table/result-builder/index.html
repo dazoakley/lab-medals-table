@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>LAB Medal Table Competition Data Builder</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css" media="screen">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      .winner {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>LAB Medal Table Competition Data Builder</h1>
+
+      <div class="row">
+        <div class="col-md-12">
+          <form class="form-horizontal">
+
+            <p>
+              &nbsp;
+            </p>
+
+            <div class="form-group">
+              <label for="year" class="col-sm-2 control-label">Year</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="year" placeholder="Year">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="year" class="col-sm-2 control-label">Date</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="date" placeholder="dd-mm-yyyy">
+                <p class="help-block">
+                  Doesn't need to be the EXACT date of the competition, just something close enough to help sorting the table
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="competition-name-full" class="col-sm-2 control-label">Competition Name (Full)</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="competition-name-full" placeholder="Competition Name (Full)">
+                <p class="help-block">
+                  This will be used in the medals list
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="competition-name-abbrv" class="col-sm-2 control-label">Competition Name (Abbreviated)</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="competition-name-abbrv" placeholder="Competition Name (Abbreviated)">
+                <p class="help-block">
+                  This will be used at the top of the medals table
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location" class="col-sm-2 control-label">Location</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="location" placeholder="Location">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guidelines" class="col-sm-2 control-label">Guidelines</label>
+              <div class="col-sm-10">
+                <select class="form-control" id="guidelines">
+                  <option>BJCP 2015</option>
+                  <option>BJCP 2008</option>
+                  <option>NGWBJ</option>
+                </select>
+              </div>
+            </div>
+
+            <hr>
+            <h3>Best of Show Winners</h3>
+
+            <div id="bos-winners"></div>
+            <button type="button" class="btn btn-default" id="add-new-bos-winner">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add New BOS Winner
+            </button>
+
+            <hr>
+            <h3>Flight Winners</h3>
+
+            <div id="flight-winners"></div>
+            <button type="button" class="btn btn-default" id="add-new-flight-winner">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add New Flight Winner
+            </button>
+
+            <hr>
+            <button type="button" class="btn btn-primary" id="generate-yaml">
+              <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+              Generate YAML
+            </button>
+          </form>
+
+          <p>&nbsp;</p>
+
+          <div>
+            <pre id="yaml"></pre>
+          </div>
+
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.en-GB.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.6.1/js-yaml.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      // BJCP Styles
+      var bjcp_2008 = {
+        "name": "Styles",
+        "children": [
+          {
+            "name": "Beer",
+            "children": [
+              {
+                "name": "Light Lager",
+                "number": "1",
+                "children": [
+                  { "name": "Lite American Lager", "letter": "A" },
+                  { "name": "Standard American Lager", "letter": "B" },
+                  { "name": "Premium American Lager", "letter": "C" },
+                  { "name": "Munich Helles", "letter": "D" },
+                  { "name": "Dortmunder Export", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Pilsner",
+                "number": "2",
+                "children": [
+                  { "name": "German Pilsner (Pils)", "letter": "A" },
+                  { "name": "Bohemian Pilsener", "letter": "B" },
+                  { "name": "Classic American Pilsner", "letter": "C" }
+                ]
+              },
+              {
+                "name": "European Amber Lager",
+                "number": "3",
+                "children": [
+                  { "name": "Vienna Lager", "letter": "A" },
+                  { "name": "Oktoberfest/Märzen", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Dark Lager",
+                "number": "4",
+                "children": [
+                  { "name": "Dark American Lager", "letter": "A" },
+                  { "name": "Munich Dunkel", "letter": "B" },
+                  { "name": "Schwarzbier (Black Beer)", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Bock",
+                "number": "5",
+                "children": [
+                  { "name": "Maibock/Helles Bock", "letter": "A" },
+                  { "name": "Traditional Bock", "letter": "B" },
+                  { "name": "Doppelbock", "letter": "C" },
+                  { "name": "Eisbock", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Light Hybrid Beer",
+                "number": "6",
+                "children": [
+                  { "name": "Cream Ale", "letter": "A" },
+                  { "name": "Blonde Ale", "letter": "B" },
+                  { "name": "Kölsch", "letter": "C" },
+                  { "name": "American Wheat or Rye Beer", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Amber Hybrid Beer",
+                "number": "7",
+                "children": [
+                  { "name": "Northern German Altbier", "letter": "A" },
+                  { "name": "California Common Beer", "letter": "B" },
+                  { "name": "Düsseldorf Altbier", "letter": "C" }
+                ]
+              },
+              {
+                "name": "English Pale Ale",
+                "number": "8",
+                "children": [
+                  { "name": "Standard/Ordinary Bitter", "letter": "A" },
+                  { "name": "Special/Best/Premium Bitter", "letter": "B" },
+                  { "name": "Extra Special/Strong Bitter (English Pale Ale)", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Scottish and Irish Ale",
+                "number": "9",
+                "children": [
+                  { "name": "Scottish Light 60/-", "letter": "A" },
+                  { "name": "Scottish Heavy 70/-", "letter": "B" },
+                  { "name": "Scottish Export 80/-", "letter": "C" },
+                  { "name": "Irish Red Ale", "letter": "D" },
+                  { "name": "Strong Scotch Ale", "letter": "E" }
+                ]
+              },
+              {
+                "name": "American Ale",
+                "number": "10",
+                "children": [
+                  { "name": "American Pale Ale", "letter": "A" },
+                  { "name": "American Amber Ale", "letter": "B" },
+                  { "name": "American Brown Ale", "letter": "C" }
+                ]
+              },
+              {
+                "name": "English Brown Ale",
+                "number": "11",
+                "children": [
+                  { "name": "Mild", "letter": "A" },
+                  { "name": "Southern English Brown", "letter": "B" },
+                  { "name": "Northern English Brown Ale", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Porter",
+                "number": "12",
+                "children": [
+                  { "name": "Brown Porter", "letter": "A" },
+                  { "name": "Robust Porter", "letter": "B" },
+                  { "name": "Baltic Porter", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Stout",
+                "number": "13",
+                "children": [
+                  { "name": "Dry Stout", "letter": "A" },
+                  { "name": "Sweet Stout", "letter": "B" },
+                  { "name": "Oatmeal Stout", "letter": "C" },
+                  { "name": "Foreign Extra Stout", "letter": "D" },
+                  { "name": "American Stout", "letter": "E" },
+                  { "name": "Russian Imperial Stout", "letter": "F" }
+                ]
+              },
+              {
+                "name": "India Pale Ale(IPA)",
+                "number": "14",
+                "children": [
+                  { "name": "English IPA", "letter": "A" },
+                  { "name": "American IPA", "letter": "B" },
+                  { "name": "Imperial IPA", "letter": "C" }
+                ]
+              },
+              {
+                "name": "German Wheat and Rye Beer",
+                "number": "15",
+                "children": [
+                  { "name": "Weizen/Weissbier", "letter": "A" },
+                  { "name": "Dunkelweizen", "letter": "B" },
+                  { "name": "Weizenbock", "letter": "C" },
+                  { "name": "Roggenbier (German Rye Beer)", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Belgian and French Ale",
+                "number": "16",
+                "children": [
+                  { "name": "Witbier", "letter": "A" },
+                  { "name": "Belgian Pale Ale", "letter": "B" },
+                  { "name": "Saison", "letter": "C" },
+                  { "name": "Bière de Garde", "letter": "D" },
+                  { "name": "Belgian Specialty Ale", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Sour Ale",
+                "number": "17",
+                "children": [
+                  { "name": "Berliner Weisse", "letter": "A" },
+                  { "name": "Flanders Red Ale", "letter": "B" },
+                  { "name": "Flanders Brown Ale/Oud Bruin", "letter": "C" },
+                  { "name": "Straight (Unblended) Lambic", "letter": "D" },
+                  { "name": "Gueuze", "letter": "E" },
+                  { "name": "Fruit Lambic", "letter": "F" }
+                ]
+              },
+              {
+                "name": "Belgian Strong Ale",
+                "number": "18",
+                "children": [
+                  { "name": "Belgian Blond Ale", "letter": "A" },
+                  { "name": "Belgian Dubbel", "letter": "B" },
+                  { "name": "Belgian Tripel", "letter": "C" },
+                  { "name": "Belgian Golden Strong Ale", "letter": "D" },
+                  { "name": "Belgian Dark Strong Ale", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Strong Ale",
+                "number": "19",
+                "children": [
+                  { "name": "Old Ale", "letter": "A" },
+                  { "name": "English Barleywine", "letter": "B" },
+                  { "name": "American Barleywine", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Fruit Beer",
+                "number": "20"
+              },
+              {
+                "name": "Spice/Herb/Vegetable Beer",
+                "number": "21",
+                "children": [
+                  { "name": "Spice, Herb, or Vegetable Beer", "letter": "A" },
+                  { "name": "Christmas/Winter Specialty Spiced Beer", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Smoke-Flavored/Wood-Aged Beer",
+                "number": "22",
+                "children": [
+                  { "name": "Classic Rauchbier", "letter": "A" },
+                  { "name": "Other Smoked Beer", "letter": "B" },
+                  { "name": "Wood-Aged Beer", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Specialty Beer",
+                "number": "23"
+              }
+            ]
+          },
+          {
+            "name": "Mead",
+            "children": [
+              {
+                "name": "Traditional Mead",
+                "number": "24",
+                "children": [
+                  { "name": "Dry Mead", "letter": "A" },
+                  { "name": "Semi-sweet Mead", "letter": "B" },
+                  { "name": "Sweet Mead", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Melomel (Fruit Mead)",
+                "number": "25",
+                "children": [
+                  { "name": "Cyser", "letter": "A" },
+                  { "name": "Pyment", "letter": "B" },
+                  { "name": "Other Fruit Melomel", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Other Mead",
+                "number": "26",
+                "children": [
+                  { "name": "Metheglin", "letter": "A" },
+                  { "name": "Braggot", "letter": "B" },
+                  { "name": "Open Category Mead", "letter": "C" }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cider",
+            "children": [
+              {
+                "name": "Standard Cider and Perry",
+                "number": "27",
+                "children": [
+                  { "name": "Common Cider", "letter": "A" },
+                  { "name": "English Cider", "letter": "B" },
+                  { "name": "French Cider", "letter": "C" },
+                  { "name": "Common Perry", "letter": "D" },
+                  { "name": "Traditional Perry", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Specialty Cider and Perry",
+                "number": "28",
+                "children": [
+                  { "name": "New England Cider", "letter": "A" },
+                  { "name": "Fruit Cider", "letter": "B" },
+                  { "name": "Applewine", "letter": "C" },
+                  { "name": "Other Specialty Cider/Perry", "letter": "D" }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+
+      var bjcp_2015 = {
+        "name": "Styles",
+        "children": [
+          {
+            "name": "Beer",
+            "children": [
+              {
+                "name": "Standard American Beer",
+                "number": "1",
+                "children": [
+                  { "name": "American Light Lager", "letter": "A" },
+                  { "name": "American Lager", "letter": "B" },
+                  { "name": "Cream Ale", "letter": "C" },
+                  { "name": "American Wheat Beer", "letter": "D" }
+                ]
+              },
+              {
+                "name": "International Lager",
+                "number": "2",
+                "children": [
+                  { "name": "International Pale Lager", "letter": "A" },
+                  { "name": "International Amber Lager", "letter": "B" },
+                  { "name": "International Dark Lager", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Czech Lager",
+                "number": "3",
+                "children": [
+                  { "name": "Czech Pale Lager", "letter": "A" },
+                  { "name": "Czech Premium Pale Lager", "letter": "B" },
+                  { "name": "Czech Amber Lager", "letter": "C" },
+                  { "name": "Czech Dark Lager", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Pale Malty European Lager",
+                "number": "4",
+                "children": [
+                  { "name": "Munich Helles", "letter": "A" },
+                  { "name": "Festbier", "letter": "B" },
+                  { "name": "Helles Bock", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Pale Bitter European Beer",
+                "number": "5",
+                "children": [
+                  { "name": "German Leichtbier", "letter": "A" },
+                  { "name": "Kölsch", "letter": "B" },
+                  { "name": "German Helles Exportbier", "letter": "C" },
+                  { "name": "German Pils", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Amber Malty European Lager",
+                "number": "6",
+                "children": [
+                  { "name": "Märzen", "letter": "A" },
+                  { "name": "Rauchbier", "letter": "B" },
+                  { "name": "Dunkles Bock", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Amber Bitter European Beer",
+                "number": "7",
+                "children": [
+                  { "name": "Vienna Lager", "letter": "A" },
+                  { "name": "Altbier", "letter": "B" },
+                  { "name": "Kellerbier", "letter": "C" },
+                  { "name": "Kellerbier: Pale Kellerbier", "letter": "C-pale" },
+                  { "name": "Kellerbier: Amber Kellerbier", "letter": "C-amber" }
+                ]
+              },
+              {
+                "name": "Dark European Lager",
+                "number": "8",
+                "children": [
+                  { "name": "Munich Dunkel", "letter": "A" },
+                  { "name": "Schwarzbier", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Strong European Beer",
+                "number": "9",
+                "children": [
+                  { "name": "Doppelbock", "letter": "A" },
+                  { "name": "Eisbock", "letter": "B" },
+                  { "name": "Baltic Porter", "letter": "C" }
+                ]
+              },
+              {
+                "name": "German Wheat Beer",
+                "number": "10",
+                "children": [
+                  { "name": "Weissbier", "letter": "A" },
+                  { "name": "Dunkles Weissbier", "letter": "B" },
+                  { "name": "Weizenbock", "letter": "C" }
+                ]
+              },
+              {
+                "name": "British Bitter",
+                "number": "11",
+                "children": [
+                  { "name": "Ordinary Bitter", "letter": "A" },
+                  { "name": "Best Bitter", "letter": "B" },
+                  { "name": "Strong Bitter", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Pale Commonwealth Beer",
+                "number": "12",
+                "children": [
+                  { "name": "British Golden Ale", "letter": "A" },
+                  { "name": "Australian Sparkling Ale", "letter": "B" },
+                  { "name": "English IPA", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Brown British Beer",
+                "number": "13",
+                "children": [
+                  { "name": "Dark Mild", "letter": "A" },
+                  { "name": "British Brown Ale", "letter": "B" },
+                  { "name": "English Porter", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Scottish Ale",
+                "number": "14",
+                "children": [
+                  { "name": "Scottish Light", "letter": "A" },
+                  { "name": "Scottish Heavy", "letter": "B" },
+                  { "name": "Scottish Export", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Irish Beer",
+                "number": "15",
+                "children": [
+                  { "name": "Irish Red Ale", "letter": "A" },
+                  { "name": "Irish Stout", "letter": "B" },
+                  { "name": "Irish Extra Stout", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Dark British Beer",
+                "number": "16",
+                "children": [
+                  { "name": "Sweet Stout", "letter": "A" },
+                  { "name": "Oatmeal Stout", "letter": "B" },
+                  { "name": "Tropical Stout", "letter": "C" },
+                  { "name": "Foreign Extra Stout", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Strong British Ale",
+                "number": "17",
+                "children": [
+                  { "name": "British Strong Ale", "letter": "A" },
+                  { "name": "Old Ale", "letter": "B" },
+                  { "name": "Wee Heavy", "letter": "C" },
+                  { "name": "English Barleywine", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Pale American Ale",
+                "number": "18",
+                "children": [
+                  { "name": "Blonde Ale", "letter": "A" },
+                  { "name": "American Pale Ale", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Amber and Brown American Beer",
+                "number": "19",
+                "children": [
+                  { "name": "American Amber Ale", "letter": "A" },
+                  { "name": "California Common", "letter": "B" },
+                  { "name": "American Brown Ale", "letter": "C" }
+                ]
+              },
+              {
+                "name": "American Porter and Stout",
+                "number": "20",
+                "children": [
+                  { "name": "American Porter", "letter": "A" },
+                  { "name": "American Stout", "letter": "B" },
+                  { "name": "Imperial Stout", "letter": "C" }
+                ]
+              },
+              {
+                "name": "IPA",
+                "number": "21",
+                "children": [
+                  { "name": "American IPA", "letter": "A" },
+                  { "name": "Specialty IPA", "letter": "B" },
+                  { "name": "Specialty IPA: Belgian IPA", "letter": "B-belgian" },
+                  { "name": "Specialty IPA: Black IPA", "letter": "B-black" },
+                  { "name": "Specialty IPA: Brown IPA", "letter": "B-brown" },
+                  { "name": "Specialty IPA: Red IPA", "letter": "B-red" },
+                  { "name": "Specialty IPA: Rye IPA", "letter": "B-rye" },
+                  { "name": "Specialty IPA: White IPA", "letter": "B-white" }
+                ]
+              },
+              {
+                "name": "Strong American Ale",
+                "number": "22",
+                "children": [
+                  { "name": "Double IPA", "letter": "A" },
+                  { "name": "American Strong Ale", "letter": "B" },
+                  { "name": "American Barleywine", "letter": "C" },
+                  { "name": "Wheatwine", "letter": "D" }
+                ]
+              },
+              {
+                "name": "European Sour Ale",
+                "number": "23",
+                "children": [
+                  { "name": "Berliner Weisse", "letter": "A" },
+                  { "name": "Flanders Red Ale", "letter": "B" },
+                  { "name": "Oud Bruin", "letter": "C" },
+                  { "name": "Lambic", "letter": "D" },
+                  { "name": "Gueuze", "letter": "E" },
+                  { "name": "Fruit Lambic", "letter": "F" }
+                ]
+              },
+              {
+                "name": "Belgian Ale",
+                "number": "24",
+                "children": [
+                  { "name": "Witbier", "letter": "A" },
+                  { "name": "Belgian Pale Ale", "letter": "B" },
+                  { "name": "Bière de Garde", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Strong Belgian Ale",
+                "number": "25",
+                "children": [
+                  { "name": "Belgian Blond Ale", "letter": "A" },
+                  { "name": "Saison", "letter": "B" },
+                  { "name": "Belgian Golden Strong Ale", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Trappist Ale",
+                "number": "26",
+                "children": [
+                  { "name": "Trappist Single", "letter": "A" },
+                  { "name": "Belgian Dubbel", "letter": "B" },
+                  { "name": "Belgian Tripel", "letter": "C" },
+                  { "name": "Belgian Dark Strong Ale", "letter": "D" }
+                ]
+              },
+              {
+                "name": "Historical Beer",
+                "number": "27",
+                "children": [
+                  { "name": "Historical Beer: Gose", "letter": "-gose" },
+                  { "name": "Historical Beer: Kentucky Common", "letter": "-ky" },
+                  { "name": "Historical Beer: Lichtenhainer", "letter": "-Lichtenhainer" },
+                  { "name": "Historical Beer: London Brown Ale", "letter": "-london-brown" },
+                  { "name": "Historical Beer: Piwo Grodziskie", "letter": "-piwo" },
+                  { "name": "Historical Beer: Pre-Prohibition Lager", "letter": "-pre18-lager" },
+                  { "name": "Historical Beer: Pre-Prohibition Porter", "letter": "-pre18-porter" },
+                  { "name": "Historical Beer: Roggenbier", "letter": "-roggenbier" },
+                  { "name": "Historical Beer: Sahti", "letter": "-sahti" }
+                ]
+              },
+              {
+                "name": "American Wild Ale",
+                "number": "28",
+                "children": [
+                  { "name": "Brett Beer", "letter": "A" },
+                  { "name": "Mixed-Fermentation Sour Beer", "letter": "B" },
+                  { "name": "Wild Specialty Beer", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Fruit Beer",
+                "number": "29",
+                "children": [
+                  { "name": "Fruit Beer", "letter": "A" },
+                  { "name": "Fruit and Spice Beer", "letter": "B" },
+                  { "name": "Specialty Fruit Beer", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Spiced Beer",
+                "number": "30",
+                "children": [
+                  { "name": "Spice, Herb, or Vegetable Beer", "letter": "A" },
+                  { "name": "Autumn Seasonal Beer", "letter": "B" },
+                  { "name": "Winter Seasonal Beer", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Alternative Fermentables Beer",
+                "number": "31",
+                "children": [
+                  { "name": "Alternative Grain Beer", "letter": "A" },
+                  { "name": "Alternative Sugar Beer", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Smoked Beer",
+                "number": "32",
+                "children": [
+                  { "name": "Classic Style Smoked Beer", "letter": "A" },
+                  { "name": "Specialty Smoked Beer", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Wood Beer",
+                "number": "33",
+                "children": [
+                  { "name": "Wood-Aged Beer", "letter": "A" },
+                  { "name": "Specialty Wood-Aged Beer", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Specialty Beer",
+                "number": "34",
+                "children": [
+                  { "name": "Clone Beer", "letter": "A" },
+                  { "name": "Mixed-Style Beer", "letter": "B" },
+                  { "name": "Experimental Beer", "letter": "C" }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mead",
+            "children": [
+              {
+                "name": "Traditional Mead",
+                "number": "M1",
+                "children": [
+                  { "name": "Dry Mead", "letter": "A" },
+                  { "name": "Semi-Sweet Mead", "letter": "B" },
+                  { "name": "Sweet Mead", "letter": "C" }
+                ]
+              },
+              {
+                "name": "Fruit Mead",
+                "number": "M2",
+                "children": [
+                  { "name": "Cyser", "letter": "A" },
+                  { "name": "Pyment", "letter": "B" },
+                  { "name": "Berry Mead", "letter": "C" },
+                  { "name": "Stone Fruit Mead", "letter": "D" },
+                  { "name": "Melomel", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Spiced Mead",
+                "number": "M3",
+                "children": [
+                  { "name": "Fruit and Spice Mead", "letter": "A" },
+                  { "name": "Spice, Herb or Vegetable Mead", "letter": "B" }
+                ]
+              },
+              {
+                "name": "Specialty Mead",
+                "number": "M4",
+                "children": [
+                  { "name": "Braggot", "letter": "A" },
+                  { "name": "Historical Mead", "letter": "B" },
+                  { "name": "Experimental Mead", "letter": "C" }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cider",
+            "children": [
+              {
+                "name": "Standard Cider and Perry",
+                "number": "C1",
+                "children": [
+                  { "name": "New World Cider", "letter": "A" },
+                  { "name": "English Cider", "letter": "B" },
+                  { "name": "French Cider", "letter": "C" },
+                  { "name": "New World Perry", "letter": "D" },
+                  { "name": "Traditional Perry", "letter": "E" }
+                ]
+              },
+              {
+                "name": "Specialty Cider and Perry",
+                "number": "C2",
+                "children": [
+                  { "name": "New England Cider", "letter": "A" },
+                  { "name": "Cider with Other Fruit", "letter": "B" },
+                  { "name": "Applewine", "letter": "C" },
+                  { "name": "Ice Cider", "letter": "D" },
+                  { "name": "Cider with Herbs/Spices", "letter": "E" },
+                  { "name": "Specialty Cider/Perry", "letter": "F" }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+    </script>
+
+    <script id="result-template" type="x-tmpl-mustache">
+      <fieldset class="winner {{type}}-winner">
+        <div class="form-group">
+          <label for="{{type}}-pos-{{number}}" class="col-sm-2 control-label">Position</label>
+          <div class="col-sm-10">
+            <select class="form-control pos" id="{{type}}-pos-{{number}}">
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="bronze">Bronze</option>
+              <option value="hm">HM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="{{type}}-brewer-{{number}}" class="col-sm-2 control-label">Brewer</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control brewer" id="{{type}}-brewer-{{number}}" placeholder="Brewer">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="{{type}}-beer-{{number}}" class="col-sm-2 control-label">Beer Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control beer" id="{{type}}-beer-{{number}}" placeholder="Beer Name">
+          </div>
+        </div>
+
+        <div id="{{type}}-bjcp-select-group-{{number}}" class="form-group bjcp-select-group">
+          <label for="{{type}}-style-{{number}}" class="col-sm-2 control-label">Style</label>
+          <div class="col-sm-10">
+            <select class="form-control bjcp-select" id="{{type}}-style-{{number}}"></select>
+          </div>
+        </div>
+      </fieldset>
+    </script>
+
+    <script type="text/javascript">
+      var result_template = document.getElementById('result-template').innerHTML;
+      Mustache.parse(result_template);
+      var flight_result_counter = 0;
+      var bos_result_counter = 0;
+
+      function add_bjcp_selector(target, guidelines) {
+        $(target).html('');
+        $(target).append($('<option>', { "value": "", "disabled": true, "selected": true }).text('Pick a style'));
+
+        for (var i = 0; i < guidelines.children.length; i++) {
+          var child = guidelines.children[i];
+
+          for (var j = 0; j < child.children.length; j++) {
+            var style  = child.children[j];
+            var name   = style.name;
+            var number = style.number;
+
+            if (style.children) {
+              for (var k = 0; k < style.children.length; k++) {
+                var subcat = style.children[k];
+                var key    = number + "" + subcat.letter;
+                var value  = key + " - " + subcat.name;
+
+                $(target).append($('<option>', { "value": key }).text(value));
+              }
+            }
+            else {
+              var value = number + " - " + name;
+
+              $(target).append($('<option>', { "value": number }).text(value));
+            }
+          }
+        }
+      }
+
+      function guidelines_to_use() {
+        var guidelines = $('#guidelines').find(":selected").text();
+
+        if (guidelines == 'BJCP 2008') {
+          return bjcp_2008;
+        }
+        else if (guidelines == 'BJCP 2015') {
+          return bjcp_2015;
+        }
+        else {
+          return null;
+        }
+      }
+
+      function set_style_selectors() {
+        var guidelines = guidelines_to_use();
+
+        if (guidelines) {
+          $('.bjcp-select').each(function() {
+            $('.bjcp-select-group').show();
+            add_bjcp_selector(this, guidelines);
+          });
+        } else {
+          $('.bjcp-select-group').hide();
+        }
+      }
+
+      function add_new_winner(type, counter) {
+        var rendered_content = Mustache.render(result_template, { type: type, number: counter });
+        $('#' + type + '-winners').append(rendered_content);
+
+        var guidelines     = guidelines_to_use();
+        var style_selector = $('#' + type + '-winners .winner .bjcp-select').last();
+        var select_group   = $('#' + type + '-bjcp-select-group-' + counter)
+
+        if (guidelines) {
+          add_bjcp_selector(style_selector, guidelines);
+        }
+        else {
+          select_group.hide();
+        }
+
+        counter += 1;
+      }
+
+      function init() {
+        // init datepicker
+        $("#date").datepicker({ format: "dd-mm-yyyy" });
+
+        // Add some flight winner slots
+        for (var i = 0; i < 2; i++) {
+          // add_new_winner('flight', flight_result_counter);
+        }
+
+        // init style selectors
+        set_style_selectors();
+        $('#guidelines').change(function() { set_style_selectors() });
+
+        // add a watchers to the buttons
+        $('#add-new-bos-winner').click(function() { add_new_winner('bos', bos_result_counter) });
+        $('#add-new-flight-winner').click(function() { add_new_winner('flight', flight_result_counter) });
+        $('#generate-yaml').click(function() { generate_yaml() });
+      }
+
+      function get_winner(target) {
+        return {
+          position: $(target).find('.pos').find(':selected').val(),
+          brewer:   $(target).find('.brewer').val(),
+          beer:     $(target).find('.beer').val(),
+          style:    $(target).find('.bjcp-select').find(':selected').val()
+        }
+      }
+
+      function get_winners() {
+        var brewers = {};
+
+        $('.bos-winner').each(function() {
+          var data = get_winner(this);
+
+          if (!brewers[data.brewer]) {
+            brewers[data.brewer] = { bos: {} };
+          }
+
+          if (!brewers[data.brewer]['bos'][data.position]) {
+            brewers[data.brewer]['bos'][data.position] = [];
+          }
+
+          brewers[data.brewer]['bos'][data.position].push({ name: data.beer, style: data.style });
+        });
+
+        $('.flight-winner').each(function() {
+          var data = get_winner(this);
+
+          if (!brewers[data.brewer]) {
+            brewers[data.brewer] = {};
+          }
+
+          if (!brewers[data.brewer]['flight']) {
+            brewers[data.brewer]['flight'] = {};
+          }
+
+          if (!brewers[data.brewer]['flight'][data.position]) {
+            brewers[data.brewer]['flight'][data.position] = [];
+          }
+
+          brewers[data.brewer]['flight'][data.position].push({ name: data.beer, style: data.style });
+        });
+
+        return brewers;
+      }
+
+      function add_input_val(data, key, input_selector) {
+        var input = $(input_selector);
+        var val   = input.val();
+
+        if (val) {
+          data[key] = val;
+        }
+      }
+
+      function generate_yaml() {
+        var data    = {};
+        var winners = get_winners();
+
+        add_input_val(data, 'year', '#year');
+        add_input_val(data, 'date', '#date');
+        add_input_val(data, 'abbr_name', '#competition-name-abbrv');
+        add_input_val(data, 'full_name', '#competition-name-full');
+        add_input_val(data, 'location', '#location');
+
+        data['guidelines'] = $('#guidelines').find(":selected").text();
+        data['winners']    = []
+
+        $.each(winners, function(name, result) {
+          var obj = { name: name };
+
+          if (result['bos'])    { obj['bos']    = result.bos }
+          if (result['flight']) { obj['flight'] = result.flight }
+
+          data['winners'].push(obj);
+        });
+
+        $('#yaml').text("---\n" + jsyaml.dump(data));
+      }
+
+      init();
+    </script>
+  </body>
+</html>
