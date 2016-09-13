@@ -158,6 +158,13 @@
         </div>
 
         <div class="form-group">
+          <label for="{{type}}-assistant-brewer-{{number}}" class="col-sm-2 control-label">Assistant Brewer</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control assistant-brewer" id="{{type}}-assistant-brewer-{{number}}" placeholder="Assistant Brewer">
+          </div>
+        </div>
+
+        <div class="form-group">
           <label for="{{type}}-beer-{{number}}" class="col-sm-2 control-label">Beer Name</label>
           <div class="col-sm-10">
             <input type="text" class="form-control beer" id="{{type}}-beer-{{number}}" placeholder="Beer Name">
@@ -280,6 +287,11 @@
           data['style'] = $(target).find('.bjcp-select').find(':selected').val();
         }
 
+        var asst_brewer = $(target).find('.assistant-brewer').val();
+        if (asst_brewer) {
+          data['asst_brewer'] = asst_brewer;
+        }
+
         return data;
       }
 
@@ -298,7 +310,8 @@
           }
 
           var detail = { name: data.beer };
-          if (data.style) { detail['style'] = data.style };
+          if (data.style)       { detail['style'] = data.style };
+          if (data.asst_brewer) { detail['asst_brewer'] = data.asst_brewer };
 
           brewers[data.brewer]['bos'][data.position].push(detail);
         });
@@ -319,7 +332,8 @@
           }
 
           var detail = { name: data.beer };
-          if (data.style) { detail['style'] = data.style };
+          if (data.style)       { detail['style'] = data.style };
+          if (data.asst_brewer) { detail['asst_brewer'] = data.asst_brewer };
 
           brewers[data.brewer]['flight'][data.position].push(detail);
         });
