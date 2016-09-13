@@ -1014,7 +1014,9 @@
         var data    = {};
         var winners = get_winners();
 
-        add_input_val(data, 'year', '#year');
+        var year = $('#year').val();
+        if (year) { data['year'] = parseInt(year) }
+
         add_input_val(data, 'date', '#date');
         add_input_val(data, 'abbr_name', '#competition-name-abbrv');
         add_input_val(data, 'full_name', '#competition-name-full');
