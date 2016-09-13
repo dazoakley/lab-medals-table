@@ -139,9 +139,9 @@
     <script id="result-template" type="x-tmpl-mustache">
       <fieldset class="winner {{type}}-winner">
         <div class="form-group">
-          <label for="{{type}}-pos" class="col-sm-2 control-label">Position</label>
+          <label for="{{type}}-pos-{{number}}" class="col-sm-2 control-label">Position</label>
           <div class="col-sm-10">
-            <select class="form-control pos" id="{{type}}-pos">
+            <select class="form-control pos" id="{{type}}-pos-{{number}}">
               <option value="gold">Gold</option>
               <option value="silver">Silver</option>
               <option value="bronze">Bronze</option>
@@ -151,23 +151,23 @@
         </div>
 
         <div class="form-group">
-          <label for="{{type}}-brewer" class="col-sm-2 control-label">Brewer</label>
+          <label for="{{type}}-brewer-{{number}}" class="col-sm-2 control-label">Brewer</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control brewer" id="{{type}}-brewer" placeholder="Brewer">
+            <input type="text" class="form-control brewer" id="{{type}}-brewer-{{number}}" placeholder="Brewer">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="{{type}}-beer" class="col-sm-2 control-label">Beer Name</label>
+          <label for="{{type}}-beer-{{number}}" class="col-sm-2 control-label">Beer Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control beer" id="{{type}}-beer" placeholder="Beer Name">
+            <input type="text" class="form-control beer" id="{{type}}-beer-{{number}}" placeholder="Beer Name">
           </div>
         </div>
 
-        <div id="{{type}}-bjcp-select-group" class="form-group bjcp-select-group">
-          <label for="{{type}}-style" class="col-sm-2 control-label">Style</label>
+        <div id="{{type}}-bjcp-select-group-{{number}}" class="form-group bjcp-select-group">
+          <label for="{{type}}-style-{{number}}" class="col-sm-2 control-label">Style</label>
           <div class="col-sm-10">
-            <select class="form-control bjcp-select" id="{{type}}-style"></select>
+            <select class="form-control bjcp-select" id="{{type}}-style-{{number}}"></select>
           </div>
         </div>
       </fieldset>
@@ -180,9 +180,11 @@
       $.getJSON('bjcp-2008.json', function(data) { bjcp_2008 = data });
       $.getJSON('bjcp-2015.json', function(data) { bjcp_2015 = data });
 
-      // set up the result_template
+      // setup result template and counters
       var result_template = document.getElementById('result-template').innerHTML;
       Mustache.parse(result_template);
+      var flight_result_counter = 0;
+      var bos_result_counter = 0;
 
       function add_bjcp_selector(target, guidelines) {
         $(target).html('');
@@ -241,13 +243,23 @@
         }
       }
 
-      function add_new_winner(type) {
-        var rendered_content = Mustache.render(result_template, { type: type });
+      function add_new_bos_winner() {
+        add_new_winner('bos', bos_result_counter);
+        bos_result_counter += 1;
+      }
+
+      function add_new_flight_winner() {
+        add_new_winner('flight', flight_result_counter);
+        flight_result_counter += 1;
+      }
+
+      function add_new_winner(type, counter) {
+        var rendered_content = Mustache.render(result_template, { type: type, number: counter });
         $('#' + type + '-winners').append(rendered_content);
 
         var guidelines     = guidelines_to_use();
         var style_selector = $('#' + type + '-winners .winner .bjcp-select').last();
-        var select_group   = $('#' + type + '-bjcp-select-group')
+        var select_group   = $('#' + type + '-bjcp-select-group-' + counter)
 
         if (guidelines) {
           add_bjcp_selector(style_selector, guidelines);
@@ -362,8 +374,8 @@
         $('#guidelines').change(function() { set_style_selectors() });
 
         // add a watchers to the buttons
-        $('#add-new-bos-winner').click(function() { add_new_winner('bos') });
-        $('#add-new-flight-winner').click(function() { add_new_winner('flight') });
+        $('#add-new-bos-winner').click(function() { add_new_bos_winner() });
+        $('#add-new-flight-winner').click(function() { add_new_flight_winner() });
         $('#generate-yaml').click(function() { generate_yaml() });
       }
 
