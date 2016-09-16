@@ -78,8 +78,21 @@ module LAB
       str = beer['brewer'].dup
       str << " (Asst. Brewer: #{beer.dig('beer', 'asst_brewer')})" if beer.dig('beer', 'asst_brewer')
       str << " - #{beer.dig('beer', 'name')}"
-      str << ", (#{beer.dig('beer', 'style')})" if beer.dig('beer', 'style')
+
+      if style = beer.dig('beer', 'style')
+        str << ", (#{expand_beer_style(style)})"
+      end
+
       str
+    end
+
+    def expand_beer_style(style)
+      guidelines = LAB.guidelines[comp['guidelines']]
+
+      return style unless guidelines
+      return style unless guidelines[style]
+
+      "#{style} - #{guidelines[style]}"
     end
 
     def competition_title

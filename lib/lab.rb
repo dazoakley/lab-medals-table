@@ -1,6 +1,7 @@
 require 'yaml'
 require 'pry'
 require 'awesome_print'
+require 'json'
 
 require 'lab/data_loader'
 require 'lab/sorter'
@@ -30,6 +31,37 @@ module LAB
 
     def medals
       %w(gold silver bronze)
+    end
+
+    def guidelines
+      {
+        'BJCP 2008' => load_style_file('bjcp-2008.json'),
+        'BJCP 2015' => load_style_file('bjcp-2015.json')
+      }
+    end
+
+    private
+
+    def load_style_file(file)
+      path = File.join([File.dirname(__FILE__), '..', 'styles', file])
+      raw  = JSON.parse(File.read(path))
+      data = {}
+
+      raw['children'].each do |klass|
+        klass['children'].each do |style|
+          number = style['number']
+
+          if style['children']
+            style['children'].each do |subcat|
+              data["#{number}#{subcat['letter']}"] = subcat['name']
+            end
+          else
+            data[number] = style['name']
+          end
+        end
+      end
+
+      data
     end
   end
 end
