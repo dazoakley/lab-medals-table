@@ -1,0 +1,60 @@
+---
+year: 2016
+date: 10-09-2016
+abbr_name: UKNHC2016
+full_name: UK National Homebrewing Competition
+location: Bristol
+guidelines: BJCP 2015
+winners:
+  - name: Dave Strachan
+    flight:
+      gold:
+        - name: Rauch
+          style: 6B
+  - name: Rich Lock
+    flight:
+      gold:
+        - name: Retribution Dark Strong
+          style: 26D
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Tea Junction
+          style: 30A
+        - name: Crossroads
+          style: 18B
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
+  - name: Sasha Maznov
+    flight:
+      gold:
+        - name: WIPA
+          style: 21B-white
+      silver:
+        - name: Double
+          style: 22A
+  - name: James WIlson
+    flight:
+      silver:
+        - name: White Tiger
+          style: 21B-white
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Essex Barley Wine
+          style: 17D
+  - name: Tim Weenink
+    flight:
+      silver:
+        - name: Longing For Home
+          style: 11C
+        - name: Dray Cart
+          style: 15C
+  - name: Jeremiah Petersen
+    flight:
+      bronze:
+        - name: Educator
+          style: 9A
