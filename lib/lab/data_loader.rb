@@ -8,7 +8,7 @@ module LAB
       def competitions
         @competitions ||= begin
           Dir[data_glob].map     { |file| YAML.load(File.read(file)) }
-                        .sort_by { |data| [data['year'], (data['abbr_name'] || data['full_name'])].join('-') }
+                        .sort_by { |data| Date.parse(data['date']) }
                         .reverse
         end
       end
