@@ -34,7 +34,7 @@ module LAB
     end
 
     def guidelines
-      {
+      @guidelines ||= {
         'BJCP 2008' => load_style_file('bjcp-2008.json'),
         'BJCP 2015' => load_style_file('bjcp-2015.json')
       }

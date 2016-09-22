@@ -80,7 +80,7 @@ module LAB
       str << " - #{beer.dig('beer', 'name')}"
 
       if style = beer.dig('beer', 'style')
-        str << ", (#{expand_beer_style(style)})"
+        str << " (#{expand_beer_style(style)})"
       end
 
       str
@@ -90,9 +90,9 @@ module LAB
       guidelines = LAB.guidelines[comp['guidelines']]
 
       return style unless guidelines
-      return style unless guidelines[style]
+      return style unless guidelines[style.to_s]
 
-      "#{style} - #{guidelines[style]}"
+      "#{style} - #{guidelines[style.to_s]}"
     end
 
     def competition_title
