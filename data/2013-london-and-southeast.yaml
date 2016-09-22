@@ -10,6 +10,7 @@ winners:
       gold:
         - name: Stout
         - name: Barley Wine
+          style: 19C
       silver:
         - name: Belgian Pale Ale
         - name: Belgian Dark Star
@@ -18,37 +19,43 @@ winners:
     bos:
       gold:
         - name: Barley Wine
+          style: 19C
       bronze:
         - name: Stout
   - name: Phill Turner
     flight:
       silver:
         - name: Amazin’ Saisin
+          style: 16C
   - name: Lee Immins
     flight:
       silver:
         - name: Campfire Stout
       bronze:
         - name: Emergency Summer IPA
+          style: 14B
   - name: Rich Lock
     flight:
       gold:
         - name: Hop You (IPA)
+          style: 14B
   - name: Mick Harrison
     flight:
       gold:
         - name: Farmgirl Saison
+          style: 16C
       silver:
         - name: Choccy Woccy Stout
   - name: Pete Hughes
     flight:
       bronze:
         - name: Better Than Dave’s Porter
+          style: 12B
   - name: Andy Ortega
     flight:
       silver:
         - name: Easy Drinker
-          style: American Brown Ale
+          style: 10C
   - name: Darren Oakley
     flight:
       gold:
@@ -65,14 +72,17 @@ winners:
     flight:
       gold:
         - name: Urban Fox Black IPA
+          style: 23
   - name: Mike Carter
     flight:
       silver:
         - name: X Wye Z (ESB)
+          style: 8C
   - name: Mark Vincent
     flight:
       gold:
         - name: Spring Heeled Jack (Bitter)
+          style: 8B
   - name: Drew Wnek
     flight:
       bronze:
@@ -85,3 +95,4 @@ winners:
     flight:
       silver:
         - name: Imperial IPA
+          style: 14C

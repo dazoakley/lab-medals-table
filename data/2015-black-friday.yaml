@@ -10,7 +10,7 @@ winners:
     flight:
       silver:
         - name: 1835 English Porter
-          style: 35A
+          style: 13C
   - name: Lee Immins
     flight:
       gold:
@@ -26,23 +26,23 @@ winners:
     flight:
       gold:
         - name: Imperial Black Rye IPA
-          style: 36A
+          style: 21B-black
     bos:
       silver:
         - name: Imperial Black Rye IPA
-          style: 36A
+          style: 21B-black
   - name: Jeremiah Petersen
     flight:
       gold:
         - name: Bildungsroman
-          style: 35A
+          style: 13C
       bronze:
         - name: Domestic Tragedy
           style: 16B
     bos:
       gold:
         - name: Bildungsroman
-          style: 35A
+          style: 13C
   - name: Mike Carter
     flight:
       silver:

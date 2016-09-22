@@ -34,11 +34,11 @@ winners:
     flight:
       gold:
         - name: Sasquatch Black IPA
-          style: 33A
+          style: 23
     bos:
       gold:
         - name: Sasquatch Black IPA
-          style: 33A
+          style: 23
   - name: Andy Ortega
     flight:
       gold:
@@ -112,4 +112,4 @@ winners:
     flight:
       bronze:
         - name: String Theory
-          style: 33A
+          style: 23
