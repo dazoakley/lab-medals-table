@@ -7,7 +7,9 @@ module LAB
     BOS_POS = {
       'gold'   => '1st',
       'silver' => '2nd',
-      'bronze' => '3rd'
+      'bronze' => '3rd',
+      '4th'    => '4th',
+      'HM'     => '5th'
     }.freeze
 
     def initialize(comp)
@@ -30,15 +32,14 @@ module LAB
                  bos = {}
 
                  comp['winners'].select { |winner| winner['bos'] }
-                                .sort_by { |winner| medal_to_bos_place(winner[0]) }
-                                .reverse
                                 .each do |winner|
                                   winner['bos'].each do |medal, beer|
                                     bos[medal_to_bos_place(medal)] = { 'brewer' => winner['name'], 'beer' => beer.first }
                                   end
                                 end
 
-                 bos
+                 bos.sort_by { |medal, beer| medal_to_bos_place(medal) }
+                    .to_h
                end
     end
 
@@ -47,8 +48,6 @@ module LAB
                     flight = {}
 
                     comp['winners'].select { |winner| winner['flight'] }
-                                   .sort_by { |winner| medal_to_bos_place(winner[0]) }
-                                   .reverse
                                    .each do |winner|
                                      winner['flight'].each do |medal, beers|
                                        beers.each do |beer|
@@ -58,13 +57,14 @@ module LAB
                                      end
                                    end
 
-                    flight.each do |_medal, beers|
-                      beers.sort_by! do |winner|
-                        [winner['brewer'], winner['beer']['name'].to_s]
-                      end
-                    end
-
                     flight
+                      .sort_by { |medal, beer| medal_to_bos_place(medal) }
+                      .to_h
+                      .each do |medal, beers|
+                        beers.sort_by! do |winner|
+                          [winner['brewer'], winner['beer']['name'].to_s]
+                        end
+                      end
                   end
     end
 
@@ -119,7 +119,11 @@ module LAB
       html = []
 
       flight_winners.each do |medal, winners|
-        html << "<dt>#{medal.titleize} Medals</dt>"
+        if medal == 'HM'
+          html << "<dt>Honourable Mention</dt>"
+        else
+          html << "<dt>#{medal.titleize} Medals</dt>"
+        end
 
         winners.each do |winner|
           html << "<dd>#{brewer_and_beer_line(winner)}</dd>"
