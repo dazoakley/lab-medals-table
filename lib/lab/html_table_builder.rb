@@ -110,6 +110,8 @@ TXT
           rank        = obj[1]
           brewer      = LAB::DataLoader.brewers[brewer_name]
 
+          next if brewer['score'] == 0.0
+
           row = [
             '       <tr>',
             "         <td>#{rank}</td>",

@@ -1,0 +1,133 @@
+---
+year: 2016
+date: 25-11-2016
+abbr_name: Black Friday
+full_name: Black Friday
+location: Ubrew
+guidelines: BJCP 2015
+winners:
+  - name: Jeremiah Petersen
+    bos:
+      gold:
+        - name: Chocolate Imperial Stout
+          style: 30A
+    flight:
+      bronze:
+        - name: Milk Stout
+          style: 16A
+      gold:
+        - name: Chocolate Imperial Stout
+          style: 30A
+  - name: Fraser Withers
+    bos:
+      bronze:
+        - name: Black Cat
+          style: 21B-black
+    flight:
+      silver:
+        - name: Harry Porter And The Goblet Of Fire
+          style: 30A
+      gold:
+        - name: Black Cat
+          style: 21B-black
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Georgijs Voshington Porter
+          style: 9C
+      silver:
+        - name: Old Bastards Fag End
+          style: 32B
+  - name: Rob Gallagher
+    flight:
+      silver:
+        - name: Kafka’s Dark Menace
+          style: 3D
+  - name: Mike Carter
+    flight:
+      silver:
+        - name: You Do Something To Me
+          style: 13C
+      bronze:
+        - name: Black Diamond
+          style: 16D
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
+          asst_brewer: Chris Wyatt
+      gold:
+        - name: Tramp Hair Treacle Stout
+          style: 16D
+  - name: Richard Conroy
+    flight:
+      bronze:
+        - name: Barclay Perkins 1859 Export India Porter
+          style: 13C
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Eclipse
+          style: 13A
+      HM:
+        - name: Black Kolsch
+          style: 34C
+  - name: Mark Charlwood
+    flight:
+      silver:
+        - name: "Dark Mild\t"
+          style: 13A
+  - name: Tim Weenink
+    flight:
+      silver:
+        - name: Dray Cart
+          style: 15C
+      HM:
+        - name: Bone Shaker
+          style: 33B
+  - name: Alex Allen
+    flight:
+      bronze:
+        - name: Milk Stout
+          style: 16A
+  - name: Paul Hadfield
+    flight:
+      HM:
+        - name: Chubby
+          style: 16A
+  - name: John Kellett
+    flight:
+      bronze:
+        - name: Oaty Cokey Resurrection
+          style: 16B
+  - name: Josh Smith
+    flight:
+      gold:
+        - name: Bourbon Borough Stout
+          style: 33B
+  - name: Stew Horne
+    flight:
+      gold:
+        - name: Grubelsucht
+          style: 34C
+  - name: Paul Spearman
+    flight:
+      silver:
+        - name: Paul’s Munich Dunkel
+          style: 34C
+  - name: Ken Bazley
+    flight:
+      bronze:
+        - name: But It’s Black
+          style: 34C
+  - name: Jaques Marais
+    flight:
+      HM:
+        - name: Once You Go Black...
+          style: 21B-black
+  - name: Sasha Maznov
+    flight:
+      silver:
+        - name: Grapefruit Ipa
+          style: 29C

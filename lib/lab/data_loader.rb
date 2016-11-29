@@ -73,8 +73,8 @@ module LAB
 
       def new_brewer_data
         {
-          'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [] },
-          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [] }
+          'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] },
+          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] }
         }
       end
     end
