@@ -70,9 +70,6 @@ winners:
       gold:
         - name: Eclipse
           style: 13A
-      HM:
-        - name: Black Kolsch
-          style: 34C
   - name: Mark Charlwood
     flight:
       silver:
@@ -83,18 +80,10 @@ winners:
       silver:
         - name: Dray Cart
           style: 15C
-      HM:
-        - name: Bone Shaker
-          style: 33B
   - name: Alex Allen
     flight:
       bronze:
         - name: Milk Stout
-          style: 16A
-  - name: Paul Hadfield
-    flight:
-      HM:
-        - name: Chubby
           style: 16A
   - name: John Kellett
     flight:
@@ -116,16 +105,6 @@ winners:
       silver:
         - name: Paul’s Munich Dunkel
           style: 34C
-  - name: Ken Bazley
-    flight:
-      bronze:
-        - name: But It’s Black
-          style: 34C
-  - name: Jaques Marais
-    flight:
-      HM:
-        - name: Once You Go Black...
-          style: 21B-black
   - name: Sasha Maznov
     flight:
       silver:
