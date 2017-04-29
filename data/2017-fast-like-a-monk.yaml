@@ -1,0 +1,68 @@
+---
+year: 2017
+date: 27-02-2017
+full_name: Fast Like A Monk
+location: Ubrew
+guidelines: BJCP 2015
+winners:
+  - name: Jeremiah Petersen
+    bos:
+      gold:
+        - name: Educator
+          style: 9A
+    flight:
+      gold:
+        - name: Educator
+          style: 9A
+      silver:
+        - name: Conceit
+          style: 26D
+  - name: Vincent Clifford
+    bos:
+      bronze:
+        - name: St. Reatham Single
+          style: 26A
+    flight:
+      gold:
+        - name: St. Reatham Single
+          style: 26A
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Helliger Rauch
+          style: 6B
+  - name: Luke Slisz
+    flight:
+      gold:
+        - name: Dubbel The Adventure
+          style: 26B
+  - name: Richard Conroy
+    flight:
+      gold:
+        - name: The Trouble With Tripels
+          style: 26C
+  - name: Rob Gallagher
+    flight:
+      silver:
+        - name: Karl's Global Liberator
+          style: 9A
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: I'll Be Bock
+          style: 9A
+  - name: Phill Turner
+    flight:
+      bronze:
+        - name: Vest Male Patersbier
+          style: 26A
+  - name: Stew Horne
+    flight:
+      bronze:
+        - name: Two Ton Tripel
+          style: 26C
+  - name: Neal Irvin
+    flight:
+      bronze:
+        - name: Belgian Dark
+          style: 26D
