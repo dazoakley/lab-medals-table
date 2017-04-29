@@ -1,0 +1,26 @@
+---
+year: 2017
+date: 11-03-2017
+abbr_name: NAWB
+full_name: NAWB National
+location: Manchester
+guidelines: NGWBJ
+winners:
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Light Lager
+        - name: Porter
+      silver:
+        - name: English IPA
+  - name: Mike Carter
+    flight:
+      bronze:
+        - name: Barley Wine
+      4th:
+        - name: Porter
+  - name: Chris Pinnock
+    flight:
+      silver:
+        - name: Dry Stout
+
