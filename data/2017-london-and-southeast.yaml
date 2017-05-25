@@ -1,0 +1,64 @@
+---
+year: 2017
+date: 20-05-2017
+full_name: London & Southeast
+location: Fourpure Brewery
+guidelines: BJCP 2015
+winners:
+  - name: Rob Gallagher
+    bos:
+      silver:
+        - name: Karl's Universal Liberator
+          style: 9A
+    flight:
+      gold:
+        - name: Karl's Universal Liberator
+          style: 9A
+      silver:
+        - name: Sklodowska' Oalen Heart
+          style: 27A
+  - name: Paul Hadfield
+    flight:
+      gold:
+        - name: Melonish
+          style: 12A
+  - name: James Wilson
+    flight:
+      gold:
+        - name: Saison D'etre
+          style: 25B
+  - name: John Kellett
+    flight:
+      gold:
+        - name: Oaty Cokey Resurrection
+          style: 16B
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Catford Blonde
+          style: 18A
+  - name: Rich Lock
+    flight:
+      silver:
+        - name: Retribution DIPA
+          style: 22A
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Mr Goldings
+          style: 12C
+  - name: Sean Cummins
+    flight:
+      bronze:
+        - name: Blonde Tripel
+          style: 26C
+  - name: Fraser Withers
+    flight:
+      bronze:
+        - name: Smooth Hands
+          style: 22A
+  - name: Alex Allen
+    flight:
+      bronze:
+        - name: Sweet Stout
+          style: 16A
