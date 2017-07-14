@@ -1,0 +1,19 @@
+---
+year: 2017
+date: 10-07-2017
+abbr_name: Bexley
+full_name: Bexley Festival
+location: Bexley
+guidelines: NGWBJ
+winners:
+  - name: Mike Carter
+    bos:
+      gold:
+        - name: Porter
+    flight:
+      gold:
+        - name: Porter
+  - name: Phill Turner
+    flight:
+      bronze:
+        - name: Bitter

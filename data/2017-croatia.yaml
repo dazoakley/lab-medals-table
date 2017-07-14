@@ -1,0 +1,13 @@
+---
+year: 2017
+date: 01-06-2017
+abbr_name: Croatia
+full_name: VI. Hrvatsko Homebrew Prvenstvo
+location: Croatia
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    flight:
+      silver:
+        - name: Ooldveek Single
+          style: 26A

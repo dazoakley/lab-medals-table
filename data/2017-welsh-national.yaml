@@ -1,0 +1,31 @@
+---
+year: 2017
+date: 01-07-2017
+full_name: Welsh National
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Man's IBS
+          style: 20C
+        - name: Ooldveek Tripel
+          style: 26C
+  - name: Sam Whaley
+    flight:
+      gold:
+        - name: Regency
+          style: 11C
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Mr Goldings
+          style: 12C
+      silver:
+        - name: Georgijs Voshington Porter
+          style: 9C
+  - name: Rich Lock
+    flight:
+      bronze:
+        - name: Retribution Porter
+          style: 20A
