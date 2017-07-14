@@ -1,0 +1,21 @@
+---
+year: 2017
+date: 03-07-2017
+abbr_name: London vs Leeds
+full_name: London vs Leeds New England IPA Challenge
+guidelines: BJCP 2015
+winners:
+  - name: Fraser Withers
+    bos:
+      gold:
+        - name: Welcome To Murkvile
+          style: 35A
+    flight:
+      gold:
+        - name: Welcome To Murkvile
+          style: 35A
+  - name: Neal Irvin
+    flight:
+      bronze:
+        - name: NEIPA
+          style: 35A
