@@ -25,7 +25,15 @@ module LAB
       private
 
       def competitions
-        LAB::DataLoader.competitions
+        LAB::DataLoader.competitions_for_table
+      end
+
+      def brewers
+        LAB::DataLoader.brewers_for_table
+      end
+
+      def sorted_brewers
+        LAB::DataLoader.sorted_brewers_for_table
       end
 
       def header_start
@@ -105,10 +113,10 @@ TXT
       def brewer_rows
         html = []
 
-        LAB::DataLoader.sorted_brewers.each do |obj|
+        sorted_brewers.each do |obj|
           brewer_name = obj[0]
           rank        = obj[1]
-          brewer      = LAB::DataLoader.brewers[brewer_name]
+          brewer      = brewers[brewer_name]
 
           next if brewer['score'] == 0.0
 

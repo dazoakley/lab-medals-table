@@ -5,6 +5,24 @@ module LAB
         File.join(File.dirname(__FILE__), '..', '..', 'data', '*.yaml')
       end
 
+      def competitions_for_table
+        competitions.reject { |data| data['exclude_from_table'] }
+      end
+
+      def competitions_for_roll
+        competitions.reject { |data| data['exclude_from_roll_of_honour'] }
+      end
+
+      def brewers_for_table
+        brewers(competitions_for_table)
+      end
+
+      def sorted_brewers_for_table
+        sorted_brewers(brewers_for_table)
+      end
+
+      private
+
       def competitions
         @competitions ||= begin
           Dir[data_glob].map     { |file| YAML.load(File.read(file)) }
@@ -13,11 +31,10 @@ module LAB
         end
       end
 
-      def brewers
-        @brewers ||= begin
+      def brewers(competitions)
           memo = {}
 
-          foreach_competition_winner do |data|
+          foreach_competition_winner(competitions) do |data|
             brewer = memo[data['name']] ||= new_brewer_data.dup
 
             append_medal_counts!(brewer, data)
@@ -26,14 +43,11 @@ module LAB
           memo.each { |_brewer, data| append_score!(data) }
 
           memo
-        end
       end
 
-      def sorted_brewers
-        @sorted_brewers ||= LAB::Sorter.new(brewers).sort_and_rank
+      def sorted_brewers(brewers)
+        LAB::Sorter.new(brewers).sort_and_rank
       end
-
-      private
 
       def calc_score(medals)
         score = 0
@@ -63,7 +77,7 @@ module LAB
         end
       end
 
-      def foreach_competition_winner
+      def foreach_competition_winner(competitions)
         competitions.each do |competition|
           competition['winners'].each do |data|
             yield(data)

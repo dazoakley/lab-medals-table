@@ -10,7 +10,7 @@ module LAB
       private
 
       def competitions
-        LAB::DataLoader.competitions
+        LAB::DataLoader.competitions_for_roll
       end
     end
   end
