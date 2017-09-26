@@ -1,0 +1,59 @@
+---
+year: 2017
+date: 16-09-2017
+abbr_name: UK NHC
+full_name: UK National Homebrewing Competition
+location: Bristol
+guidelines: BJCP 2015
+winners:
+  - name: Ken Bazley
+    bos:
+      silver:
+        - name: Great Galah
+          style: 24A
+    flight:
+      gold:
+        - name: Great Galah
+          style: 24A
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Matt Monroe
+          style: 13A
+  - name: Paul Spearman
+    flight:
+      gold:
+        - name: Paul's Old Ale
+          style: 17B
+  - name: Rich Lock
+    flight:
+      gold:
+        - name: Retribution DIPA
+          style: 22A
+  - name: Lee Immins
+    flight:
+      silver:
+        - name: Knight
+          style: 12C
+  - name: Sasha Maznov
+    flight:
+      silver:
+        - name: Saison IPA
+          style: 21B
+  - name: Fraser Withers
+    flight:
+      silver:
+        - name: Best Mate
+          style: 11C
+        - name: Crossroads
+          style: 18B
+        - name: Death Star
+          style: 22A
+      bronze:
+        - name: Lemon Drop
+          style: 3A
+  - name: Richard Clibborn
+    flight:
+      bronze:
+        - name: 3 Phase Tripel
+          style: 26C
