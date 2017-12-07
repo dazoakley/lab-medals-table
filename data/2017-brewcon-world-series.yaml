@@ -1,0 +1,63 @@
+---
+year: 2017
+date: 12-11-2017
+abbr_name: Brew Con
+full_name: Brew Con World Series
+location: 'Brew Con, London'
+guidelines: BJCP 2015
+winners:
+  - name: James Wilson
+    flight:
+      silver:
+        - name: Men Vs Wheat
+          style: 10C
+        - name: Chocolate Bomb
+          style: 30A
+        - name: Fat Cat
+          style: 16D
+        - name: Saison Campsis
+          style: 25B
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Tea Junction
+          style: 30A
+      silver:
+        - name: Crossroads
+          style: 18B
+        - name: Blue Jay
+          style: 19A
+          asst_brewer: Lee Kellet
+  - name: Mark Charlwood
+    flight:
+      bronze:
+        - name: Diet Dark Lord
+          style: 30A
+  - name: Lee Immins
+    flight:
+      silver:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Daisycutter
+          style: 5B
+      bronze:
+        - name: Perle's Cafe
+          style: 5D
+  - name: Mike Carter
+    flight:
+      silver:
+        - name: Not A Boys' Bitter
+          style: 11C
+  - name: Richard Clibborn
+    flight:
+      silver:
+        - name: 3 Phase Tripel IPA
+          style: 21B-belgian
+  - name: Rob Gallagher
+    flight:
+      gold:
+        - name: Skłodowska's Oaken Heart
+          style: 27-piwo
