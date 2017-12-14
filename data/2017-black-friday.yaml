@@ -6,89 +6,11 @@ full_name: Black Friday
 location: Ubrew
 guidelines: BJCP 2015
 winners:
-  - name: Robbie Gaston
-    bos:
-      gold:
-        - name: Milky Mild
-          style: 13A
-          asst_brewer: Tim Passmore, Hugh Rowberry
-    flight:
-      gold:
-        - name: Milky Mild
-          style: 13A
-          asst_brewer: Tim Passmore, Hugh Rowberry
-  - name: Russell Purves
-    bos:
-      silver:
-        - name: Alone In A Crowdie
-          style: 29A
-          asst_brewer: Daren Fearon
-    flight:
-      gold:
-        - name: Alone In A Crowdie
-          style: 29A
-          asst_brewer: Daren Fearon
-  - name: James Torr
-    bos:
-      bronze:
-        - name: Nah Yuh Carry Mi Things?
-          style: 20A
-    flight:
-      gold:
-        - name: Nah Yuh Carry Mi Things?
-          style: 20A
-  - name: Jerry Pringle
-    flight:
-      silver:
-        - name: Black Metal Mic Czech
-          style: 3D
-  - name: Nick Bosworth
-    flight:
-      bronze:
-        - name: Black Country Noggy
-          style: 13A
-  - name: Charles Abbott
-    flight:
-      silver:
-        - name: Heavy On The Chips
-          style: 13C
-          asst_brewer: Jason Jones
-  - name: William Dunn
-    flight:
-      bronze:
-        - name: Dunn's American Porter
-          style: 20A
   - name: Lee Immins
     flight:
       HM:
         - name: Bring Your Daughter To The Porter
           style: 13C
-  - name: Philip Coulter
-    flight:
-      gold:
-        - name: Sandy's Sweet Stout
-          style: 16A
-          asst_brewer: Claire Gilmour
-  - name: Thomas Handysides
-    flight:
-      silver:
-        - name: Black Monday
-          style: 16B
-  - name: Jonathan Purdie
-    flight:
-      bronze:
-        - name: Mocha Stout
-          style: 16A
-  - name: Charles Tinsley
-    flight:
-      HM:
-        - name: Bounty Hunter
-          style: 16B
-  - name: Mark Hopkins
-    flight:
-      gold:
-        - name: Uncle Sam Stout
-          style: 20B
   - name: Barry Watts
     flight:
       silver:
@@ -100,16 +22,6 @@ winners:
         - name: Black Armadillo
           style: 20B
           asst_brewer: Vincent Clifford
-  - name: Paul Gaunt
-    flight:
-      gold:
-        - name: Dark Horse
-          style: 20C
-  - name: George Hedley
-    flight:
-      silver:
-        - name: Vladimir Putin
-          style: 20C
   - name: John Kellett
     flight:
       bronze:
@@ -120,11 +32,6 @@ winners:
       HM:
         - name: A Bit Of Inner Darkness
           style: 20C
-  - name: Piotr Mikucki
-    flight:
-      gold:
-        - name: P
-          style: 34C
   - name: Mark Sanderson
     flight:
       silver:
@@ -140,19 +47,3 @@ winners:
       silver:
         - name: Darkside Of Paradise
           style: 30A
-  - name: Anthony Painter
-    flight:
-      bronze:
-        - name: The Italian
-          style: 30A
-  - name: Anna Moe
-    flight:
-      gold:
-        - name: Tropical Night
-          style: 21B-black
-          asst_brewer: Neil Page
-  - name: Ian Cheeseright
-    flight:
-      silver:
-        - name: Concentrate And Ask Again Later
-          style: 21B-black
