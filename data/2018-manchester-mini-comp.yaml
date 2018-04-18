@@ -1,0 +1,15 @@
+---
+year: 2018
+date: 18-03-2018
+abbr_name: Manchester Mini Comp
+full_name: Manchester Mini Competition
+location: Manchester
+guidelines: BJCP 2015
+winners:
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Mark Smiled
+          style: 13A
+        - name: The Cats Bit Her
+          style: 11B

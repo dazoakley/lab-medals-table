@@ -1,0 +1,52 @@
+---
+year: 2018
+date: 09-04-2018
+abbr_name: All Hail Pale
+full_name: All Hail Pale Homebrew Competition
+location: London
+guidelines: BJCP 2015
+winners:
+  - name: Mark Sanderson
+    bos:
+      bronze:
+        - name: Dingy Bar
+          style: 5D
+    flight:
+      gold:
+        - name: Dingy Bar
+          style: 5D
+  - name: Jaques Marais
+    flight:
+      bronze:
+        - name: Happy Daze
+          style: 21B
+  - name: Sam Jones
+    flight:
+      silver:
+        - name: Vans
+          style: 18B
+  - name: Steve Smith
+    flight:
+      gold:
+        - name: Thyme Of The Saison
+          style: 25B
+  - name: Stew Horne
+    flight:
+      HM:
+        - name: Atomium
+          style: 25A
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Ooldveek Singel
+          style: 34C
+  - name: Mark Charlwood
+    flight:
+      silver:
+        - name: Traditional Lambic
+          style: 34C
+  - name: Fraser Withers
+    flight:
+      bronze:
+        - name: Cool As A
+          style: 34C
