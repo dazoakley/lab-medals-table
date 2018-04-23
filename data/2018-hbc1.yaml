@@ -1,0 +1,54 @@
+---
+year: 2018
+date: 19-04-2018
+abbr_name: 'HBC#1'
+full_name: 'Hertford Brewing Club #1 The English Sessions'
+location: Hertford
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    bos:
+      gold:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
+    flight:
+      gold:
+        - name: Bring Your Daughter To The Porter
+          style: 13C
+  - name: Mark Sanderson
+    bos:
+      silver:
+        - name: Mark Smiled
+          style: 13A
+      bronze:
+        - name: Little Sunflower
+          style: 12A
+    flight:
+      gold:
+        - name: The Cats Bit Her
+          style: 11B
+        - name: Little Sunflower
+          style: 12A
+        - name: Mark Smiled
+          style: 13A
+  - name: Robert Gallagher
+    flight:
+      gold:
+        - name: Franklin's Crystal Diffraction
+          style: 11A
+  - name: Paul Spearman
+    flight:
+      silver:
+        - name: Paul's Best Bitter
+          style: 11B
+        - name: Paul's English Golden Ale
+  - name: Robbie Gaston
+    flight:
+      silver:
+        - name: Milky Mild (Lactose-Free!)
+          style: 13A
+  - name: Dan Keeley
+    flight:
+      silver:
+        - name: Green Griffin Special
+          style: 11A
