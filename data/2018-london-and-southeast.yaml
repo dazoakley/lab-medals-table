@@ -1,0 +1,73 @@
+---
+year: 2018
+date: 20-05-2018
+abbr_name: London & Southeast
+full_name: London & Southeast Craft Brewing Competition
+location: 'Fourpure Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Devon MacDougall
+    flight:
+      bronze:
+        - name: $4 Rent
+          style: 9C
+        - name: Saison
+          style: 25B
+  - name: Richard Conroy
+    flight:
+      silver:
+        - name: Tiderace
+          style: 12A
+  - name: Alex Allen
+    flight:
+      gold:
+        - name: Old John's Lady
+          style: 16A
+      silver:
+        - name: Old John's Pale
+          style: 18B
+        - name: Vbp
+          style: 30A
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: Old Treacle
+          style: 17B
+      silver:
+        - name: Eis DIPA
+          style: 34C
+  - name: James Wilson
+    flight:
+      bronze:
+        - name: Careless
+          style: 16D
+  - name: Fraser Withers
+    flight:
+      silver:
+        - name: Blue Jay
+          style: 19A
+      gold:
+        - name: You Sexy Thing
+          style: 33A
+  - name: Richard Clibborn
+    flight:
+      HM:
+        - name: 3 Phase Tripel IPA
+          style: 21B-belgian
+  - name: Mark Charlwood
+    flight:
+      HM:
+        - name: Trappist Single
+          style: 26A
+  - name: Luke Slisz
+    flight:
+      bronze:
+        - name: Oud Bruin
+          style: 23C
+        - name: Brett Beer
+          style: 28A
+  - name: Rob Gallagher
+    flight:
+      HM:
+        - name: Rubens' Red Venus
+          style: 23B
