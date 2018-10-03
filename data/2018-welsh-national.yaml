@@ -1,0 +1,42 @@
+---
+year: 2018
+date: 22-09-2018
+abbr_name: Welsh National
+full_name: Welsh National
+guidelines: BJCP 2015
+winners:
+  - name: Stew Horne
+    flight:
+      bronze:
+        - name: I Am Not Lee Immins
+          style: 1B
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Cat's Cradle
+          style: 12A
+        - name: Prickle Puss
+          style: 23A
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Bring Your Daughter To the Porter
+          style: 13C
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: '1741'
+          style: 20A
+      silver:
+        - name: Fall Line
+          style: 19A
+  - name: James Wilson
+    flight:
+      gold:
+        - name: Careless
+          style: 16D
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: You Sexy Thing
+          style: 33B
