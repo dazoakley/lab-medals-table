@@ -36,6 +36,10 @@ winners:
         - name: Careless
           style: 16D
   - name: Fraser Withers
+    bos:
+      silver:
+        - name: You Sexy Thing
+          style: 33B
     flight:
       gold:
         - name: You Sexy Thing
