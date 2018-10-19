@@ -5,6 +5,7 @@ default: serve
 build:
 	bin/html_table > medal-table/index.html
 	bin/roll_of_honour > medal-table/roll-of-honour.html
+	bin/csv_export > medal-table/roll-of-honour.csv
 
 serve: build
 	cd medal-table && ruby -run -ehttpd . -p8000

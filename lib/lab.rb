@@ -8,6 +8,7 @@ require 'lab/sorter'
 require 'lab/html_table_builder'
 require 'lab/roll_of_honour_builder'
 require 'lab/competition_roll_of_honour_builder'
+require 'lab/csv_export_builder'
 
 module LAB
   # Scores awarded for each medal
