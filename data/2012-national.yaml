@@ -10,7 +10,7 @@ winners:
     flight:
       gold:
         - name: Mystrawraspb
-          style: 20A
+          style: 20
       silver:
         - name: Mybarleywine
           style: 19B
@@ -20,12 +20,12 @@ winners:
     bos:
       bronze:
         - name: Mystrawraspb
-          style: 20A
+          style: 20
   - name: Ken Bazley
     flight:
       gold:
         - name: Coconut Porter
-          style: 19
+          style: 21A
       bronze:
         - name: Altbier
           style: 7A
@@ -51,7 +51,7 @@ winners:
     flight:
       silver:
         - name: Summer Pale
-          style: 30A
+          style: 10A
   - name: Bryan Spooner
     flight:
       bronze:

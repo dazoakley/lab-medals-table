@@ -9,39 +9,50 @@ winners:
     flight:
       gold:
         - name: Smoked Porter
+          style: 12B
       silver:
         - name: Belgian Pale Ale
+          style: 16B
       bronze:
         - name: Wood-aged Chocolate Stout
+          style: 22C
   - name: Ken Bazley
     flight:
       gold:
         - name: Polish Bitter
+          style: 8A
   - name: Rob Case
     flight:
       gold:
         - name: Robust Porter
+          style: 12B
   - name: Paul Spearman
     flight:
       bronze:
         - name: ESB
+          style: 8C
   - name: Drew Wnek
     flight:
       gold:
         - name: Happy Thanksgiving London
+          style: 21B
   - name: Paul Henderson
     flight:
       bronze:
         - name: Mild
+          style: 11A
   - name: Andy Parker
     flight:
       bronze:
         - name: American IPA
+          style: 14B
   - name: Peter Bamford
     flight:
       silver:
         - name: Coconut Porter
+          style: 21A
   - name: Tom Johnstone
     flight:
       bronze:
-        - name: Kolsch
+        - name: Kolnel
+          style: 6C

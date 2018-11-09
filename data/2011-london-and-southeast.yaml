@@ -9,51 +9,51 @@ winners:
     flight:
       bronze:
         - name: Street Party Bitter
-          style: Special Bitters Blondes and Pale Ales
+          style: 8B
         - name: Howard Hughes Ruby Mild
-          style: Standard bitters and Milds
+          style: 11A
   - name: Tom Greasley
     flight:
       gold:
         - name: Sarcastro Stout
-          style: Speciality
+          style: 23
     bos:
       gold:
         - name: Sarcastro Stout
-          style: Speciality
+          style: 23
   - name: Rob Case
     flight:
       gold:
         - name: Scarecrow Mild
-          style: Standard bitters and Milds
+          style: 11A
       bronze:
         - name: Passing Time
-          style: Imperial Stouts, ESBs, Barleywines, Old Ales
+          style: 13F
   - name: David Wilton
     flight:
       silver:
         - name: Little Brother
-          style: Standard bitters and Milds
+          style: 8A
   - name: Gregg Irwin
     flight:
       gold:
         - name: Decadence Stout
-          style: Porters and dry Stouts
+          style: 13D
       silver:
         - name: Roaring Queen
-          style: Belgian, Fruit Beer, Lager
+          style: 16C
   - name: Paul Henderson
     flight:
       gold:
         - name: Left Over IPA
-          style: IPAs and Amber Ales
+          style: 14B
   - name: Simon Poffley
     flight:
       gold:
         - name: Higham Hill Special
-          style: Special Bitters Blondes and Pale Ales
+          style: 8C
   - name: Bryan Spooner
     flight:
       silver:
         - name: Barley One
-          style: Imperial Stouts, ESBs, Barleywines, Old Ales
+          style: 19C

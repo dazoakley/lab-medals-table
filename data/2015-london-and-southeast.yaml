@@ -15,7 +15,7 @@ winners:
           style: 8B
       silver:
         - name: 1823
-          style: 33A
+          style: 23
       bronze:
         - name: Imperious Old Bastard
           style: 22B
@@ -55,7 +55,7 @@ winners:
           style: 14B
       bronze:
         - name: Red Ruin & Redemption
-          style: 33A
+          style: 23
   - name: Mike Carter
     flight:
       gold:

@@ -9,19 +9,24 @@ winners:
     flight:
       gold:
         - name: Stout
+          style: 13A
         - name: Barley Wine
           style: 19C
       silver:
         - name: Belgian Pale Ale
+          style: 16B
         - name: Belgian Dark Star
+          style: 18E
       bronze:
         - name: Am Pils
+          style: 2C
     bos:
       gold:
         - name: Barley Wine
           style: 19C
       bronze:
         - name: Stout
+          style: 13A
   - name: Phill Turner
     flight:
       silver:
@@ -31,6 +36,7 @@ winners:
     flight:
       silver:
         - name: Campfire Stout
+          style: 13A
       bronze:
         - name: Emergency Summer IPA
           style: 14B
@@ -46,6 +52,7 @@ winners:
           style: 16C
       silver:
         - name: Choccy Woccy Stout
+          style: 13B
   - name: Pete Hughes
     flight:
       bronze:
@@ -87,10 +94,12 @@ winners:
     flight:
       bronze:
         - name: Naturale De Cherry
+          style: 20
   - name: Sean Cummins
     flight:
       bronze:
         - name: Smooth Black (Stout)
+          style: 13A
   - name: Andy Parker
     flight:
       silver:
