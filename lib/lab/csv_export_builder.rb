@@ -29,6 +29,8 @@ module LAB
                   guidelines,
                   winner['name'],
                   beer['name'],
+                  expand_beer_style(comp, beer['style']),
+                  beer['style'],
                   medal,
                   bos_medals[beer['name']]
                 ]
@@ -49,6 +51,8 @@ module LAB
           'Guidelines',
           'Brewer',
           'Beer',
+          'Style Name',
+          'Style Code',
           'Flight Medal',
           'BOS Medal'
         ]
@@ -63,6 +67,15 @@ module LAB
 
       def csv_data
         @csv_data ||= []
+      end
+
+      def expand_beer_style(comp, style)
+        guidelines = LAB.guidelines[comp['guidelines']]
+
+        return style unless guidelines
+        return style unless guidelines[style.to_s]
+
+        guidelines[style.to_s]
       end
 
       def competitions
