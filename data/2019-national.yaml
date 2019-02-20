@@ -1,0 +1,54 @@
+---
+year: 2019
+date: 16-02-2019
+abbr_name: UK NHC
+full_name: UK National Homebrewing Competition
+location: Bristol
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Apres-Festbier
+          style: 4B
+        - name: Cabin Fever
+          style: 22C
+  - name: Rob Gallagher
+    flight:
+      bronze:
+        - name: Kafka's Dark Prognosis
+          style: 3D
+      HM:
+        - name: Hume's Heavy Induction
+          style: 17C
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Cat's Cradle
+          style: 12A
+      silver:
+        - name: Rauch
+          style: 6B
+  - name: Dave Strachan
+    flight:
+      gold:
+        - name: IPA
+          style: 21A
+          asst_brewer: Richard Davies
+  - name: Richard Clibborn
+    flight:
+      silver:
+        - name: Hopping Puffin Porter
+          style: 13C
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Space Monkey Stout
+          style: 16D
+        - name: Not As Good As Fraser Withers
+          style: 33A
+  - name: Mark Charlwood
+    flight:
+      bronze:
+        - name: Nolo
+          style: 34C

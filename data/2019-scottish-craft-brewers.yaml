@@ -1,0 +1,21 @@
+---
+year: 2019
+date: 18-01-2019
+abbr_name: SCB
+full_name: 'Scottish Craft Brewers Annual Competition'
+location: Edinburgh
+guidelines: BJCP 2015
+winners:
+ - name: Mark Sanderson
+   flight:
+     silver:
+       - name: Nice Tan
+         style: 11A
+     bronze:
+       - name: Pomegranate City
+         style: 29C
+ - name: Devon MacDougall
+   flight:
+     HM:
+       - name: A Finer Shade of Pale
+         style: 21A

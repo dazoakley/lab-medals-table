@@ -1,0 +1,57 @@
+---
+year: 2018
+date: 24-11-2018
+abbr_name: Brew Con
+full_name: Brew Con World Series
+location: 'Brew Con, London'
+guidelines: BJCP 2015
+winners:
+  - name: Antony Hawkins
+    flight:
+      gold:
+        - name: Trapped In The Bottle
+          style: 26A
+        - name: Something Bold
+          style: 17D
+  - name: Rob Gallagher
+    bos:
+      gold:
+        - name: Rossum's Utopian Rebel
+          style: 3B
+    flight:
+      gold:
+        - name: Rossum's Utopian Rebel
+          style: 3B
+  - name: Fraser Withers
+    flight:
+      bronze:
+        - name: You Sexy Thing
+          style: 33B
+        - name: Metric Shed Load
+          style: 22A
+      gold:
+        - name: Metric Van Load
+          style: 18B
+      silver:
+        - name: Wee Lee Immins
+          style: 17C
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Prickle Puss
+          style: 23A
+  - name: Richard Clibborn
+    flight:
+      bronze:
+        - name: Magnus 10
+          style: 26D
+  - name: Mike Carter
+    flight:
+      bronze:
+        - name: Over The Top
+          style: 30A
+  - name: James Wilson
+    flight:
+      silver:
+        - name: Man Vs Wheat 3
+          style: 10A

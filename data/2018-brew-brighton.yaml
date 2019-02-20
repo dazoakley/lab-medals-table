@@ -1,0 +1,17 @@
+---
+year: 2018
+date: 27-10-2018
+abbr_name: Brew Brighton
+full_name: Brew Brighton
+location: Brighton
+guidelines: BJCP 2015
+winners:
+  - name: Lucas Stolarczyk
+    bos:
+      silver:
+        - name: Gaius Rubus
+          style: "40 - Foraged/Fruit Beer"
+    flight:
+      gold:
+        - name: Gaius Rubus
+          style: "40A - Foraged/Fruit Beer"
