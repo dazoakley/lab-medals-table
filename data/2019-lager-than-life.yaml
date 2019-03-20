@@ -1,0 +1,50 @@
+---
+year: 2019
+date: 09-03-2019
+abbr_name: Lager Than Life
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Mark Charlwood
+    bos:
+      gold:
+        - name: German Leichtbier I
+          style: 5A
+    flight:
+      gold:
+        - name: German Leichtbier I
+          style: 5A
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Nancy's Ray Gun
+          style: 2A
+  - name: Steve Smith
+    flight:
+      bronze:
+        - name: Czech 1-2
+          style: 3B
+      gold:
+        - name: It's The Neu! Thing
+          style: 5D
+  - name: Mick Harrison
+    flight:
+      gold:
+        - name: Ultravox
+          style: 7A
+  - name: Stew Horne
+    flight:
+      silver:
+        - name: The Image Has Gone Only You And I
+          style: 7A
+  - name: Robert Gallagher
+    flight:
+      gold:
+        - name: Mendel's Dihybrid Cross
+          style: 3C
+  - name: Lucas Stolarczyk
+    flight:
+      bronze:
+        - name: $6 Million Beer
+          style: 19B
