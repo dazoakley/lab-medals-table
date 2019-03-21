@@ -21,6 +21,29 @@ module LAB
         sorted_brewers(brewers_for_table)
       end
 
+      def new_brewer_data
+        {
+          'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] },
+          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] }
+        }
+      end
+
+      def append_medal_counts!(brewer, medals)
+        LAB.sections.each do |section|
+          medal_counts = medals[section]
+
+          next unless medal_counts
+
+          medal_counts.each do |medal, medaling_beers|
+            brewer[section][medal] += medaling_beers
+          end
+        end
+      end
+
+      def append_score!(data)
+        data['score'] = calc_score(data)
+      end
+
       private
 
       def competitions
@@ -53,6 +76,8 @@ module LAB
         score = 0
 
         medals.each do |section, medal_counts|
+          next unless medal_counts.respond_to?(:each)
+          
           medal_counts.each do |place, medaling_beers|
             score += (SCORES.fetch(section).fetch(place, 0) * medaling_beers.count)
           end
@@ -61,35 +86,12 @@ module LAB
         score
       end
 
-      def append_score!(data)
-        data['score'] = calc_score(data)
-      end
-
-      def append_medal_counts!(brewer, medals)
-        LAB.sections.each do |section|
-          medal_counts = medals[section]
-
-          next unless medal_counts
-
-          medal_counts.each do |medal, medaling_beers|
-            brewer[section][medal] += medaling_beers
-          end
-        end
-      end
-
       def foreach_competition_winner(competitions)
         competitions.each do |competition|
           competition['winners'].each do |data|
             yield(data)
           end
         end
-      end
-
-      def new_brewer_data
-        {
-          'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] },
-          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] }
-        }
       end
     end
   end
