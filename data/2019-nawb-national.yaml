@@ -15,3 +15,16 @@ winners:
     flight:
       bronze:
         - name: Bitter
+  - name: Chris Pinnock
+    flight:
+      gold:
+        - name: Kit Beer
+        - name: Oatmeal Stout
+      bronze:
+        - name: American Pale Ale
+        - name: Russian Imperial Stout
+        - name: 3 Bottle Class (IPA, Stout, Barley Wine)
+  - name: Phill
+    flight:
+      silver:
+        - name: Barley Wine
