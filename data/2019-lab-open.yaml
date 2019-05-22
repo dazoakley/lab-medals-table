@@ -1,0 +1,80 @@
+---
+year: 2019
+date: 18-05-2019
+abbr_name: LAB Open
+full_name: LAB Open
+location: "Fourpure Brewery, London"
+guidelines: BJCP 2015
+winners:
+  - name: John Kellett
+    flight:
+      4th:
+        - name: Pale Eagle
+          style: 18B
+  - name: Matthew Callaby
+    flight:
+      4th:
+        - name: Milk Stout
+          style: 16A
+  - name: Lee Immins
+    flight:
+      HM:
+        - name: Space Monkey Stout
+          style: 16D
+      bronze:
+        - name: Wee Heavy Monkey
+          style: 17C
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Titiyh Y Aa
+          style: 26C
+  - name: Mark Charlwood
+    flight:
+      bronze:
+        - name: Session IPA II
+          style: 21B
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: Mélèze
+          style: 22A
+  - name: Lucas Stolarczyk
+    flight:
+      bronze:
+        - name: They Forced Me To
+          style: 28C
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: The Cat Smiled
+          style: 32A
+      4th:
+        - name: Demeter
+          style: 27-piwo
+  - name: Antony Hawkins
+    flight:
+      gold:
+        - name: Something Old V2017
+          style: 17D
+  - name: Mike Carter
+    flight:
+      4th:
+        - name: One For The Road!
+          style: 17A
+  - name: Luke Slisz
+    flight:
+      bronze:
+        - name: The Oude Less Taken
+          style: 34B
+          asst_brewer: Robert Frost & Stephen Fry
+  - name: Richard Clibborn
+    flight:
+      gold:
+        - name: London Porter
+          style: 13C
+  - name: Steve Smith
+    flight:
+      bronze:
+        - name: Ohm Sweet Ohm
+          style: 7B
