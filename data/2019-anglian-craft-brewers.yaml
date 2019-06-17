@@ -1,0 +1,61 @@
+---
+year: 2019
+date: 15-06-2019
+abbr_name: ACB
+full_name: Anglian Craft Brewers Homebrew Competition
+location: 'Royal British Legion, Wivenhoe, Essex'
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    bos:
+      gold:
+        - name: Wee Heavy Monkey
+          style: 17C
+    flight:
+      silver:
+        - name: Space Monkey Stout
+          style: 16D
+      gold:
+        - name: Wee Heavy Monkey
+          style: 17C
+  - name: Mark Sanderson
+    bos:
+      silver:
+        - name: Tapestry
+          style: 13A
+    flight:
+      silver:
+        - name: Panzer X
+          style: 8B
+      gold:
+        - name: Tapestry
+          style: 13A
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: 'Kölsch, Eh? Lök!'
+          style: 5B
+  - name: Paul Spearman
+    flight:
+      HM:
+        - name: Paul's German Pilsner
+          style: 5D
+  - name: Steve Smith
+    flight:
+      silver:
+        - name: Moe Tucker's New Zealand Farmhouse
+          style: 25B
+  - name: Phill Turner
+    flight:
+      4th:
+        - name: Georgijs Voshington
+          style: 9C
+          asst_brewer: Mark Sanderson
+      silver:
+        - name: Bog Standard Bitter
+          style: 11B
+  - name: Fraser Withers
+    flight:
+      HM:
+        - name: Baltic Atheists
+          style: 9C
