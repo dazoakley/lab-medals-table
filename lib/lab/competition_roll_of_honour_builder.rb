@@ -5,11 +5,11 @@ module LAB
     attr_reader :comp
 
     BOS_POS = {
-      'gold'   => '1st',
+      'gold' => '1st',
       'silver' => '2nd',
       'bronze' => '3rd',
-      '4th'    => '4th',
-      'HM'     => '5th'
+      '4th' => '4th',
+      'HM' => '5th'
     }.freeze
 
     def initialize(comp)
@@ -38,7 +38,7 @@ module LAB
                                   end
                                 end
 
-                 bos.sort_by { |medal, beer| medal_to_bos_place(medal) }
+                 bos.sort_by { |medal, _beer| medal_to_bos_place(medal) }
                     .to_h
                end
     end
@@ -58,9 +58,9 @@ module LAB
                                    end
 
                     flight
-                      .sort_by { |medal, beer| medal_to_bos_place(medal) }
+                      .sort_by { |medal, _beer| medal_to_bos_place(medal) }
                       .to_h
-                      .each do |medal, beers|
+                      .each do |_medal, beers|
                         beers.sort_by! do |winner|
                           [winner['brewer'], winner['beer']['name'].to_s]
                         end
@@ -71,7 +71,7 @@ module LAB
     private
 
     def medal_to_bos_place(medal)
-      BOS_POS[medal] ? BOS_POS[medal] : medal
+      BOS_POS[medal] || medal
     end
 
     def brewer_and_beer_line(beer)
@@ -119,11 +119,13 @@ module LAB
       html = []
 
       flight_winners.each do |medal, winners|
-        if medal == 'HM'
-          html << "<dt>Honourable Mention</dt>"
-        else
-          html << "<dt>#{medal.titleize} Medals</dt>"
-        end
+        html << if medal == 'HM'
+                  '<dt>Honourable Mention</dt>'
+                elsif medal == '4th'
+                  '<dt>Fourth Place</dt>'
+                else
+                  "<dt>#{medal.titleize} Medals</dt>"
+                end
 
         winners.each do |winner|
           html << "<dd>#{brewer_and_beer_line(winner)}</dd>"
