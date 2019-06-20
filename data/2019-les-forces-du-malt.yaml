@@ -1,0 +1,15 @@
+---
+year: 2019
+date: 16-06-2019
+abbr_name: FDMBA
+full_name: Les Forces du Malt
+location: 'Toulouse, France'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      gold:
+        - name: Powder Day
+          style: 21A
+        - name: '1741'
+          style: 20A
