@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rspec'
-gem 'pry'
 gem 'awesome_print'
+gem 'nokogiri', '~> 1.10.4'
+gem 'pry'
+gem 'rspec'
 gem 'titleize'
-gem 'nokogiri'
