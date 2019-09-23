@@ -1,0 +1,44 @@
+---
+year: 2019
+date: 14-09-2019
+abbr_name: Welsh National
+full_name: Welsh National Homebrew Competition
+location: 'Tiny Rebel Brewery, Newport'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: Freshly Squeezed
+          style: 18B
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Mandrill Mild
+          style: 13A
+        - name: All Was Quiet In The Deep Dark Wood
+          style: 33A
+  - name: Lucas Stolarczyk
+    flight:
+      silver:
+        - name: The Midnight Snack
+          style: 19C
+  - name: Stew Horne
+    flight:
+      silver:
+        - name: Mae Haf A'r Byw Yn Hawdd
+          style: 25B
+  - name: Craig Tarft
+    flight:
+      bronze:
+        - name: Innocent Perle
+          style: 25A
+  - name: Fraser Withers
+    flight:
+      silver:
+        - name: Sour Paulo
+          style: "PRX4 - Catharina Sour"
+        - name: You Sexy Thing
+          style: 33B
+        - name: Hot Chocolate
+          style: 30A
