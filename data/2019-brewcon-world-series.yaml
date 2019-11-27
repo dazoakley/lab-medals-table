@@ -1,0 +1,62 @@
+---
+year: 2019
+date: 24-11-2019
+abbr_name: Brew Con
+full_name: Brew Con World Series III
+location: 'Brew Con, London'
+guidelines: BJCP 2015
+winners:
+  - name: Steve Smith
+    flight:
+      gold:
+        - name: Yorkshire/sussex
+          style: 11B
+    bos:
+      gold:
+        - name: Yorkshire/sussex
+          style: 11B
+  - name: Rob Gallagher
+    flight:
+      gold:
+        - name: Rob's On The Job
+          style: 9A
+        - name: Rob Is No Slob
+          style: 3C
+  - name: Mark Charlwood
+    flight:
+      silver:
+        - name: American Light Lager
+          style: 1A
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Pale New World
+          style: 12A
+      bronze:
+        - name: Half A Dozen
+          style: 11B
+      HM:
+        - name: Hamlet
+          style: 32A
+  - name: Lee Immins
+    flight:
+      HM:
+        - name: Fear The Monkey
+          style: 13C
+        - name: Paradise Stout
+          style: 30A
+  - name: Paul Spearman
+    flight:
+      bronze:
+        - name: Paul's Imperial Stout
+          style: 20C
+  - name: Fraser Withers
+    flight:
+      bronze:
+        - name: You Sexy Thing
+          style: 33B
+      gold:
+        - name: Crossroads
+          style: 18B
+        - name: Militant Atheist
+          style: 21A

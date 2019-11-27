@@ -21,19 +21,21 @@ module LAB
               end
             end
 
-            winner['flight'].each do |medal, beers|
-              beers.each do |beer|
-                csv_data << [
-                  year,
-                  name,
-                  guidelines,
-                  winner['name'],
-                  beer['name'],
-                  expand_beer_style(comp, beer['style']),
-                  beer['style'],
-                  medal,
-                  bos_medals[beer['name']]
-                ]
+            if winner['flight']
+              winner['flight'].each do |medal, beers|
+                beers.each do |beer|
+                  csv_data << [
+                    year,
+                    name,
+                    guidelines,
+                    winner['name'],
+                    beer['name'],
+                    expand_beer_style(comp, beer['style']),
+                    beer['style'],
+                    medal,
+                    bos_medals[beer['name']]
+                  ]
+                end
               end
             end
           end
