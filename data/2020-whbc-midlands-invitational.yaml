@@ -1,0 +1,36 @@
+---
+year: 2020
+date: 19-01-2020
+abbr_name: WHBC
+full_name: WHBC Midlands Invitational
+location: 'Tonic, Worcester'
+guidelines: BJCP 2015
+winners:
+  - name: Rob Gallagher
+    bos:
+      gold:
+        - name: Franklin's Crystal Diffraction
+          style: 11B
+    flight:
+      silver:
+        - name: Franklin's Crystal Diffraction
+          style: 11B
+  - name: Ian Cosier
+    bos:
+      bronze:
+        - name: Oxford Road
+          style: 12C
+    flight:
+      silver:
+        - name: Oxford Road
+          style: 12C
+  - name: Fraser Withers
+    flight:
+      bronze:
+        - name: Time Lord
+          style: 11B
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Currie Night Pale
+          style: 12A
