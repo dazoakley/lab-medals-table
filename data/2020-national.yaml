@@ -1,0 +1,52 @@
+---
+year: 2020
+date: 15-02-2020
+abbr_name: UK NHC
+full_name: UK National Homebrewing Competition
+location: Bristol
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Apresfestbier
+          style: 4B
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Blame The French
+          style: 1B
+      gold:
+        - name: '1666'
+          style: 32A
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Not As Good As Fraser Witherses
+          style: 17C
+      HM:
+        - name: Paradise Stout
+          style: 30A
+      bronze:
+        - name: Theres No Smoke Without Helles Fire
+          style: 6B
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Black Yet Red
+          style: 23F
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: You Sexy Thing
+          style: 33B
+  - name: James Wilson
+    flight:
+      HM:
+        - name: The Duvel Went Down To Georgia
+          style: 34B
+  - name: Simonas Vainauskas
+    flight:
+      gold:
+        - name: You Could Peddle This In Saudi Arabia
+          style: 27-gose
