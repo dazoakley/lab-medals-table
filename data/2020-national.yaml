@@ -12,6 +12,10 @@ winners:
         - name: Apresfestbier
           style: 4B
   - name: Mark Sanderson
+    bos:
+      silver:
+        - name: '1666'
+          style: 32A
     flight:
       bronze:
         - name: Blame The French
