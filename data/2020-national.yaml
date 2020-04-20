@@ -44,6 +44,9 @@ winners:
       gold:
         - name: You Sexy Thing
           style: 33B
+    bos:
+      bronze:
+        - name: You Sexy Thing
   - name: James Wilson
     flight:
       HM:

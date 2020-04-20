@@ -41,6 +41,10 @@ winners:
         - name: Cool As A Kiwi
           style: PRX5 - New Zealand Pilsner
           asst_brewer: Charlie Cat
+    bos:
+      bronze:
+        - name: Cool As A Kiwi
+
   - name: Steve Smith
     flight:
       bronze:

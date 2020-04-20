@@ -102,3 +102,8 @@ winners:
       bronze:
         - name: Sinead O'Stout
           style: 13B
+  - name: Fraser Withers
+    flight:
+      silver:
+        - name: Death Star
+          style: 14C

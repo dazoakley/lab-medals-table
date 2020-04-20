@@ -70,3 +70,18 @@ winners:
       bronze:
         - name: Roll The Potato
           style: 13B
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Best Mate
+          style: 11B
+        - name: Yankee Wheat
+          style: 1D
+        - name: Big Foot
+          style: 22B
+      bronze:
+        - name: Blue Jay
+          style: 19A
+    bos:
+      gold:
+        - name: Big Foot
