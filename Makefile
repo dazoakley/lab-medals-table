@@ -12,4 +12,4 @@ serve: build
 	cd medal-table && ruby -run -ehttpd . -p8000
 
 deploy: build
-	rsync -e ssh --delete -varuzP medal-table/ admin@londonamateurbrewers.co.uk:/srv/londonamateurbrewers.co.uk/public/htdocs/medal-table/
+	rsync -e ssh --delete -varuzP medal-table/ sympl@londonamateurbrewers.co.uk:/srv/londonamateurbrewers.co.uk/public/htdocs/medal-table/
