@@ -1,0 +1,20 @@
+---
+year: 2020
+date: 05-07-2020
+abbr_name: FDMBA
+full_name: Les Forces du Malt
+location: 'Toulouse, France'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    bos:
+      gold:
+        - name: Helles Bels
+          style: 29A
+    flight:
+      silver:
+        - name: Mojit-IPA
+          style: 21B
+      gold:
+        - name: Helles Bels
+          style: 29A
