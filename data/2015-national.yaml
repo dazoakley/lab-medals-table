@@ -46,3 +46,14 @@ winners:
       bronze:
         - name: Es Weiss Zwei
           style: 10A
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Big Foot
+          style: 22B
+      silver:
+        - name: Death Star
+          style: 22A
+      bronze:
+        - name: Das Gut
+          style: 5B
