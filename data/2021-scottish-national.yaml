@@ -1,0 +1,38 @@
+---
+year: 2021
+date: 20-02-2021
+abbr_name: SNC
+full_name: Scottish National Homebrew Competition
+location: Remote Judging
+guidelines: BJCP 2015
+winners:
+  - name: Fraser Withers
+    bos:
+      silver:
+        - name: Too Strong For Kong
+          style: 33B
+    flight:
+      gold:
+        - name: Too Strong For Kong
+          style: 33B
+  - name: James Wilson
+    flight:
+      gold:
+        - name: Epsom Strong Bitter
+          style: 11C
+      bronze:
+        - name: Hard Top
+          style: 20B
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Mandrill Mild
+          style: 13A
+  - name: Stew Horne
+    flight:
+      silver:
+        - name: Jorkvik
+          style: 28A
+      HM:
+        - name: Silly Saison
+          style: "31A: Alternative Grain Beer"
