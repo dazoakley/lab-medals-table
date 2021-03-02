@@ -1,13 +1,13 @@
 ---
-year: 2016
-date: 03-09-2016
+year: 2020
+date: 21-11-2020
 abbr_name: Briarbank
 full_name: Briarbank Homebrew Competition
-location: Briarbank Brewery, Ipswich
+location: Brairbank Brewery, Ipswich
 guidelines: SIBA
 winners:
   - name: Mark Sanderson
     flight:
       gold:
-        - name: Daisycutter
-          style: Kolsch
+        - name: Panzer X
+          style: Schwarzbier
