@@ -1,0 +1,69 @@
+---
+year: 2021
+date: 28-03-2021
+abbr_name: 11+
+full_name: The Eleven Plus Homebrew Competition
+location: Online
+guidelines: BJCP 2015
+winners:
+  - name: Craig Tarft
+    bos:
+      gold:
+        - name: Wee Bevvy
+          style: 17C
+    flight:
+      gold:
+        - name: Wee Bevvy
+          style: 17C
+  - name: Fraser Withers
+    bos:
+      silver:
+        - name: Too Strong For Kong
+          style: "43A: Speciality Wood Aged Beer"
+          asst_brewer: Charlie Cat
+    flight:
+      gold:
+        - name: Too Strong For Kong
+          style: "43A: Speciality Wood Aged Beer"
+          asst_brewer: Charlie Cat
+  - name: Jacques Marais
+    bos:
+      bronze:
+        - name: Darker's Quad
+          style: 26D
+    flight:
+      gold:
+        - name: Darker's Quad
+          style: 26D
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Cabin Fever
+          style: 22C
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Simian Claws
+          style: 9A
+          asst_brewer: 'Pete Talbot, Paul Harper'
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Leshy
+          style: 26D
+      gold:
+        - name: Omnipresent Authority Figure
+          style: 20C
+  - name: Russell Anthony
+    flight:
+      HM:
+        - name: Belgian Dark Strong
+          style: 26D
+  - name: Lucas Stolarczyk
+    flight:
+      silver:
+        - name: Maximum Oak Planck
+          style: "36A: Wood Aged Beer"
+      bronze:
+        - name: Maximum Planck
+          style: "37A: Spiced, Herb or Vegetable Beer"
