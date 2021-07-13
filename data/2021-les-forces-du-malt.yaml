@@ -1,0 +1,22 @@
+---
+year: 2021
+date: 03-07-2021
+abbr_name: FDMBA
+full_name: Les Forces du Malt
+location: 'Toulouse, France'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    bos:
+      gold:
+        - name: Mélèze
+          style: 22A
+    flight:
+      bronze:
+        - name: Cabinfever
+          style: 17D
+        - name: Freshly Squeezed
+          style: 18B
+      gold:
+        - name: Mélèze
+          style: 22A
