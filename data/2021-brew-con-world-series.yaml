@@ -1,0 +1,58 @@
+---
+year: 2021
+date: 05-11-2021
+abbr_name: Brew Con
+full_name: Brew Con World Series IV
+location: 'Wild Card Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: May Day Leap
+          style: 4C
+        - name: Cabin Fever
+          style: 22C
+      HM:
+        - name: Maltymcbarrelface
+          style: 33A
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Hooters
+          style: 13C
+      4th:
+        - name: Picasso Cubes
+          style: 32A
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: Dreams
+          style: 13B
+  - name: Stew Horne
+    flight:
+      4th:
+        - name: Garden Hop Pale
+          style: 18B
+  - name: Lucas Stolarczyk
+    flight:
+      4th:
+        - name: K for Kayak
+          style: 26A
+        - name: The Path To Inner Peace And Harmony
+          style: 20C
+  - name: Jacques Marais
+    flight:
+      HM:
+        - name: Deaths Quad
+          style: 26D
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Peter Pipli Pipola Picked A Pin Of Portered Pipli
+          style: 29B
+  - name: Guy Asaert
+    flight:
+      bronze:
+        - name: Connel Bridge Wee Heavy
+          style: 17C
