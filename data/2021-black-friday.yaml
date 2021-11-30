@@ -1,0 +1,41 @@
+---
+year: 2021
+date: 26-11-2021
+abbr_name: Black Friday
+full_name: Black Friday
+location: 'Hammerton Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Rob Gallagher
+    bos:
+      silver:
+        - name: Kafka's Dark Morphology
+          style: 3D
+    flight:
+      gold:
+        - name: Kafka's Dark Morphology
+          style: 3D
+  - name: James Wilson
+    bos:
+      bronze:
+        - name: Hard Top
+          style: 20B
+    flight:
+      gold:
+        - name: Hard Top
+          style: 20B
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: Stouty McStoutface
+          style: 15B
+  - name: Lucas Stolarczyk
+    flight:
+      bronze:
+        - name: The Path To Inner Peace And Harmony
+          style: 20C
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: Noirmottor
+          style: "40A: Other Black Beer - Black Doppelbock"
