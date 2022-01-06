@@ -37,45 +37,46 @@ module LAB
       end
 
       def header_start
-        <<TXT
-<html>
-  <head>
-    <link href="/wp-content/themes/lonbrew-wp/style.css" rel="stylesheet">
-    <style type="text/css">
-      html { font-size: smaller; padding: 15px }
-      table { border-collapse: collapse; text-align: center; font-size: small; }
-      th,td { border: 1px solid grey; padding: 2px 4px; }
-      .totals   { background-color: #F0F0F0; }
-      tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
-      td.gold   { background-color: gold !important; }
-      td.silver { background-color: silver !important; }
-      td.bronze { background-color: #CD7F32 !important; }
-    </style>
-  <head>
-  <body>
-    <h2>London Amateur Brewers - Medals Table Since 2010</h2>
-    <h4>Medal Values</h4>
-    <p>
-      <b>Flight:</b> Gold - #{LAB::SCORES['flight']['gold']}, Silver - #{LAB::SCORES['flight']['silver']}, Bronze - #{LAB::SCORES['flight']['bronze']}<br />
-      <b>Best of Show:</b> Gold - #{LAB::SCORES['bos']['gold']}, Silver - #{LAB::SCORES['bos']['silver']}, Bronze - #{LAB::SCORES['bos']['bronze']}
-    </p>
-    <p>
-      <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
-      Brewers equal after total medal points are ranked then by BoS GSB, then Flight GSB.
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th rowspan="3">Rank</th>
-          <th rowspan="3">Member</th>
-          <th rowspan="3" class="totals">Medal Points</th>
-          <th colspan="6" class="totals">Total Medals</th>
-TXT
+        <<~TXT
+          <html>
+            <head>
+              <link href="/wp-content/themes/lonbrew-wp/style.css" rel="stylesheet">
+              <style type="text/css">
+                html { font-size: smaller; padding: 15px }
+                table { border-collapse: collapse; text-align: center; font-size: small; }
+                th,td { border: 1px solid grey; padding: 2px 4px; }
+                .totals   { background-color: #F0F0F0; }
+                tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
+                td.gold   { background-color: gold !important; }
+                td.silver { background-color: silver !important; }
+                td.bronze { background-color: #CD7F32 !important; }
+              </style>
+            <head>
+            <body>
+              <h2>London Amateur Brewers - Medals Table Since 2010</h2>
+              <h4>Medal Values</h4>
+              <p>
+                <b>Flight:</b> Gold - #{LAB::SCORES['flight']['gold']}, Silver - #{LAB::SCORES['flight']['silver']}, Bronze - #{LAB::SCORES['flight']['bronze']}<br />
+                <b>Best of Show:</b> Gold - #{LAB::SCORES['bos']['gold']}, Silver - #{LAB::SCORES['bos']['silver']}, Bronze - #{LAB::SCORES['bos']['bronze']}
+              </p>
+              <p>
+                <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
+                Brewers equal after total medal points are ranked then by BoS GSB, then Flight GSB.
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th rowspan="3">Rank</th>
+                    <th rowspan="3">Member</th>
+                    <th rowspan="3" class="totals">Total Points</th>
+                    <th rowspan="3" class="totals">Total Medals</th>
+                    <th colspan="6" class="totals">Medals</th>
+        TXT
       end
 
       def header_competitions
         competitions.map do |competition|
-          %(          <th colspan="6">#{competition['year']} - #{(competition['abbr_name'] || competition['full_name'])}</th>)
+          %(          <th colspan="6">#{competition['year']} - #{competition['abbr_name'] || competition['full_name']}</th>)
         end.join("\n")
       end
 
@@ -124,7 +125,8 @@ TXT
             '       <tr>',
             "         <td>#{rank}</td>",
             "         <td>#{brewer_name.sub(' ', '&nbsp;')}</td>",
-            "         <td class=\"totals\">#{brewer['score']}</td>"
+            "         <td class=\"totals\">#{brewer['score']}</td>",
+            "         <td class=\"totals\">#{brewer['total_medals']}</td>"
           ]
 
           row << "         #{medal_data_cells(brewer, total_count: true)}"

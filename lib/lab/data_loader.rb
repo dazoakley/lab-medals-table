@@ -1,3 +1,5 @@
+require 'awesome_print'
+
 module LAB
   class DataLoader
     class << self
@@ -24,7 +26,7 @@ module LAB
       def new_brewer_data
         {
           'flight' => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] },
-          'bos'    => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] }
+          'bos' => { 'gold' => [], 'silver' => [], 'bronze' => [], '4th' => [], 'HM' => [] }
         }
       end
 
@@ -40,32 +42,51 @@ module LAB
         end
       end
 
-      def append_score!(data)
-        data['score'] = calc_score(data)
+      def append_total_medal_count!(brewer)
+        total_count = 0
+
+        LAB.sections.each do |section|
+          next unless brewer[section]
+
+          LAB.medals.each do |medal|
+            medals_won = brewer[section][medal]
+
+            next unless medals_won
+
+            total_count += medals_won.size
+          end
+        end
+
+        brewer['total_medals'] = total_count
+      end
+
+      def append_score!(brewer)
+        brewer['score'] = calc_score(brewer)
       end
 
       private
 
       def competitions
-        @competitions ||= begin
-          Dir[data_glob].map     { |file| YAML.load(File.read(file)) }
-                        .sort_by { |data| Date.parse(data['date']) }
-                        .reverse
-        end
+        @competitions ||= Dir[data_glob].map { |file| YAML.load(File.read(file)) }
+                                        .sort_by { |data| Date.parse(data['date']) }
+                                        .reverse
       end
 
       def brewers(competitions)
-          memo = {}
+        memo = {}
 
-          foreach_competition_winner(competitions) do |data|
-            brewer = memo[data['name']] ||= new_brewer_data.dup
+        foreach_competition_winner(competitions) do |data|
+          brewer = memo[data['name']] ||= new_brewer_data.dup
 
-            append_medal_counts!(brewer, data)
-          end
+          append_medal_counts!(brewer, data)
+        end
 
-          memo.each { |_brewer, data| append_score!(data) }
+        memo.each do |_brewer, data|
+          append_score!(data)
+          append_total_medal_count!(data)
+        end
 
-          memo
+        memo
       end
 
       def sorted_brewers(brewers)
@@ -77,7 +98,7 @@ module LAB
 
         medals.each do |section, medal_counts|
           next unless medal_counts.respond_to?(:each)
-          
+
           medal_counts.each do |place, medaling_beers|
             score += (SCORES.fetch(section).fetch(place, 0) * medaling_beers.count)
           end
@@ -86,11 +107,9 @@ module LAB
         score
       end
 
-      def foreach_competition_winner(competitions)
+      def foreach_competition_winner(competitions, &block)
         competitions.each do |competition|
-          competition['winners'].each do |data|
-            yield(data)
-          end
+          competition['winners'].each(&block)
         end
       end
     end
