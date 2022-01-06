@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'awesome_print'
-gem 'nokogiri', '~> 1.11.4'
+gem 'nokogiri', '~> 1.12.5'
 gem 'pry'
 gem 'rspec'
 gem 'rubocop'
