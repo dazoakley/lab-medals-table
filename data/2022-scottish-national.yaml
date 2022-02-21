@@ -1,0 +1,43 @@
+---
+year: 2022
+date: 20-02-2022
+abbr_name: SCB
+full_name: Scottish National Homebrew Competition
+location: Remote Judging
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Mayday Leap
+          style: 4C
+      HM:
+        - name: Fauxhemian Pils
+          style: 3B
+  - name: Craig Tarft
+    flight:
+      silver:
+        - name: Just A Bitter
+          style: 11A
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: County Beermakers Old Ale
+          style: '17A1: Burton Ale'
+        - name: 'Spelt Rong, Grisette'
+          style: 25B
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Bella Lugosi
+          style: 16B
+  - name: Simas Vainauskas
+    flight:
+      bronze:
+        - name: Imposter Strongman
+          style: 25C
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: The Wolf Cries Mary
+          style: 30A
