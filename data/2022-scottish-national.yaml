@@ -41,3 +41,8 @@ winners:
       silver:
         - name: The Wolf Cries Mary
           style: 30A
+  - name: Les Manley
+    flight:
+      HM:
+        - name: English Bitter
+          style: 11B
