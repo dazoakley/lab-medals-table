@@ -29,43 +29,44 @@ module LAB
 
     def best_of_show_winners
       @bos ||= begin
-                 bos = {}
+        bos = {}
 
-                 comp['winners'].select { |winner| winner['bos'] }
-                                .each do |winner|
-                                  winner['bos'].each do |medal, beer|
-                                    bos[medal_to_bos_place(medal)] = { 'brewer' => winner['name'], 'beer' => beer.first }
-                                  end
-                                end
+        comp['winners'].select { |winner| winner['bos'] }
+                       .each do |winner|
+                         winner['bos'].each do |medal, beer|
+                           bos[medal_to_bos_place(medal)] =
+                             { 'brewer' => winner['name'], 'beer' => beer.first }
+                         end
+                       end
 
-                 bos.sort_by { |medal, _beer| medal_to_bos_place(medal) }
-                    .to_h
-               end
+        bos.sort_by { |medal, _beer| medal_to_bos_place(medal) }
+           .to_h
+      end
     end
 
     def flight_winners
       @flight ||= begin
-                    flight = {}
+        flight = {}
 
-                    comp['winners'].select { |winner| winner['flight'] }
-                                   .each do |winner|
-                                     winner['flight'].each do |medal, beers|
-                                       beers.each do |beer|
-                                         flight[medal] ||= []
-                                         flight[medal] << { 'brewer' => winner['name'], 'beer' => beer }
-                                       end
-                                     end
-                                   end
+        comp['winners'].select { |winner| winner['flight'] }
+                       .each do |winner|
+                         winner['flight'].each do |medal, beers|
+                           beers.each do |beer|
+                             flight[medal] ||= []
+                             flight[medal] << { 'brewer' => winner['name'], 'beer' => beer }
+                           end
+                         end
+                       end
 
-                    flight
-                      .sort_by { |medal, _beer| medal_to_bos_place(medal) }
-                      .to_h
-                      .each do |_medal, beers|
-                        beers.sort_by! do |winner|
-                          [winner['brewer'], winner['beer']['name'].to_s]
-                        end
-                      end
-                  end
+        flight
+          .sort_by { |medal, _beer| medal_to_bos_place(medal) }
+          .to_h
+          .each do |_medal, beers|
+            beers.sort_by! do |winner|
+              [winner['brewer'], winner['beer']['name'].to_s]
+            end
+          end
+      end
     end
 
     private
@@ -92,7 +93,7 @@ module LAB
       return style unless guidelines
       return style unless guidelines[style.to_s]
 
-      "#{style} - #{guidelines[style.to_s]}"
+      "#{style}: #{guidelines[style.to_s]}"
     end
 
     def competition_title

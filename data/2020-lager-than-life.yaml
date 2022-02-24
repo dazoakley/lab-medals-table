@@ -29,7 +29,7 @@ winners:
     flight:
       silver:
         - name: Al Capone
-          style: "43A - Kellerbier: Pale"
+          style: "43A: Kellerbier - Pale"
   - name: Russell Anthony
     flight:
       HM:
@@ -39,7 +39,7 @@ winners:
     flight:
       gold:
         - name: Cool As A Kiwi
-          style: PRX5 - New Zealand Pilsner
+          style: "X5: New Zealand Pilsner"
           asst_brewer: Charlie Cat
     bos:
       bronze:
