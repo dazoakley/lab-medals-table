@@ -1,0 +1,18 @@
+---
+year: 2021
+date: 08-05-2021
+abbr_name: Three Hills
+full_name: Three Hills Brewing Homebrew Club Ahtanum Competition
+location: Wooodford
+guidelines: BJCP 2015
+winners:
+  - name: Serge Savin
+    bos:
+      gold:
+        - name: Where Am I?
+          style: "X5: New Zealand Pilsner"
+  - name: Lee Immins
+    bos:
+      silver:
+        - name: Deep Sea Diver
+          style: 21B
