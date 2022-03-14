@@ -1,0 +1,42 @@
+---
+year: 2022
+date: 05-03-2022
+abbr_name: Lager Than Life
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    bos:
+      bronze:
+        - name: Mayday Leap
+          style: 4C
+    flight:
+      gold:
+        - name: Mayday Leap
+          style: 4C
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Beer
+          style: 3B
+  - name: Guy Asaert
+    flight:
+      silver:
+        - name: Festooned
+          style: 4B
+  - name: James Wilson
+    flight:
+      bronze:
+        - name: Experimenting Down Under
+          style: 'X5: New Zealand Pilsner'
+  - name: Joell Leskin
+    flight:
+      gold:
+        - name: Viennaaaa
+          style: 7A
+  - name: Rob Gallagher
+    flight:
+      silver:
+        - name: '1'
+          style: 8A
