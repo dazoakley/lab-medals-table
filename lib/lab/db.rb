@@ -8,7 +8,7 @@ module LAB
   class Db
     class << self
       def connect
-        @connect ||= Sequel.connect(ENV.fetch('DATABASE_URL', database_file))
+        @connect ||= Sequel.connect(ENV.fetch('DATABASE_URL', database_dsn))
       end
 
       def disconnect
@@ -32,12 +32,20 @@ module LAB
         false
       end
 
+      def drop
+        FileUtils.rm_rf(database_file)
+      end
+
       def migrations_dir
         File.join(File.dirname(__FILE__), '../../db/migrations')
       end
 
+      def database_dsn
+        "sqlite://#{database_file}"
+      end
+
       def database_file
-        "sqlite://db/lab.db"
+        'db/lab.db'
       end
     end
   end
