@@ -27,11 +27,7 @@ module LAB
             # binding.pry
             # exit
 
-            if brewers.dig(name, 'score')
-              memo[name] << brewers.dig(name, 'score')
-            else
-              memo[name] << 0.0
-            end
+            memo[name] << (brewers.dig(name, 'score') || 0.0)
           end
         end
 
@@ -46,7 +42,7 @@ module LAB
           single_comp = deep_copy(@total_data)
 
           competition['winners'].each do |data|
-            brewer = single_comp[data['name']] ||= LAB::DataLoader.new_brewer_data.dup  
+            brewer = single_comp[data['name']] ||= LAB::DataLoader.new_brewer_data.dup
             LAB::DataLoader.append_medal_counts!(brewer, data)
           end
 

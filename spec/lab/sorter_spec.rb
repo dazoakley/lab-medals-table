@@ -7,27 +7,27 @@ RSpec.describe LAB::Sorter do
     {
       'A' => {
         'score' => 40,
-        'bos'   => {
-          'gold'   => [{}],
-          'silver' => [{}, {}]
-        }
-      },
-      'B' => {
-        'score' => 20,
-        'bos'   => {
+        'bos' => {
+          'gold' => [{}],
           'silver' => [{}, {}]
         }
       },
       'C' => {
-        'score'  => 20,
+        'score' => 20,
         'flight' => {
           'gold' => [{}, {}]
         }
       },
       'D' => {
-        'score'  => 20,
+        'score' => 20,
         'flight' => {
           'gold' => [{}, {}]
+        }
+      },
+      'B' => {
+        'score' => 20,
+        'bos' => {
+          'silver' => [{}, {}]
         }
       }
     }
@@ -42,7 +42,7 @@ RSpec.describe LAB::Sorter do
 
   describe '#ranked_names' do
     it 'should sort the brewers into the correct order' do
-      expected = %w(A B C D)
+      expected = %w[A B C D]
       expect(subject.ranked_names).to eq(expected)
     end
   end

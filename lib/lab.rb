@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 require 'pry'
 require 'awesome_print'
@@ -12,15 +14,17 @@ require 'lab/csv_export_builder'
 require 'lab/points_over_time_builder'
 
 module LAB
+  autoload :Db, 'lab/db'
+
   # Scores awarded for each medal
   SCORES = {
     'flight' => {
-      'gold'   => 10,
+      'gold' => 10,
       'silver' => 5,
       'bronze' => 2.5
     },
-    'bos'    => {
-      'gold'   => 20,
+    'bos' => {
+      'gold' => 20,
       'silver' => 10,
       'bronze' => 5
     }
@@ -28,11 +32,11 @@ module LAB
 
   class << self
     def sections
-      %w(flight bos)
+      %w[flight bos]
     end
 
     def medals
-      %w(gold silver bronze)
+      %w[gold silver bronze]
     end
 
     def guidelines
