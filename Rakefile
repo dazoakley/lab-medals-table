@@ -12,7 +12,7 @@ begin
 rescue LoadError
 end
 
-DB = LAB::Db.connect
+db = LAB::Db.connect
 
 namespace :db do
   desc 'Run database migrations'
@@ -26,12 +26,14 @@ namespace :db do
   end
 
   desc 'Load the database with data'
-  task load: :migrate do
-    LAB::DatabaseLoader.new(DB).load
+  task load: %i[drop migrate] do
+    LAB::DatabaseLoader.new(db).load
   end
 
   desc 'Drop the database'
   task :drop do
     LAB::Db.drop
+    LAB::Db.disconnect
+    db = LAB::Db.connect
   end
 end

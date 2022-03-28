@@ -6,11 +6,11 @@ module LAB
     many_to_one :competition_edition
     many_to_one :style
 
-    # def validate
-    #   super
-    #   validates_includes Result.result_types, :type
-    #   validates_includes Result.places, :place
-    # end
+    def validate
+      super
+      errors.add(:type, "must be one of #{Result.result_types}") unless Result.result_types.include?(type)
+      errors.add(:place, "must be one of #{Result.places}") unless Result.places.include?(place)
+    end
 
     def self.result_types
       %w[flight bos]
