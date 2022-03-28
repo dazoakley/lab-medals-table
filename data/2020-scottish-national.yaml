@@ -1,0 +1,22 @@
+---
+year: 2020
+date: 26-01-2020
+abbr_name: SCB
+full_name: Scottish National Homebrew Competition
+location: Bellfield & Campervan Brewery
+guidelines: BJCP 2015
+winners:
+  - name: Mark Sanderson
+    bos:
+      bronze:
+        - name: 'One Be, Or Not One Be'
+          style: 2A
+    flight:
+      gold:
+        - name: 'One Be, Or Not One Be'
+          style: 2A
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Freshly Squeezed
+          style: 18B

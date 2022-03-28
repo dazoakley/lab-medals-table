@@ -14,12 +14,15 @@ require 'lab/csv_export_builder'
 require 'lab/points_over_time_builder'
 
 module LAB
+  autoload :Beer, 'lab/beer'
   autoload :Brewer, 'lab/brewer'
   autoload :Competition, 'lab/competition'
+  autoload :CompetitionEdition, 'lab/competition_edition'
   autoload :DatabaseLoader, 'lab/database_loader'
   autoload :Db, 'lab/db'
   autoload :Guideline, 'lab/guideline'
   autoload :Location, 'lab/location'
+  autoload :Result, 'lab/result'
   autoload :Style, 'lab/style'
 
   # Scores awarded for each medal

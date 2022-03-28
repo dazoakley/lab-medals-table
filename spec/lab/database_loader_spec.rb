@@ -10,15 +10,15 @@ RSpec.describe LAB::DatabaseLoader do
 
   describe '#load_guidelines' do
     it 'should load the guidelines table' do
-      expect(DB['guidelines'].count).to eq(0)
+      expect(DB[:guidelines].count).to eq(0)
 
       subject.load_guidelines
 
-      expect(DB['guidelines'].count).to eq(4)
+      expect(DB[:guidelines].count).to eq(6)
     end
 
     it 'should load the styles table' do
-      expect(DB['styles'].count).to eq(0)
+      expect(DB[:styles].count).to eq(0)
 
       subject.load_guidelines
 
@@ -30,6 +30,70 @@ RSpec.describe LAB::DatabaseLoader do
 
       expect(light_lager).to_not be(nil)
       expect(light_lager.name).to eq('American Light Lager')
+    end
+  end
+
+  describe '#load_competitions' do
+    before do
+      subject.load_guidelines
+    end
+
+    it 'should load the competitions table' do
+      expect(DB[:competitions].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:competitions].count).to eq(4)
+    end
+
+    it 'should load the locations table' do
+      expect(DB[:locations].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:locations].count).to eq(4)
+    end
+
+    it 'should load the competition_editions table' do
+      expect(DB[:competition_editions].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:competition_editions].count).to eq(5)
+    end
+
+    it 'should load the brewers table' do
+      expect(DB[:brewers].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:brewers].count).to eq(21)
+    end
+
+    it 'should load the beers table' do
+      expect(DB[:beers].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:beers].count).to eq(34)
+    end
+
+    it 'should load unknown styles into the styles table' do
+      expect(DB[:styles].count).to eq(340)
+
+      subject.load_competitions
+
+      expect(DB[:styles].count).to eq(344)
+    end
+
+    it 'should load the results table' do
+      expect(DB[:results].count).to eq(0)
+
+      subject.load_competitions
+
+      expect(DB[:results].count).to eq(39)
+      expect(DB[:results].where(type: 'flight').count).to eq(35)
+      expect(DB[:results].where(type: 'bos').count).to eq(4)
     end
   end
 end

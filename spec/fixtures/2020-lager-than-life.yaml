@@ -1,0 +1,57 @@
+---
+year: 2020
+date: 07-03-2020
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Dave Strachan
+    bos:
+      gold:
+        - name: Holy Smokes
+          style: 6B
+          asst_brewer: Richard Davies
+    flight:
+      gold:
+        - name: Holy Smokes
+          style: 6B
+          asst_brewer: Richard Davies
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Blame The French
+          style: 1B
+      bronze:
+        - name: '1666'
+          style: 32A
+  - name: Lucas Stolarczyk
+    flight:
+      silver:
+        - name: Al Capone
+          style: "43A: Kellerbier - Pale"
+  - name: Russell Anthony
+    flight:
+      HM:
+        - name: What The Helles
+          style: 4A
+  - name: Fraser Withers
+    flight:
+      gold:
+        - name: Cool As A Kiwi
+          style: "X5: New Zealand Pilsner"
+          asst_brewer: Charlie Cat
+    bos:
+      bronze:
+        - name: Cool As A Kiwi
+          style: "X5: New Zealand Pilsner"
+          asst_brewer: Charlie Cat
+  - name: Steve Smith
+    flight:
+      bronze:
+        - name: Czech Your Head
+          style: 3B
+  - name: Lee Immins
+    flight:
+      HM:
+        - name: There's No Smoke Without Helles Fire
+          style: 6B

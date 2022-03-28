@@ -8,7 +8,7 @@ module LAB
       end
 
       def competitions_for_table
-        competitions.reject { |data| data['exclude_from_table'] }
+        competitions.reject { |data| data['exclude_from_points_table'] }
       end
 
       def competitions_for_roll

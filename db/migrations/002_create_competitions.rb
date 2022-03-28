@@ -4,8 +4,10 @@ Sequel.migration do
   change do
     create_table(:competitions) do
       primary_key :id
-      String :name, null: false, unique: true
-      String :abbreviated_name, null: false, unique: true
+      String :name, null: false
+      String :abbreviated_name, null: false
+      Boolean :exclude_from_points_table, default: false
+      unique %i[name abbreviated_name]
     end
 
     create_table(:guidelines) do
@@ -17,8 +19,8 @@ Sequel.migration do
       primary_key :id
       foreign_key :guideline_id, :guidelines, null: false
       String :number, null: false
-      String :name, null: false
-      unique [:guideline_id, :number]
+      String :name # FIXME: this shoulnd't be nullable - how do we deal with "new" styles?
+      unique %i[guideline_id number]
     end
 
     create_table(:locations) do

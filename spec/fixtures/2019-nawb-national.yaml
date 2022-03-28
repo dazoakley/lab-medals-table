@@ -1,0 +1,30 @@
+---
+year: 2019
+date: 17-03-2019
+abbr_name: NAWB
+full_name: NAWB National
+location: Manchester
+guidelines: NGWBJ
+winners:
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Pale Lager
+        - name: Russian Imperial Stout
+  - name: Mick Harrison
+    flight:
+      bronze:
+        - name: Bitter
+  - name: Chris Pinnock
+    flight:
+      gold:
+        - name: Kit Beer
+        - name: Oatmeal Stout
+      bronze:
+        - name: American Pale Ale
+        - name: Russian Imperial Stout
+        - name: 3 Bottle Class (IPA, Stout, Barley Wine)
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Barley Wine
