@@ -92,8 +92,8 @@ RSpec.describe LAB::DatabaseLoader do
       subject.load_competitions
 
       expect(DB[:results].count).to eq(39)
-      expect(DB[:results].where(type: 'flight').count).to eq(35)
-      expect(DB[:results].where(type: 'bos').count).to eq(4)
+      expect(DB[:results].where(round: 'flight').count).to eq(35)
+      expect(DB[:results].where(round: 'bos').count).to eq(4)
     end
   end
 end

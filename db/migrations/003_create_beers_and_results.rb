@@ -14,9 +14,9 @@ Sequel.migration do
       foreign_key :competition_edition_id, :competition_editions, null: false
       foreign_key :beer_id, :beers, null: false
       foreign_key :style_id, :styles, null: false
-      String :type, null: false
+      String :round, null: false
       String :place, null: false
-      unique %i[competition_edition_id beer_id type]
+      unique %i[competition_edition_id beer_id round]
     end
   end
 end

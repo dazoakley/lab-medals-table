@@ -30,3 +30,10 @@ RSpec.configure do |config|
     end
   end
 end
+
+def stub_database
+  competitions_dir = File.join(File.dirname(__FILE__), 'fixtures/')
+  guidelines_dir = File.join(File.dirname(__FILE__), '../styles/')
+
+  LAB::DatabaseLoader.new(DB, competitions_dir, guidelines_dir).load
+end

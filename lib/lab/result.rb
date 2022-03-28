@@ -6,14 +6,31 @@ module LAB
     many_to_one :competition_edition
     many_to_one :style
 
+    SCORES = {
+      'flight' => {
+        'gold' => 10,
+        'silver' => 5,
+        'bronze' => 2.5
+      },
+      'bos' => {
+        'gold' => 20,
+        'silver' => 10,
+        'bronze' => 5
+      }
+    }.freeze
+
     def validate
       super
-      errors.add(:type, "must be one of #{Result.result_types}") unless Result.result_types.include?(type)
+      errors.add(:round, "must be one of #{Result.rounds}") unless Result.rounds.include?(round)
       errors.add(:place, "must be one of #{Result.places}") unless Result.places.include?(place)
     end
 
-    def self.result_types
-      %w[flight bos]
+    def score
+      SCORES[round][place] || 0
+    end
+
+    def self.rounds
+      %w[bos flight]
     end
 
     def self.places

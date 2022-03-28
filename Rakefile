@@ -37,3 +37,9 @@ namespace :db do
     db = LAB::Db.connect
   end
 end
+
+desc 'Load pry'
+task :pry do
+  require 'pry'
+  binding.pry
+end

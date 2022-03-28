@@ -70,9 +70,9 @@ module LAB
       data['winners'].each do |winner|
         brewer = Brewer.find_or_create(name: winner['name'])
 
-        Result.result_types.each do |type|
+        Result.rounds.each do |round|
           Result.places.each do |place|
-            beers = winner.dig(type, place)
+            beers = winner.dig(round, place)
             next unless beers&.any?
 
             beers.each do |beer_data|
@@ -84,7 +84,7 @@ module LAB
                 competition_edition_id: edition.id,
                 beer_id: beer.id,
                 style_id: style.id,
-                type: type,
+                round: round,
                 place: place
               )
             end
