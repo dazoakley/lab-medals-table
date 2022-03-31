@@ -12,7 +12,7 @@ module LAB
       counts = {}
 
       Result.rounds.each do |round|
-        %w[gold silver bronze].each do |place|
+        Result.places.each do |place|
           counts[round] ||= {}
           counts[round][place] = 0
         end
@@ -32,7 +32,7 @@ module LAB
       counts = medal_counts
 
       Result.rounds.each do |round|
-        %w[gold silver bronze].each do |place|
+        Result.gold_silver_bronze_places.each do |place|
           sorter_val << counts[round][place]
         end
       end

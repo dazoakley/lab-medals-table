@@ -36,5 +36,9 @@ module LAB
     def self.places
       %w[gold silver bronze 4th HM]
     end
+
+    def self.gold_silver_bronze_places
+      %w[gold silver bronze]
+    end
   end
 end

@@ -19,8 +19,8 @@ RSpec.describe LAB::Brewer do
     it 'returns the medal counts for a brewers winning beers' do
       expect(LAB::Brewer.find(name: 'Mark Sanderson').medal_counts)
         .to eq({
-                 'bos' => { 'gold' => 1, 'silver' => 0, 'bronze' => 0 },
-                 'flight' => { 'gold' => 4, 'silver' => 0, 'bronze' => 2 }
+                 'bos' => { 'gold' => 1, 'silver' => 0, 'bronze' => 0, '4th' => 0, 'HM' => 0 },
+                 'flight' => { 'gold' => 4, 'silver' => 0, 'bronze' => 2, '4th' => 0, 'HM' => 0 }
                })
     end
   end

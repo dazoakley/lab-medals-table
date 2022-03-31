@@ -4,9 +4,9 @@ require 'yaml'
 require 'pry'
 require 'awesome_print'
 require 'json'
+require 'sequel'
 
 require 'lab/data_loader'
-require 'lab/sorter'
 require 'lab/html_table_builder'
 require 'lab/roll_of_honour_builder'
 require 'lab/competition_roll_of_honour_builder'
@@ -24,6 +24,8 @@ module LAB
   autoload :Location, 'lab/location'
   autoload :Result, 'lab/result'
   autoload :Style, 'lab/style'
+  autoload :TableBuilder, 'lab/table_builder'
+  autoload :Sorter, 'lab/sorter'
 
   # Scores awarded for each medal
   SCORES = {
