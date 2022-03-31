@@ -28,7 +28,7 @@ module LAB
 
         # puts "name: #{name}, abbreviated_name: #{abbr_name}"
         competition = Competition.find_or_create(name: name, abbreviated_name: abbr_name,
-                                                 exclude_from_points_table: data['exclude_from_points_table'])
+                                                 points_eligible: data.fetch('points_eligible', true))
 
         load_edition(competition, data)
       end

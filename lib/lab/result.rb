@@ -26,7 +26,13 @@ module LAB
     end
 
     def score
+      return 0 unless points_eligible?
+
       SCORES[round][place] || 0
+    end
+
+    def points_eligible?
+      competition_edition.competition.points_eligible?
     end
 
     def self.rounds

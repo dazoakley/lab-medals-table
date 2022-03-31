@@ -7,7 +7,14 @@ module LAB
     one_to_many :results
 
     def total_points
-      results.map(&:score).sum
+      points_eligible_results.map(&:score).sum
+    end
+
+    def points_eligible_results
+      LAB::Result
+        .where(beer_id: id)
+        .join(:competition_editions, id: :competition_edition_id)
+        .join(:competitions, [%i[id competition_id], [:points_eligible, true]])
     end
   end
 end

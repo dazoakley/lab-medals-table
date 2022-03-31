@@ -7,8 +7,8 @@ module LAB
     many_to_one :guideline
     one_to_many :results
 
-    def self.by_date
-      reverse(:date)
+    def self.points_eligible
+      join(:competitions, [%i[id competition_id], [:points_eligible, true]])
     end
 
     def table_display_name

@@ -31,14 +31,14 @@
           <th rowspan="3" class="totals">Total Points</th>
           <th rowspan="3" class="totals">Total Medals</th>
           <th colspan="6" class="totals">Medals</th>
-          <% LAB::CompetitionEdition.by_date.each do |competition_edition| %>
+          <% LAB::CompetitionEdition.points_eligible.reverse(:date).each do |competition_edition| %>
             <th colspan="6"><%= competition_edition.table_display_name %></th>
           <% end %>
         </tr>
         <tr>
           <th colspan="3" class="totals">BOS</th>
           <th colspan="3" class="totals">Flight</th>
-          <% LAB::CompetitionEdition.count.times do %>
+          <% LAB::CompetitionEdition.points_eligible.count.times do %>
             <th colspan="3">BOS</th>
             <th colspan="3">Flight</th>
           <% end %>
@@ -49,7 +49,7 @@
             <th class="totals">S</th>
             <th class="totals">B</th>
           <% end %>
-          <% LAB::CompetitionEdition.count.times do %>
+          <% LAB::CompetitionEdition.points_eligible.count.times do %>
             <% 2.times do %>
               <th>G</th>
               <th>S</th>
@@ -69,7 +69,7 @@
           <tr>
             <td><%= rank %></td>
             <td><%= brewer.name.sub(' ', '&nbsp;') %></td>
-            <td class="totals"><%= brewer.total_points %></td>
+            <td class="totals"><%= "%.1f" % brewer.total_points %></td>
             <td class="totals"><%= brewer.total_medals %></td>
             <% LAB::Result.rounds.each do |round| %>
               <% LAB::Result.gold_silver_bronze_places.each do |place| %>
@@ -81,7 +81,7 @@
                 <td class="<%= css_class %>"><%= count if count > 0 %></td>
               <% end %>
             <% end %>
-            <% LAB::CompetitionEdition.by_date.each do |competition_edition| %>
+            <% LAB::CompetitionEdition.points_eligible.reverse(:date).each do |competition_edition| %>
               <% LAB::Result.rounds.each do |round| %>
                 <%
                   medal_counts = brewer.medal_counts_for_competition_edition(competition_edition)

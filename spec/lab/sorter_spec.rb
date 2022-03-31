@@ -20,10 +20,29 @@ RSpec.describe LAB::Sorter do
 
   describe '#ranked_names' do
     it 'should sort the brewers into the correct order' do
-      expected = ['Mark Sanderson', 'Dave Strachan', 'Phill Turner', 'Chris Pinnock', 'Ian Cosier', 'Lee Immins',
-                  'Fraser Withers', 'Joell Leskin', 'Rob Gallagher', 'Guy Asaert', 'Serge Savin', 'Lucas Stolarczyk',
-                  'Craig Tarft', 'Mick Harrison', 'Steve Smith', 'James Wilson', 'Simas Vainauskas', 'Charlie Cat',
-                  'Russell Anthony', 'Richard Davies', 'Les Manley']
+      expected = [
+        'Mark Sanderson',
+        'Dave Strachan',
+        'Phill Turner',
+        'Chris Pinnock',
+        'Ian Cosier',
+        'Lee Immins',
+        'Fraser Withers',
+        'Joell Leskin',
+        'Serge Savin',
+        'Lucas Stolarczyk',
+        'Rob Gallagher',
+        'Craig Tarft',
+        'Guy Asaert',
+        'Mick Harrison',
+        'Steve Smith',
+        'James Wilson',
+        'Simas Vainauskas',
+        'Charlie Cat',
+        'Russell Anthony',
+        'Richard Davies',
+        'Les Manley'
+      ]
 
       expect(subject.ranked_names).to eq(expected)
     end

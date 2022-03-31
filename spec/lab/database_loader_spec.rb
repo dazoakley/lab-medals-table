@@ -43,7 +43,7 @@ RSpec.describe LAB::DatabaseLoader do
 
       subject.load_competitions
 
-      expect(DB[:competitions].count).to eq(4)
+      expect(DB[:competitions].count).to eq(5)
     end
 
     it 'should load the locations table' do
@@ -59,7 +59,7 @@ RSpec.describe LAB::DatabaseLoader do
 
       subject.load_competitions
 
-      expect(DB[:competition_editions].count).to eq(5)
+      expect(DB[:competition_editions].count).to eq(6)
     end
 
     it 'should load the brewers table' do
@@ -75,7 +75,7 @@ RSpec.describe LAB::DatabaseLoader do
 
       subject.load_competitions
 
-      expect(DB[:beers].count).to eq(34)
+      expect(DB[:beers].count).to eq(35)
     end
 
     it 'should load unknown styles into the styles table' do
@@ -83,7 +83,7 @@ RSpec.describe LAB::DatabaseLoader do
 
       subject.load_competitions
 
-      expect(DB[:styles].count).to eq(344)
+      expect(DB[:styles].count).to eq(345)
     end
 
     it 'should load the results table' do
@@ -91,9 +91,9 @@ RSpec.describe LAB::DatabaseLoader do
 
       subject.load_competitions
 
-      expect(DB[:results].count).to eq(39)
-      expect(DB[:results].where(round: 'flight').count).to eq(35)
-      expect(DB[:results].where(round: 'bos').count).to eq(4)
+      expect(DB[:results].count).to eq(41)
+      expect(DB[:results].where(round: 'flight').count).to eq(36)
+      expect(DB[:results].where(round: 'bos').count).to eq(5)
     end
   end
 end

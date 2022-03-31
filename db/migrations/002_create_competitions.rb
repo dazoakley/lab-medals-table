@@ -6,7 +6,7 @@ Sequel.migration do
       primary_key :id
       String :name, null: false
       String :abbreviated_name, null: false
-      Boolean :exclude_from_points_table, default: false
+      Boolean :points_eligible, default: true, null: false
       unique %i[name abbreviated_name]
     end
 

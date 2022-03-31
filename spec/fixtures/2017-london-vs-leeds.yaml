@@ -16,8 +16,3 @@ winners:
       gold:
         - name: Welcome To Murkvile
           style: 35A
-  - name: Neal Irvin
-    flight:
-      bronze:
-        - name: NEIPA
-          style: 35A
