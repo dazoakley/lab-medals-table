@@ -38,8 +38,9 @@ namespace :db do
   end
 end
 
-desc 'Load pry'
-task :pry do
-  require 'pry'
-  binding.pry
+namespace :build do
+  desc 'Build the results table'
+  task :table do
+    LAB::TableBuilder.build
+  end
 end

@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <link href="https://londonamateurbrewers.co.uk/wp-content/themes/lonbrew-wp/style.css" rel="stylesheet">
+    <style type="text/css">
+      html { font-size: smaller; padding: 15px }
+      table { border-collapse: collapse; text-align: center; font-size: small; }
+      th,td { border: 1px solid grey; padding: 2px 4px; }
+      .totals   { background-color: #F0F0F0; }
+      tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
+      td.gold   { background-color: gold !important; }
+      td.silver { background-color: silver !important; }
+      td.bronze { background-color: #CD7F32 !important; }
+    </style>
+  <head>
+  <body>
+    <h2>London Amateur Brewers - Medals Table Since 2010</h2>
+    <h4>Medal Values</h4>
+    <p>
+      <b>Flight:</b> Gold - <%= LAB::Result::SCORES['flight']['gold'] %>, Silver - <%= LAB::Result::SCORES['flight']['silver'] %>, Bronze - <%= LAB::Result::SCORES['flight']['bronze'] %><br />
+      <b>Best of Show:</b> Gold - <%= LAB::Result::SCORES['bos']['gold'] %>, Silver - <%= LAB::Result::SCORES['bos']['silver'] %>, Bronze - <%= LAB::Result::SCORES['bos']['bronze'] %>
+    </p>
+    <p>
+      <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
+      Brewers equal after total medal points are ranked then by BoS GSB, then Flight GSB.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="3">Rank</th>
+          <th rowspan="3">Member</th>
+          <th rowspan="3" class="totals">Total Points</th>
+          <th rowspan="3" class="totals">Total Medals</th>
+          <th colspan="6" class="totals">Medals</th>
+          <% LAB::CompetitionEdition.by_date.each do |competition_edition| %>
+            <th colspan="6"><%= competition_edition.table_display_name %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <th colspan="3" class="totals">BOS</th>
+          <th colspan="3" class="totals">Flight</th>
+          <% LAB::CompetitionEdition.count.times do %>
+            <th colspan="3">BOS</th>
+            <th colspan="3">Flight</th>
+          <% end %>
+        </tr>
+        <tr>
+          <% 2.times do %>
+            <th class="totals">G</th>
+            <th class="totals">S</th>
+            <th class="totals">B</th>
+          <% end %>
+          <% LAB::CompetitionEdition.count.times do %>
+            <% 2.times do %>
+              <th>G</th>
+              <th>S</th>
+              <th>B</th>
+            <% end %>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% Brewer.sorted_and_ranked.each do |obj| %>
+          <%
+            brewer = obj[0]
+            rank = obj[1]
+
+            next if brewer.total_points.zero?
+          %>
+          <tr>
+            <td><%= rank %></td>
+            <td><%= brewer.name.sub(' ', '&nbsp;') %></td>
+            <td class="totals"><%= brewer.total_points %></td>
+            <td class="totals"><%= brewer.total_medals %></td>
+            <% LAB::Result.rounds.each do |round| %>
+              <% LAB::Result.gold_silver_bronze_places.each do |place| %>
+                <%
+                  count = brewer.medal_counts.dig(round, place)
+                  css_class = "totals"
+                  css_class << " #{place}" if count > 0
+                %>
+                <td class="<%= css_class %>"><%= count if count > 0 %></td>
+              <% end %>
+            <% end %>
+            <% LAB::CompetitionEdition.by_date.each do |competition_edition| %>
+              <% LAB::Result.rounds.each do |round| %>
+                <%
+                  medal_counts = brewer.medal_counts_for_competition_edition(competition_edition)
+                %>
+                <% LAB::Result.gold_silver_bronze_places.each do |place| %>
+                  <%
+                    count = medal_counts.dig(round, place)
+                    css_class = count > 0 ? place : ""
+                  %>
+                  <td class="<%= css_class %>"><%= count if count > 0 %></td>
+                <% end %>
+              <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>

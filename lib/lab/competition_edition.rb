@@ -2,9 +2,17 @@
 
 module LAB
   class CompetitionEdition < Sequel::Model
-    many_to_one :competitions
-    many_to_one :locations
-    many_to_one :guidelines
+    many_to_one :competition
+    many_to_one :location
+    many_to_one :guideline
     one_to_many :results
+
+    def self.by_date
+      reverse(:date)
+    end
+
+    def table_display_name
+      "#{date.year} - #{competition.abbreviated_name}"
+    end
   end
 end

@@ -7,7 +7,6 @@ require 'json'
 require 'sequel'
 
 require 'lab/data_loader'
-require 'lab/html_table_builder'
 require 'lab/roll_of_honour_builder'
 require 'lab/competition_roll_of_honour_builder'
 require 'lab/csv_export_builder'
@@ -23,9 +22,9 @@ module LAB
   autoload :Guideline, 'lab/guideline'
   autoload :Location, 'lab/location'
   autoload :Result, 'lab/result'
+  autoload :Sorter, 'lab/sorter'
   autoload :Style, 'lab/style'
   autoload :TableBuilder, 'lab/table_builder'
-  autoload :Sorter, 'lab/sorter'
 
   # Scores awarded for each medal
   SCORES = {

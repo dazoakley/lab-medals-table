@@ -11,18 +11,18 @@ module LAB
         memo = []
 
         ranked_names.each_with_index do |name, index|
+          brewer = brewers.find { |b| b.name == name }
+
           if index == 0
-            memo << [name, index + 1]
+            memo << [brewer, index + 1]
           else
-            prev_brewer = ranked_names[index - 1]
+            prev_brewer_name = ranked_names[index - 1]
+            prev_brewer      = brewers.find { |b| b.name == prev_brewer_name }
 
-            curr_score  = brewers.find { |b| b.name == name }.sorter
-            prev_score  = brewers.find { |b| b.name == prev_brewer }.sorter
+            comparison  = brewer.sorter <=> prev_brewer.sorter
+            rank        = comparison.zero? ? '=' : index + 1
 
-            comparison  = curr_score <=> prev_score
-            rank        = comparison == 0 ? '=' : index + 1
-
-            memo << [name, rank]
+            memo << [brewer, rank]
           end
         end
 

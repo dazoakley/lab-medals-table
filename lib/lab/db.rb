@@ -1,14 +1,20 @@
 # frozen_string_literal: true
 
 require 'sequel'
+require 'logger'
 
 Sequel.extension :migration
+Sequel::Model.plugin :many_through_many
 
 module LAB
   class Db
     class << self
       def connect
-        @connect ||= Sequel.connect(ENV.fetch('DATABASE_URL', database_dsn))
+        @connect ||= begin
+          db = Sequel.connect(ENV.fetch('DATABASE_URL', database_dsn))
+          # db.loggers << Logger.new($stdout)
+          db
+        end
       end
 
       def disconnect
