@@ -41,6 +41,6 @@ end
 namespace :build do
   desc 'Build the results table'
   task :table do
-    LAB::TableBuilder.build
+    puts LAB::TableBuilder.build
   end
 end
