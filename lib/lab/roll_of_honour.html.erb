@@ -1,0 +1,20 @@
+<% LAB::CompetitionEdition.reverse(:date).each do |competition_edition| %>
+  <h4><%= competition_edition.roll_of_honour_display_name %></h4>
+  <dl>
+    <dt>Guidelines</dt><dd><%= competition_edition.guideline.name %></dd>
+
+    <% if competition_edition.best_of_show_winners? %>
+      <dt>Best of Show Winners</dt>
+      <% competition_edition.best_of_show_winners.each do |result| %>
+        <dd><%= result.description_for_roll_of_honour %></dd>
+      <% end %>
+    <% end %>
+
+    <% if competition_edition.flight_winners? %>
+      <dt>Flight Winners</dt>
+      <% competition_edition.flight_winners.each do |result| %>
+        <dd><%= result.description_for_roll_of_honour %></dd>
+      <% end %>
+    <% end %>
+  </dl>
+<% end %>

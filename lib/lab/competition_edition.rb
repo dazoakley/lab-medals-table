@@ -14,5 +14,25 @@ module LAB
     def table_display_name
       "#{date.year} - #{competition.abbreviated_name}"
     end
+
+    def roll_of_honour_display_name
+      "#{competition.name}, #{date.year} - #{location.name}"
+    end
+
+    def best_of_show_winners?
+      best_of_show_winners.any?
+    end
+
+    def best_of_show_winners
+      @best_of_show_winners ||= LAB::Result.best_of_show_results_for_competition_edition(self)
+    end
+
+    def flight_winners?
+      flight_winners.any?
+    end
+
+    def flight_winners
+      @flight_winners ||= LAB::Result.flight_results_for_competition_edition(self)
+    end
   end
 end

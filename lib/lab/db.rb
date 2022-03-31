@@ -31,13 +31,6 @@ module LAB
         Sequel::Migrator.apply(connect, migrations_dir, version - 1)
       end
 
-      def ready?
-        connect.execute('SELECT 1')
-        true
-      rescue Sequel::Error
-        false
-      end
-
       def drop
         FileUtils.rm_rf(database_file)
       end

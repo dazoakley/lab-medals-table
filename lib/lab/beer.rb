@@ -3,7 +3,7 @@
 module LAB
   class Beer < Sequel::Model
     many_to_one :brewer
-    many_to_one :assistant_brewer, class: :Brewer
+    many_to_one :assistant_brewer, class: LAB::Brewer
     one_to_many :results
 
     def total_points

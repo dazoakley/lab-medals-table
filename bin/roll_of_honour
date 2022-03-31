@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-$LOAD_PATH.unshift File.join(__FILE__, '../../lib')
-
-require 'lab'
-
-puts LAB::RollOfHonourBuilder.build

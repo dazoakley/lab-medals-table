@@ -14,6 +14,24 @@ RSpec.describe LAB::Result do
                                    location_id: location.id)
   end
 
+  describe '#description_for_roll_of_honour' do
+    it 'returns the correct description' do
+      result1 = LAB::Result.create(round: 'flight', place: 'gold', competition_edition_id: edition.id,
+                                   beer_id: beer.id, style_id: style.id)
+      expected1 = 'Gold - Test Brewer - Test Beer (1A: Test Style)'
+
+      expect(result1.description_for_roll_of_honour).to eq(expected1)
+
+      beer2 = LAB::Beer.create(name: 'Test Beer 2', brewer_id: brewer.id, assistant_brewer_id: brewer.id)
+      style2 = LAB::Style.create(guideline_id: guideline.id, number: 'NONE')
+      result2 = LAB::Result.create(round: 'flight', place: 'silver', competition_edition_id: edition.id,
+                                   beer_id: beer2.id, style_id: style2.id)
+      expected2 = 'Silver - Test Brewer (Assistant Brewer: Test Brewer) - Test Beer 2'
+
+      expect(result2.description_for_roll_of_honour).to eq(expected2)
+    end
+  end
+
   describe '#score' do
     describe 'when the competition is points eligible' do
       describe 'when the result is a "flight" round' do
@@ -99,6 +117,52 @@ RSpec.describe LAB::Result do
           end
         end
       end
+    end
+  end
+
+  describe '.best_of_show_results_for_competition_edition' do
+    before do
+      stub_database
+    end
+
+    it 'returns BoS results for the given competiton edition' do
+      ltl = LAB::Competition.find(name: 'Lager Than Life').competition_editions.max_by(&:date)
+      nawb = LAB::Competition.find(name: 'NAWB National').competition_editions.first
+
+      expect(described_class.best_of_show_results_for_competition_edition(ltl).count).to eq(1)
+      expect(described_class.best_of_show_results_for_competition_edition(nawb).count).to eq(0)
+    end
+
+    it 'returns BoS results for the given competiton edition sorted by medal' do
+      ltl = LAB::Competition.find(name: 'Lager Than Life').competition_editions.min_by(&:date)
+
+      results = described_class.best_of_show_results_for_competition_edition(ltl)
+
+      expect(results.count).to eq(2)
+      expect(results.map(&:place)).to eq(%w[gold bronze])
+    end
+  end
+
+  describe '.flight_results_for_competition_edition' do
+    before do
+      stub_database
+    end
+
+    it 'returns flight results for the given competiton edition' do
+      ltl = LAB::Competition.find(name: 'Lager Than Life').competition_editions.max_by(&:date)
+      nawb = LAB::Competition.find(name: 'NAWB National').competition_editions.first
+
+      expect(described_class.flight_results_for_competition_edition(ltl).count).to eq(6)
+      expect(described_class.flight_results_for_competition_edition(nawb).count).to eq(9)
+    end
+
+    it 'returns flight results for the given competiton edition sorted by medal' do
+      ltl = LAB::Competition.find(name: 'Lager Than Life').competition_editions.max_by(&:date)
+
+      results = described_class.flight_results_for_competition_edition(ltl)
+
+      expect(results.count).to eq(6)
+      expect(results.map(&:place)).to eq(%w[gold gold silver silver silver bronze])
     end
   end
 end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'titleize'
+
 module LAB
   class Result < Sequel::Model
     many_to_one :beer
@@ -33,6 +35,30 @@ module LAB
 
     def points_eligible?
       competition_edition.competition.points_eligible?
+    end
+
+    def description_for_roll_of_honour
+      desc = "#{place.titleize} - #{beer.brewer.name}"
+      desc << " (Assistant Brewer: #{beer.assistant_brewer.name})" if beer.assistant_brewer
+      desc << " - #{beer.name}"
+
+      if style.number != 'NONE'
+        desc << " (#{style.number}"
+        desc << ": #{style.name}" if style.name && !style.name.empty?
+        desc << ')'
+      end
+
+      desc
+    end
+
+    def self.best_of_show_results_for_competition_edition(competition_edition)
+      where(competition_edition_id: competition_edition.id, round: 'bos')
+        .sort_by { |result| Result.places.index(result.place) }
+    end
+
+    def self.flight_results_for_competition_edition(competition_edition)
+      where(competition_edition_id: competition_edition.id, round: 'flight')
+        .sort_by { |result| Result.places.index(result.place) }
     end
 
     def self.rounds

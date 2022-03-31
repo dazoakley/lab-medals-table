@@ -43,4 +43,9 @@ namespace :build do
   task :table do
     puts LAB::TableBuilder.build
   end
+
+  desc 'Build the roll of honour'
+  task :roll do
+    puts LAB::RollOfHonourBuilder.build
+  end
 end

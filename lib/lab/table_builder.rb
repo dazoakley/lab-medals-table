@@ -6,7 +6,7 @@ module LAB
   class TableBuilder
     class << self
       def build
-        template = ERB.new(File.read(File.join(__dir__, 'table.html.erb')))
+        template = ERB.new(File.read(File.join(__dir__, 'table.html.erb')), trim_mode: '>')
         template.result(binding)
       end
     end
