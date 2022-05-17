@@ -7,16 +7,13 @@ RSpec.describe LAB::CompetitionEdition do
     stub_database
   end
 
-  # competition = LAB::Competition.find(name: 'Lager Than Life')
-  # competition_edition = competition.competition_editions.max_by(&:date)
+  describe '#points_eligible?' do
+    it 'returns true if the competition is eligible for point' do
+      no_points_ce = LAB::Competition.find(name: 'London vs Leeds New England IPA Challenge').competition_editions.first
+      points_ce = LAB::Competition.find(name: 'Lager Than Life').competition_editions.first
 
-  describe '.points_eligible' do
-    it 'returns all points eligible competition editions' do
-      expect(LAB::CompetitionEdition.points_eligible.count).to eq(5)
-
-      competition_names = LAB::CompetitionEdition.points_eligible.map(&:competition).map(&:name)
-
-      expect(competition_names).to_not include('London vs Leeds New England IPA Challenge')
+      expect(no_points_ce.points_eligible?).to be false
+      expect(points_ce.points_eligible?).to be true
     end
   end
 

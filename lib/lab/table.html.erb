@@ -16,8 +16,8 @@
     <h2>London Amateur Brewers - Medals Table Since 2010</h2>
     <h4>Medal Values</h4>
     <p>
-      <b>Flight:</b> Gold - <%= LAB::Result::SCORES['flight']['gold'] %>, Silver - <%= LAB::Result::SCORES['flight']['silver'] %>, Bronze - <%= LAB::Result::SCORES['flight']['bronze'] %><br />
-      <b>Best of Show:</b> Gold - <%= LAB::Result::SCORES['bos']['gold'] %>, Silver - <%= LAB::Result::SCORES['bos']['silver'] %>, Bronze - <%= LAB::Result::SCORES['bos']['bronze'] %>
+      <b>Best of Show:</b> Gold - <%= LAB::Result::SCORES['bos']['gold'] %>, Silver - <%= LAB::Result::SCORES['bos']['silver'] %>, Bronze - <%= LAB::Result::SCORES['bos']['bronze'] %><br />
+      <b>Flight:</b> Gold - <%= LAB::Result::SCORES['flight']['gold'] %>, Silver - <%= LAB::Result::SCORES['flight']['silver'] %>, Bronze - <%= LAB::Result::SCORES['flight']['bronze'] %>
     </p>
     <p>
       <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
@@ -31,14 +31,14 @@
           <th rowspan="3" class="totals">Total Points</th>
           <th rowspan="3" class="totals">Total Medals</th>
           <th colspan="6" class="totals">Medals</th>
-          <% LAB::CompetitionEdition.points_eligible.reverse(:date).each do |competition_edition| %>
+          <% @competition_editions.each do |competition_edition| %>
             <th colspan="6"><%= competition_edition.table_display_name %></th>
           <% end %>
         </tr>
         <tr>
           <th colspan="3" class="totals">BOS</th>
           <th colspan="3" class="totals">Flight</th>
-          <% LAB::CompetitionEdition.points_eligible.count.times do %>
+          <% @competition_editions.count.times do %>
             <th colspan="3">BOS</th>
             <th colspan="3">Flight</th>
           <% end %>
@@ -49,7 +49,7 @@
             <th class="totals">S</th>
             <th class="totals">B</th>
           <% end %>
-          <% LAB::CompetitionEdition.points_eligible.count.times do %>
+          <% @competition_editions.count.times do %>
             <% 2.times do %>
               <th>G</th>
               <th>S</th>
@@ -81,17 +81,19 @@
                 <td class="<%= css_class %>"><%= count if count > 0 %></td>
               <% end %>
             <% end %>
-            <% LAB::CompetitionEdition.points_eligible.reverse(:date).each do |competition_edition| %>
+            <% @competition_editions.each do |competition_edition| %>
+              <%
+                medal_counts = brewer.medal_counts_for_competition_edition(competition_edition)
+              %>
               <% LAB::Result.rounds.each do |round| %>
-                <%
-                  medal_counts = brewer.medal_counts_for_competition_edition(competition_edition)
-                %>
                 <% LAB::Result.gold_silver_bronze_places.each do |place| %>
                   <%
                     count = medal_counts.dig(round, place)
                     css_class = count > 0 ? place : ""
                   %>
-                  <td class="<%= css_class %>"><%= count if count > 0 %></td>
+                  <td class="<%= css_class %>">
+                    <%= count if count > 0 %>
+                  </td>
                 <% end %>
               <% end %>
             <% end %>

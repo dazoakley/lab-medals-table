@@ -11,8 +11,8 @@ module LAB
       %i[beers id brewer_id]
     ]
 
-    def self.points_eligible
-      join(:competitions, [%i[id competition_id], [:points_eligible, true]])
+    def points_eligible?
+      competition.points_eligible?
     end
 
     def table_display_name

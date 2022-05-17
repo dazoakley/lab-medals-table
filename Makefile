@@ -3,6 +3,7 @@
 default: serve
 
 build:
+	bundle exec rake db:load
 	bundle exec rake build:table > medal-table/index.html
 	bundle exec rake build:roll > medal-table/roll-of-honour.html
 	bundle exec rake build:csv > medal-table/roll-of-honour.csv
