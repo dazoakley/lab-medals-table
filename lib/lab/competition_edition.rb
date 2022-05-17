@@ -6,6 +6,10 @@ module LAB
     many_to_one :location
     many_to_one :guideline
     one_to_many :results
+    many_through_many :brewers, [
+      %i[results competition_edition_id beer_id],
+      %i[beers id brewer_id]
+    ]
 
     def self.points_eligible
       join(:competitions, [%i[id competition_id], [:points_eligible, true]])
@@ -33,6 +37,10 @@ module LAB
 
     def flight_winners
       @flight_winners ||= LAB::Result.flight_results_for_competition_edition(self)
+    end
+
+    def winning_brewers
+      brewers.uniq
     end
   end
 end

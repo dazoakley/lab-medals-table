@@ -53,4 +53,9 @@ namespace :build do
   task :csv do
     puts LAB::CsvExportBuilder.build
   end
+
+  desc 'Build the Points Over Time CSV export'
+  task :pot do
+    puts LAB::PointsOverTimeBuilder.build
+  end
 end

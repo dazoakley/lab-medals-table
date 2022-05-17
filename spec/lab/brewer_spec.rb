@@ -7,6 +7,14 @@ RSpec.describe LAB::Brewer do
     stub_database
   end
 
+  describe '#results' do
+    it 'returns the competition results for the brewer' do
+      expect(LAB::Brewer.find(name: 'Charlie Cat').results.count).to eq(0)
+      expect(LAB::Brewer.find(name: 'Mick Harrison').results.count).to eq(1)
+      expect(LAB::Brewer.find(name: 'Ian Cosier').results.count).to eq(4)
+    end
+  end
+
   describe '#total_points' do
     it 'returns the total points for a brewers winning beers' do
       expect(LAB::Brewer.find(name: 'Ian Cosier').total_points).to eq 20
@@ -20,6 +28,22 @@ RSpec.describe LAB::Brewer do
       expect(LAB::Brewer.find(name: 'Ian Cosier').total_medals).to eq 3
       expect(LAB::Brewer.find(name: 'Mark Sanderson').total_medals).to eq 7
       expect(LAB::Brewer.find(name: 'Steve Smith').total_medals).to eq 1
+    end
+  end
+
+  describe '#total_points_for_competition_edition' do
+    it 'returns the total points for a brewers winning beers in a competition edition' do
+      brewer = LAB::Brewer.find(name: 'Ian Cosier')
+      competition = LAB::Competition.find(name: 'Lager Than Life')
+      competition_edition = competition.competition_editions.max_by(&:date)
+
+      expect(brewer.total_points_for_competition_edition(competition_edition)).to eq 15
+
+      brewer = LAB::Brewer.find(name: 'Mark Sanderson')
+      competition = LAB::Competition.find(name: 'Bexley Festival')
+      competition_edition = competition.competition_editions.max_by(&:date)
+
+      expect(brewer.total_points_for_competition_edition(competition_edition)).to eq 50
     end
   end
 

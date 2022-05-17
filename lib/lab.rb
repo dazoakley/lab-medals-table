@@ -6,8 +6,6 @@ require 'awesome_print'
 require 'json'
 require 'sequel'
 
-require 'lab/points_over_time_builder'
-
 module LAB
   autoload :Beer, 'lab/beer'
   autoload :Brewer, 'lab/brewer'
@@ -18,6 +16,7 @@ module LAB
   autoload :Db, 'lab/db'
   autoload :Guideline, 'lab/guideline'
   autoload :Location, 'lab/location'
+  autoload :PointsOverTimeBuilder, 'lab/points_over_time_builder'
   autoload :Result, 'lab/result'
   autoload :RollOfHonourBuilder, 'lab/roll_of_honour_builder'
   autoload :Sorter, 'lab/sorter'

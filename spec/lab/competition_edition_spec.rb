@@ -63,4 +63,21 @@ RSpec.describe LAB::CompetitionEdition do
       expect(competition_edition.flight_winners.count).to eq(6)
     end
   end
+
+  describe '#winning_brewers' do
+    it 'returns all winning brewers (LAB::Brewer\'s) for the competition edition' do
+      competition_edition = LAB::Competition.find(name: 'Lager Than Life').competition_editions.min_by(&:date)
+
+      expect(competition_edition.winning_brewers.count).to eq(7)
+      expect(competition_edition.winning_brewers.map(&:name).sort).to eq([
+                                                                           'Dave Strachan',
+                                                                           'Fraser Withers',
+                                                                           'Lee Immins',
+                                                                           'Lucas Stolarczyk',
+                                                                           'Mark Sanderson',
+                                                                           'Russell Anthony',
+                                                                           'Steve Smith'
+                                                                         ])
+    end
+  end
 end

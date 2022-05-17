@@ -4,63 +4,45 @@ module LAB
   class PointsOverTimeBuilder
     class << self
       def build
-        data = build_data
-
         CSV.generate do |csv|
-          csv << ['Brewer'] + competitions.map { |c| c['date'] }
-          data.each do |brewer, scores|
+          csv << ['Brewer'] + LAB::CompetitionEdition.map(&:date)
+          brewer_points_over_time.each do |brewer, scores|
             csv << ([brewer] + scores)
           end
         end
       end
 
-      def build_data
-        collate_timeline
+      def brewer_points_per_competition_edition
+        points_per_comp_edition = {}
 
-        memo  = {}
-        names = @timeline.last.keys.sort
+        LAB::Brewer.order(:name).each do |brewer|
+          next if brewer.total_points.zero?
 
-        @timeline.each do |brewers|
-          names.each do |name|
-            memo[name] ||= []
+          points_per_comp_edition[brewer.name] = []
+        end
 
-            # binding.pry
-            # exit
+        LAB::CompetitionEdition.each do |competition_edition|
+          winning_brewer_names = competition_edition.winning_brewers.map(&:name)
 
-            memo[name] << (brewers.dig(name, 'score') || 0.0)
+          points_per_comp_edition.each do |name, points_arry|
+            points_arry << if winning_brewer_names.include?(name)
+                             brewer = LAB::Brewer.find(name:)
+                             brewer.total_points_for_competition_edition(competition_edition)
+                           else
+                             0
+                           end
           end
         end
 
-        memo
+        points_per_comp_edition
       end
 
-      def collate_timeline
-        @timeline   = []
-        @total_data = {}
-
-        competitions.each do |competition|
-          single_comp = deep_copy(@total_data)
-
-          competition['winners'].each do |data|
-            brewer = single_comp[data['name']] ||= LAB::DataLoader.new_brewer_data.dup
-            LAB::DataLoader.append_medal_counts!(brewer, data)
+      def brewer_points_over_time
+        brewer_points_per_competition_edition.each do |_brewer, points_arry|
+          points_arry.each_with_index do |points, index|
+            points_arry[index] =  index.zero? ? points : points_arry[index - 1] + points
           end
-
-          single_comp.each { |_brewer, data| LAB::DataLoader.append_score!(data) }
-
-          @timeline << single_comp
-          @total_data = deep_copy(single_comp)
         end
-      end
-
-      private
-
-      def deep_copy(obj_to_copy)
-        Marshal.load(Marshal.dump(obj_to_copy))
-      end
-
-      def competitions
-        LAB::DataLoader.competitions_for_table.reverse
       end
     end
   end

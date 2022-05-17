@@ -3,7 +3,10 @@
 module LAB
   class Brewer < Sequel::Model
     one_to_many :beers
-    many_through_many :results, [%i[beers brewer_id id], %i[results beer_id id]]
+    many_through_many :results, [
+      %i[beers brewer_id id],
+      %i[results beer_id id]
+    ]
 
     def self.sorted_and_ranked
       LAB::Sorter.new(LAB::Brewer.all).sort_and_rank
@@ -11,6 +14,18 @@ module LAB
 
     def total_points
       beers.map(&:total_points).sum
+    end
+
+    def total_points_for_competition_edition(competition_edition)
+      score = 0
+
+      results.each do |result|
+        next unless result.competition_edition_id == competition_edition.id
+
+        score += result.score
+      end
+
+      score
     end
 
     def total_medals

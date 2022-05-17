@@ -6,7 +6,7 @@ build:
 	bundle exec rake build:table > medal-table/index.html
 	bundle exec rake build:roll > medal-table/roll-of-honour.html
 	bundle exec rake build:csv > medal-table/roll-of-honour.csv
-	bin/points_over_time > medal-table/points-over-time.csv
+	bundle exec rake build:pot > medal-table/points-over-time.csv
 
 serve: build
 	cd medal-table && ruby -run -ehttpd . -p8000
