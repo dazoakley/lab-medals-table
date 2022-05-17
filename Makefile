@@ -5,7 +5,7 @@ default: serve
 build:
 	bundle exec rake build:table > medal-table/index.html
 	bundle exec rake build:roll > medal-table/roll-of-honour.html
-	bin/csv_export > medal-table/roll-of-honour.csv
+	bundle exec rake build:csv > medal-table/roll-of-honour.csv
 	bin/points_over_time > medal-table/points-over-time.csv
 
 serve: build

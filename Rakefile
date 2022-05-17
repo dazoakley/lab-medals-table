@@ -48,4 +48,9 @@ namespace :build do
   task :roll do
     puts LAB::RollOfHonourBuilder.build
   end
+
+  desc 'Build the CSV export'
+  task :csv do
+    puts LAB::CsvExportBuilder.build
+  end
 end

@@ -6,7 +6,6 @@ require 'awesome_print'
 require 'json'
 require 'sequel'
 
-require 'lab/csv_export_builder'
 require 'lab/points_over_time_builder'
 
 module LAB
@@ -14,6 +13,7 @@ module LAB
   autoload :Brewer, 'lab/brewer'
   autoload :Competition, 'lab/competition'
   autoload :CompetitionEdition, 'lab/competition_edition'
+  autoload :CsvExportBuilder, 'lab/csv_export_builder'
   autoload :DatabaseLoader, 'lab/database_loader'
   autoload :Db, 'lab/db'
   autoload :Guideline, 'lab/guideline'
