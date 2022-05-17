@@ -1,43 +1,30 @@
 # frozen_string_literal: true
 
 require 'csv'
-require 'pry'
 
 module LAB
   class CsvExportBuilder
     class << self
       def build
-        competitions.each do |comp|
-          year       = comp['year']
-          name       = comp['full_name'] || comp['abbr_name']
-          guidelines = comp['guidelines']
+        LAB::CompetitionEdition.each do |competition_edition|
+          bos_medals = {}
 
-          comp['winners'].each do |winner|
-            bos_medals = {}
+          competition_edition.best_of_show_winners.each do |result|
+            bos_medals[result.beer_id] = result.place
+          end
 
-            if winner['bos']
-              winner['bos'].each do |medal, beers|
-                bos_medals[beers.first['name']] = medal
-              end
-            end
-
-            if winner['flight']
-              winner['flight'].each do |medal, beers|
-                beers.each do |beer|
-                  csv_data << [
-                    year,
-                    name,
-                    guidelines,
-                    winner['name'],
-                    beer['name'],
-                    expand_beer_style(comp, beer['style']),
-                    beer['style'],
-                    medal,
-                    bos_medals[beer['name']]
-                  ]
-                end
-              end
-            end
+          competition_edition.flight_winners.each do |result|
+            csv_data << [
+              competition_edition.date.year,
+              competition_edition.competition.name,
+              competition_edition.guideline.name,
+              result.beer.brewer.name,
+              result.beer.name,
+              result.style.name || result.style.number,
+              result.style.number || result.style.name,
+              result.place,
+              bos_medals[result.beer_id]
+            ]
           end
         end
 
@@ -61,7 +48,7 @@ module LAB
 
         CSV.generate do |csv|
           csv << headers
-          csv_data.sort_by { |row| row[0] }.each do |row|
+          csv_data.each do |row|
             csv << row
           end
         end
@@ -69,19 +56,6 @@ module LAB
 
       def csv_data
         @csv_data ||= []
-      end
-
-      def expand_beer_style(comp, style)
-        guidelines = LAB.guidelines[comp['guidelines']]
-
-        return style unless guidelines
-        return style unless guidelines[style.to_s]
-
-        guidelines[style.to_s]
-      end
-
-      def competitions
-        LAB::DataLoader.competitions_for_roll
       end
     end
   end

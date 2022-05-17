@@ -1,3 +1,5 @@
 medal-table/index.html
 medal-table/roll-of-honour.html
 medal-table/*.csv
+db/*.db
+artifacts

@@ -1,16 +1,13 @@
+# frozen_string_literal: true
+
+require 'erb'
+
 module LAB
   class RollOfHonourBuilder
     class << self
       def build
-        competitions.map do |competition|
-          CompetitionRollOfHonourBuilder.new(competition).build
-        end.join("\n\n")
-      end
-
-      private
-
-      def competitions
-        LAB::DataLoader.competitions_for_roll
+        template = ERB.new(File.read(File.join(__dir__, 'roll_of_honour.html.erb')), trim_mode: '>')
+        template.result(binding)
       end
     end
   end
