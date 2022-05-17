@@ -45,6 +45,8 @@ module LAB
         counts = empty_medal_counts
 
         results.each do |result|
+          next unless result.points_eligible?
+
           counts[result.round][result.place] += 1
         end
 
