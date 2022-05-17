@@ -1,0 +1,63 @@
+---
+year: 2022
+date: 15-05-2022
+abbr_name: LAB Open
+full_name: LAB Open
+location: 'Hammerton Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: James Wilson
+    bos:
+      silver:
+        - name: Winner Winner Marzen Dinner
+          style: 6A
+    flight:
+      gold:
+        - name: Winner Winner Marzen Dinner
+          style: 6A
+  - name: Dave Strachan
+    bos:
+      bronze:
+        - name: Porter
+          style: 13C
+          asst_brewer: Richard Davies
+    flight:
+      gold:
+        - name: Porter
+          style: 13C
+          asst_brewer: Richard Davies
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Rusty Droid
+          style: 7A
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Lacrimosa
+          style: 13A
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: Entre Deux Meres
+          style: 17D
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: The Dark Prince (oaked)
+          style: 33A
+  - name: Raphael Clegg-Vinell
+    flight:
+      bronze:
+        - name: Gold'n Blue
+          style: 1D
+  - name: Guy Asaert
+    flight:
+      silver:
+        - name: Dubbel Or Nothing
+          style: 26B
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Keepsake
+          style: 24C
