@@ -1,0 +1,18 @@
+---
+year: 2022
+date: 18-03-2022
+abbr_name: NAWB
+full_name: NAWB National
+location: Coventry
+guidelines: NGWBJ
+winners:
+  - name: Chris Pinnock
+    flight:
+      silver:
+        - name: English IPA
+      gold:
+        - name: Dry Stout
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Strong Lager
