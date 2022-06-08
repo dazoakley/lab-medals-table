@@ -1,211 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>LAB Medal Table Competition Data Builder</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css"
-      media="screen"
-    />
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>LAB Medal Table Competition Data Builder</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css"
+    media="screen" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style media="screen">
-      .winner {
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        padding: 10px;
-        margin: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>LAB Medal Table Competition Data Builder</h1>
+  <style media="screen">
+    .winner {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
 
-      <div class="row">
-        <div class="col-md-12">
-          <form class="form-horizontal">
-            <p>&nbsp;</p>
+<body>
+  <div class="container">
+    <h1>LAB Medal Table Competition Data Builder</h1>
 
-            <div class="form-group">
-              <label for="year" class="col-sm-2 control-label">Year</label>
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="year"
-                  placeholder="Year"
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="year" class="col-sm-2 control-label">Date</label>
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="date"
-                  placeholder="dd-mm-yyyy"
-                />
-                <p class="help-block">
-                  Doesn't need to be the EXACT date of the competition, just
-                  something close enough to help sorting the table
-                </p>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="competition-name-full" class="col-sm-2 control-label"
-                >Competition Name (Full)</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="competition-name-full"
-                  placeholder="Competition Name (Full)"
-                />
-                <p class="help-block">
-                  This will be used in the medals list
-                </p>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="competition-name-abbrv" class="col-sm-2 control-label"
-                >Competition Name (Abbreviated)</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="competition-name-abbrv"
-                  placeholder="Competition Name (Abbreviated)"
-                />
-                <p class="help-block">
-                  This will be used at the top of the medals table
-                </p>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="location" class="col-sm-2 control-label"
-                >Location</label
-              >
-              <div class="col-sm-10">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="location"
-                  placeholder="Location"
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="guidelines" class="col-sm-2 control-label"
-                >Guidelines</label
-              >
-              <div class="col-sm-10">
-                <select class="form-control" id="guidelines">
-                  <option>BJCP 2015</option>
-                  <option>BJCP 2008</option>
-                  <option>NGWBJ</option>
-                </select>
-              </div>
-            </div>
-
-            <hr />
-            <h3>Best of Show Winners</h3>
-
-            <div id="bos-winners"></div>
-            <button
-              type="button"
-              class="btn btn-default"
-              id="add-new-bos-winner"
-            >
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              Add New BOS Winner
-            </button>
-
-            <hr />
-            <h3>Flight Winners</h3>
-
-            <div id="flight-winners"></div>
-            <button
-              type="button"
-              class="btn btn-default"
-              id="add-new-flight-winner"
-            >
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              Add New Flight Winner
-            </button>
-
-            <hr />
-            <button type="button" class="btn btn-primary" id="generate-yaml">
-              <span
-                class="glyphicon glyphicon-console"
-                aria-hidden="true"
-              ></span>
-              Generate YAML
-            </button>
-          </form>
-
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-horizontal">
           <p>&nbsp;</p>
 
-          <div>
-            <pre id="yaml"></pre>
+          <div class="form-group">
+            <label for="year" class="col-sm-2 control-label">Year</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="year" placeholder="Year" />
+            </div>
           </div>
 
-          <p>&nbsp;</p>
+          <div class="form-group">
+            <label for="year" class="col-sm-2 control-label">Date</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="date" placeholder="dd-mm-yyyy" />
+              <p class="help-block">
+                Doesn't need to be the EXACT date of the competition, just
+                something close enough to help sorting the table
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="competition-name-full" class="col-sm-2 control-label">Competition Name (Full)</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="competition-name-full"
+                placeholder="Competition Name (Full)" />
+              <p class="help-block">
+                This will be used in the medals list
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="competition-name-abbrv" class="col-sm-2 control-label">
+              Competition Name (Abbreviated)
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="competition-name-abbrv"
+                placeholder="Competition Name (Abbreviated)" />
+              <p class="help-block">
+                This will be used at the top of the medals table
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="smaller-competition" class="col-sm-2 control-label">
+              Smaller Competition
+            </label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-check" id="smaller-competition" />
+              <p class="help-block">
+                Is this is a smaller competition, i.e. only a single round of judging, or low entry numbers?
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location" class="col-sm-2 control-label">
+              Location
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="location" placeholder="Location" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="guidelines" class="col-sm-2 control-label">Guidelines</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="guidelines">
+                <option>BJCP 2015</option>
+                <option>BJCP 2008</option>
+                <option>NGWBJ</option>
+              </select>
+            </div>
+          </div>
+
+          <hr />
+          <h3>Best of Show Winners</h3>
+
+          <div id="bos-winners"></div>
+          <button type="button" class="btn btn-default" id="add-new-bos-winner">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add New BOS Winner
+          </button>
+
+          <hr />
+          <h3>Flight Winners</h3>
+
+          <div id="flight-winners"></div>
+          <button type="button" class="btn btn-default" id="add-new-flight-winner">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add New Flight Winner
+          </button>
+
+          <hr />
+          <button type="button" class="btn btn-primary" id="generate-yaml">
+            <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+            Generate YAML
+          </button>
+        </form>
+
+        <p>&nbsp;</p>
+
+        <div>
+          <pre id="yaml"></pre>
         </div>
+
+        <p>&nbsp;</p>
       </div>
     </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"
-      charset="utf-8"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.en-GB.min.js"
-      charset="utf-8"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"
-      charset="utf-8"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.6.1/js-yaml.min.js"
-      charset="utf-8"
-    ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"
+    charset="utf-8"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.en-GB.min.js"
+    charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.6.1/js-yaml.min.js" charset="utf-8"></script>
 
-    <script id="result-template" type="x-tmpl-mustache">
+  <script id="result-template" type="x-tmpl-mustache">
       <fieldset class="winner {{type}}-winner">
         <div class="form-group">
           <label for="{{type}}-pos-{{number}}" class="col-sm-2 control-label">Position</label>
@@ -250,268 +209,281 @@
       </fieldset>
     </script>
 
-    <script type="text/javascript">
-      // load up BJCP guidelines
-      var bjcp_2008 = {};
-      var bjcp_2015 = {};
-      $.getJSON("bjcp-2008.json", function(data) {
-        bjcp_2008 = data;
-      });
-      $.getJSON("bjcp-2015.json", function(data) {
-        bjcp_2015 = data;
-      });
+  <script type="text/javascript">
+    // load up BJCP guidelines
+    var bjcp_2008 = {};
+    var bjcp_2015 = {};
+    $.getJSON("bjcp-2008.json", function (data) {
+      bjcp_2008 = data;
+    });
+    $.getJSON("bjcp-2015.json", function (data) {
+      bjcp_2015 = data;
+    });
 
-      // setup result template and counters
-      var result_template = document.getElementById("result-template")
-        .innerHTML;
-      Mustache.parse(result_template);
-      var flight_result_counter = 0;
-      var bos_result_counter = 0;
+    // setup result template and counters
+    var result_template = document.getElementById("result-template")
+      .innerHTML;
+    Mustache.parse(result_template);
+    var flight_result_counter = 0;
+    var bos_result_counter = 0;
 
-      function add_bjcp_selector(target, guidelines) {
-        $(target).html("");
-        $(target).append(
-          $("<option>", { value: "", disabled: true, selected: true }).text(
-            "Pick a style"
-          )
-        );
+    function add_bjcp_selector(target, guidelines) {
+      $(target).html("");
+      $(target).append(
+        $("<option>", { value: "", disabled: true, selected: true }).text(
+          "Pick a style"
+        )
+      );
 
-        for (var i = 0; i < guidelines.children.length; i++) {
-          var child = guidelines.children[i];
+      for (var i = 0; i < guidelines.children.length; i++) {
+        var child = guidelines.children[i];
 
-          for (var j = 0; j < child.children.length; j++) {
-            var style = child.children[j];
-            var name = style.name;
-            var number = style.number;
+        for (var j = 0; j < child.children.length; j++) {
+          var style = child.children[j];
+          var name = style.name;
+          var number = style.number;
 
-            if (style.children) {
-              for (var k = 0; k < style.children.length; k++) {
-                var subcat = style.children[k];
-                var key = number + "" + subcat.letter;
-                var value = key + " - " + subcat.name;
+          if (style.children) {
+            for (var k = 0; k < style.children.length; k++) {
+              var subcat = style.children[k];
+              var key = number + "" + subcat.letter;
+              var value = key + " - " + subcat.name;
 
-                $(target).append($("<option>", { value: key }).text(value));
-              }
-            } else {
-              var value = number + " - " + name;
-
-              $(target).append($("<option>", { value: number }).text(value));
+              $(target).append($("<option>", { value: key }).text(value));
             }
+          } else {
+            var value = number + " - " + name;
+
+            $(target).append($("<option>", { value: number }).text(value));
           }
         }
       }
+    }
 
-      function guidelines_to_use() {
-        var guidelines = $("#guidelines")
-          .find(":selected")
-          .text();
+    function guidelines_to_use() {
+      var guidelines = $("#guidelines")
+        .find(":selected")
+        .text();
 
-        if (guidelines == "BJCP 2008") {
-          return bjcp_2008;
-        } else if (guidelines == "BJCP 2015") {
-          return bjcp_2015;
-        } else {
-          return null;
-        }
+      if (guidelines == "BJCP 2008") {
+        return bjcp_2008;
+      } else if (guidelines == "BJCP 2015") {
+        return bjcp_2015;
+      } else {
+        return null;
       }
+    }
 
-      function set_style_selectors() {
-        var guidelines = guidelines_to_use();
+    function set_style_selectors() {
+      var guidelines = guidelines_to_use();
 
-        if (guidelines) {
-          $(".bjcp-select").each(function() {
-            $(".bjcp-select-group").show();
-            add_bjcp_selector(this, guidelines);
-          });
-        } else {
-          $(".bjcp-select-group").hide();
-        }
-      }
-
-      function add_new_bos_winner() {
-        add_new_winner("bos", bos_result_counter);
-        bos_result_counter += 1;
-      }
-
-      function add_new_flight_winner() {
-        add_new_winner("flight", flight_result_counter);
-        flight_result_counter += 1;
-      }
-
-      function add_new_winner(type, counter) {
-        var rendered_content = Mustache.render(result_template, {
-          type: type,
-          number: counter
+      if (guidelines) {
+        $(".bjcp-select").each(function () {
+          $(".bjcp-select-group").show();
+          add_bjcp_selector(this, guidelines);
         });
-        $("#" + type + "-winners").append(rendered_content);
-
-        var guidelines = guidelines_to_use();
-        var style_selector = $(
-          "#" + type + "-winners .winner .bjcp-select"
-        ).last();
-        var select_group = $("#" + type + "-bjcp-select-group-" + counter);
-
-        if (guidelines) {
-          add_bjcp_selector(style_selector, guidelines);
-        } else {
-          select_group.hide();
-        }
+      } else {
+        $(".bjcp-select-group").hide();
       }
+    }
 
-      function get_winner(target) {
-        var data = {
-          position: $(target)
-            .find(".pos")
-            .find(":selected")
-            .val(),
-          brewer: $(target)
-            .find(".brewer")
-            .val(),
-          beer: $(target)
-            .find(".beer")
-            .val()
-        };
+    function add_new_bos_winner() {
+      add_new_winner("bos", bos_result_counter);
+      bos_result_counter += 1;
+    }
 
-        if (guidelines_to_use()) {
-          data["style"] = $(target)
-            .find(".bjcp-select")
-            .find(":selected")
-            .val();
-        }
+    function add_new_flight_winner() {
+      add_new_winner("flight", flight_result_counter);
+      flight_result_counter += 1;
+    }
 
-        var asst_brewer = $(target)
-          .find(".assistant-brewer")
+    function add_new_winner(type, counter) {
+      var rendered_content = Mustache.render(result_template, {
+        type: type,
+        number: counter
+      });
+      $("#" + type + "-winners").append(rendered_content);
+
+      var guidelines = guidelines_to_use();
+      var style_selector = $(
+        "#" + type + "-winners .winner .bjcp-select"
+      ).last();
+      var select_group = $("#" + type + "-bjcp-select-group-" + counter);
+
+      if (guidelines) {
+        add_bjcp_selector(style_selector, guidelines);
+      } else {
+        select_group.hide();
+      }
+    }
+
+    function get_winner(target) {
+      var data = {
+        position: $(target)
+          .find(".pos")
+          .find(":selected")
+          .val(),
+        brewer: $(target)
+          .find(".brewer")
+          .val(),
+        beer: $(target)
+          .find(".beer")
+          .val()
+      };
+
+      if (guidelines_to_use()) {
+        data["style"] = $(target)
+          .find(".bjcp-select")
+          .find(":selected")
           .val();
-        if (asst_brewer) {
-          data["asst_brewer"] = asst_brewer;
+      }
+
+      var asst_brewer = $(target)
+        .find(".assistant-brewer")
+        .val();
+      if (asst_brewer) {
+        data["asst_brewer"] = asst_brewer;
+      }
+
+      return data;
+    }
+
+    function get_winners() {
+      var brewers = {};
+
+      $(".bos-winner").each(function () {
+        var data = get_winner(this);
+
+        if (!brewers[data.brewer]) {
+          brewers[data.brewer] = { bos: {} };
         }
 
-        return data;
-      }
-
-      function get_winners() {
-        var brewers = {};
-
-        $(".bos-winner").each(function() {
-          var data = get_winner(this);
-
-          if (!brewers[data.brewer]) {
-            brewers[data.brewer] = { bos: {} };
-          }
-
-          if (!brewers[data.brewer]["bos"][data.position]) {
-            brewers[data.brewer]["bos"][data.position] = [];
-          }
-
-          var detail = { name: data.beer };
-          if (data.style) {
-            detail["style"] = data.style;
-          }
-          if (data.asst_brewer) {
-            detail["asst_brewer"] = data.asst_brewer;
-          }
-
-          brewers[data.brewer]["bos"][data.position].push(detail);
-        });
-
-        $(".flight-winner").each(function() {
-          var data = get_winner(this);
-
-          if (!brewers[data.brewer]) {
-            brewers[data.brewer] = {};
-          }
-
-          if (!brewers[data.brewer]["flight"]) {
-            brewers[data.brewer]["flight"] = {};
-          }
-
-          if (!brewers[data.brewer]["flight"][data.position]) {
-            brewers[data.brewer]["flight"][data.position] = [];
-          }
-
-          var detail = { name: data.beer };
-          if (data.style) {
-            detail["style"] = data.style;
-          }
-          if (data.asst_brewer) {
-            detail["asst_brewer"] = data.asst_brewer;
-          }
-
-          brewers[data.brewer]["flight"][data.position].push(detail);
-        });
-
-        return brewers;
-      }
-
-      function add_input_val(data, key, input_selector) {
-        var input = $(input_selector);
-        var val = input.val();
-
-        if (val) {
-          data[key] = val;
-        }
-      }
-
-      function generate_yaml() {
-        var data = {};
-        var winners = get_winners();
-
-        var year = $("#year").val();
-        if (year) {
-          data["year"] = parseInt(year);
+        if (!brewers[data.brewer]["bos"][data.position]) {
+          brewers[data.brewer]["bos"][data.position] = [];
         }
 
-        add_input_val(data, "date", "#date");
-        add_input_val(data, "abbr_name", "#competition-name-abbrv");
-        add_input_val(data, "full_name", "#competition-name-full");
-        add_input_val(data, "location", "#location");
+        var detail = { name: data.beer };
+        if (data.style) {
+          detail["style"] = data.style;
+        }
+        if (data.asst_brewer) {
+          detail["asst_brewer"] = data.asst_brewer;
+        }
 
-        data["guidelines"] = $("#guidelines")
-          .find(":selected")
-          .text();
-        data["winners"] = [];
+        brewers[data.brewer]["bos"][data.position].push(detail);
+      });
 
-        $.each(winners, function(name, result) {
-          if (name) {
-            var obj = { name: name };
+      $(".flight-winner").each(function () {
+        var data = get_winner(this);
 
-            if (result["bos"]) {
-              obj["bos"] = result.bos;
-            }
-            if (result["flight"]) {
-              obj["flight"] = result.flight;
-            }
+        if (!brewers[data.brewer]) {
+          brewers[data.brewer] = {};
+        }
 
-            data["winners"].push(obj);
-          }
-        });
+        if (!brewers[data.brewer]["flight"]) {
+          brewers[data.brewer]["flight"] = {};
+        }
 
-        $("#yaml").text("---\n" + jsyaml.dump(data));
+        if (!brewers[data.brewer]["flight"][data.position]) {
+          brewers[data.brewer]["flight"][data.position] = [];
+        }
+
+        var detail = { name: data.beer };
+        if (data.style) {
+          detail["style"] = data.style;
+        }
+        if (data.asst_brewer) {
+          detail["asst_brewer"] = data.asst_brewer;
+        }
+
+        brewers[data.brewer]["flight"][data.position].push(detail);
+      });
+
+      return brewers;
+    }
+
+    function add_input_val(data, key, input_selector) {
+      var input = $(input_selector);
+      var val = input.val();
+
+      if (val) {
+        data[key] = val;
+      }
+    }
+
+    function add_true_false_input_val(data, key, input_selector) {
+      var input = $(input_selector);
+      var val = input.prop("checked");
+
+      if (val) {
+        data[key] = true;
+      }
+    }
+
+    function generate_yaml() {
+      var data = {};
+      var winners = get_winners();
+
+      var year = $("#year").val();
+      if (year) {
+        data["year"] = parseInt(year);
       }
 
-      function init() {
-        // init datepicker
-        $("#date").datepicker({ format: "dd-mm-yyyy" });
+      add_input_val(data, "date", "#date");
+      add_input_val(data, "abbr_name", "#competition-name-abbrv");
+      add_input_val(data, "full_name", "#competition-name-full");
+      add_input_val(data, "location", "#location");
 
-        // init style selectors
+      add_true_false_input_val(data, "smaller_competition", "#smaller-competition");
+
+
+      data["guidelines"] = $("#guidelines")
+        .find(":selected")
+        .text();
+      data["winners"] = [];
+
+      $.each(winners, function (name, result) {
+        if (name) {
+          var obj = { name: name };
+
+          if (result["bos"]) {
+            obj["bos"] = result.bos;
+          }
+          if (result["flight"]) {
+            obj["flight"] = result.flight;
+          }
+
+          data["winners"].push(obj);
+        }
+      });
+
+      $("#yaml").text("---\n" + jsyaml.dump(data));
+    }
+
+    function init() {
+      // init datepicker
+      $("#date").datepicker({ format: "dd-mm-yyyy" });
+
+      // init style selectors
+      set_style_selectors();
+      $("#guidelines").change(function () {
         set_style_selectors();
-        $("#guidelines").change(function() {
-          set_style_selectors();
-        });
+      });
 
-        // add a watchers to the buttons
-        $("#add-new-bos-winner").click(function() {
-          add_new_bos_winner();
-        });
-        $("#add-new-flight-winner").click(function() {
-          add_new_flight_winner();
-        });
-        $("#generate-yaml").click(function() {
-          generate_yaml();
-        });
-      }
+      // add a watchers to the buttons
+      $("#add-new-bos-winner").click(function () {
+        add_new_bos_winner();
+      });
+      $("#add-new-flight-winner").click(function () {
+        add_new_flight_winner();
+      });
+      $("#generate-yaml").click(function () {
+        generate_yaml();
+      });
+    }
 
-      init();
-    </script>
-  </body>
+    init();
+  </script>
+</body>
+
 </html>
