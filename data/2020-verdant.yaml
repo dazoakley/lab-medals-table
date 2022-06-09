@@ -5,6 +5,7 @@ abbr_name: Verdant
 full_name: Verdant IPA Yeast Home Brew Competition
 location: Verdant Brewing Co, Falmouth
 guidelines: BJCP 2015
+smaller_competition: true
 winners:
   - name: Lee Immins
     bos:

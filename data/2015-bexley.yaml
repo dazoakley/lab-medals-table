@@ -5,6 +5,7 @@ abbr_name: Bexley
 full_name: Bexley Festival
 location: Bexley
 guidelines: NGWBJ
+smaller_competition: true
 winners:
   - name: Dave Halse
     flight:
