@@ -5,6 +5,7 @@ full_name: Piwobranie in Grodzisk Wielkopolski
 abbr_name: Poland
 location: Poland
 guidelines: Local Guidelines
+smaller_competition: true
 winners:
   - name: Lee Immins
     flight:

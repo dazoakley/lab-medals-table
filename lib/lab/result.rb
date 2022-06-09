@@ -30,11 +30,21 @@ module LAB
     def score
       return 0 unless points_eligible?
 
-      SCORES[round][place] || 0
+      provisional_score = SCORES[round][place] || 0
+
+      if smaller_competition?
+        provisional_score / 2
+      else
+        provisional_score
+      end
     end
 
     def points_eligible?
-      competition_edition.competition.points_eligible?
+      competition_edition.points_eligible?
+    end
+
+    def smaller_competition?
+      competition_edition.smaller_competition?
     end
 
     def description_for_roll_of_honour

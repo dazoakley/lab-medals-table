@@ -5,6 +5,7 @@ abbr_name: Three Hills
 full_name: Three Hills Brewing Homebrew Club Ahtanum Competition
 location: Three Hills Brewing, Woodford
 guidelines: BJCP 2015
+smaller_competition: true
 winners:
   - name: Serge Savin
     bos:

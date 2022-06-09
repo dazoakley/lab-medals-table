@@ -7,5 +7,9 @@ module LAB
     def points_eligible?
       points_eligible
     end
+
+    def smaller_competition?
+      smaller_competition
+    end
   end
 end

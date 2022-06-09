@@ -17,6 +17,16 @@ RSpec.describe LAB::CompetitionEdition do
     end
   end
 
+  describe '#smaller_competition?' do
+    it 'returns true if the competition is a smaller competition' do
+      lager_comp = LAB::Competition.find(name: 'Lager Than Life').competition_editions.first
+      smaller_comp = LAB::Competition.find(name: 'Bexley Festival').competition_editions.first
+
+      expect(lager_comp.smaller_competition?).to be false
+      expect(smaller_comp.smaller_competition?).to be true
+    end
+  end
+
   describe '#best_of_show_winners?' do
     it 'returns true if there are any best of show winners' do
       competition_edition = LAB::Competition.find(name: 'Lager Than Life').competition_editions.max_by(&:date)

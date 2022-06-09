@@ -97,6 +97,76 @@ RSpec.describe LAB::Result do
           expect(result.score).to eq 0
         end
       end
+
+      describe 'when the competition is a "smaller_competition"' do
+        let(:competition) do
+          LAB::Competition.create(name: 'Test Competition', abbreviated_name: 'Test', smaller_competition: true)
+        end
+
+        describe 'when the result is a "flight" round' do
+          let(:result) do
+            LAB::Result.create(round: 'flight', place: 'gold', competition_edition_id: edition.id, beer_id: beer.id,
+                               style_id: style.id)
+          end
+
+          it 'returns the correct score for a gold medal' do
+            result.place = 'gold'
+            expect(result.score).to eq LAB::Result::SCORES['flight']['gold'] / 2
+          end
+
+          it 'returns the correct score for a silver medal' do
+            result.place = 'silver'
+            expect(result.score).to eq LAB::Result::SCORES['flight']['silver'] / 2
+          end
+
+          it 'returns the correct score for a bronze medal' do
+            result.place = 'bronze'
+            expect(result.score).to eq LAB::Result::SCORES['flight']['bronze'] / 2
+          end
+
+          it 'returns no score for a 4th place' do
+            result.place = '4th'
+            expect(result.score).to eq 0
+          end
+
+          it 'returns no score for a HM' do
+            result.place = 'HM'
+            expect(result.score).to eq 0
+          end
+        end
+
+        describe 'when the result is a "bos" round' do
+          let(:result) do
+            LAB::Result.create(round: 'bos', place: 'gold', competition_edition_id: edition.id, beer_id: beer.id,
+                               style_id: style.id)
+          end
+
+          it 'returns the correct score for a gold medal' do
+            result.place = 'gold'
+            expect(result.score).to eq LAB::Result::SCORES['bos']['gold'] / 2
+          end
+
+          it 'returns the correct score for a silver medal' do
+            result.place = 'silver'
+            expect(result.score).to eq LAB::Result::SCORES['bos']['silver'] / 2
+          end
+
+          it 'returns the correct score for a bronze medal' do
+            result.place = 'bronze'
+            expect(result.score).to eq LAB::Result::SCORES['bos']['bronze'] / 2
+          end
+
+          it 'returns no score for a 4th place' do
+            result.place = '4th'
+            expect(result.score).to eq 0
+          end
+
+          it 'returns no score for a HM' do
+            result.place = 'HM'
+            expect(result.score).to eq 0
+          end
+        end
+      end
     end
 
     describe 'when the competition is NOT points eligible' do

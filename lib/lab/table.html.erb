@@ -5,6 +5,7 @@
       html { font-size: smaller; padding: 15px }
       table { border-collapse: collapse; text-align: center; font-size: small; }
       th,td { border: 1px solid grey; padding: 2px 4px; }
+      .smaller_comp_title { background-image: repeating-linear-gradient(45deg, #F0F0F0, #F0F0F0 15px, #DBDBDB 15px, #DBDBDB 30px); }
       .totals   { background-color: #F0F0F0; }
       tbody tr:hover, tbody tr:hover .totals  { background-color: #DAF7A6; }
       td.gold   { background-color: gold !important; }
@@ -20,7 +21,14 @@
       <b>Flight:</b> Gold - <%= LAB::Result::SCORES['flight']['gold'] %>, Silver - <%= LAB::Result::SCORES['flight']['silver'] %>, Bronze - <%= LAB::Result::SCORES['flight']['bronze'] %>
     </p>
     <p>
-      <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em><br />
+      <em>Disclaimer: medal values are unofficial and determined completely by what we decided when we created the spreadsheet</em>
+    </p>
+    <p>
+      For &quot;smaller&quot; competitions the points awarded will be half those stated above.<br/>
+      We define a &quot;smaller&quot; competition as one which only has a single round of judging, or a very small number of overall entries (i.e. &lt;30).<br/>
+      These are identified in the table with a grey striped background in the title box.
+    </p>
+    <p>
       Brewers equal after total medal points are ranked then by BoS GSB, then Flight GSB.
     </p>
     <table>
@@ -32,7 +40,9 @@
           <th rowspan="3" class="totals">Total Medals</th>
           <th colspan="6" class="totals">Medals</th>
           <% @competition_editions.each do |competition_edition| %>
-            <th colspan="6"><%= competition_edition.table_display_name %></th>
+            <th colspan="6" <% if competition_edition.smaller_competition? %>class="smaller_comp_title"<% end %>>
+              <%= competition_edition.table_display_name %>
+            </th>
           <% end %>
         </tr>
         <tr>

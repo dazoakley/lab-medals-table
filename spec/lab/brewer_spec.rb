@@ -18,7 +18,7 @@ RSpec.describe LAB::Brewer do
   describe '#total_points' do
     it 'returns the total points for a brewers winning beers' do
       expect(LAB::Brewer.find(name: 'Ian Cosier').total_points).to eq 20
-      expect(LAB::Brewer.find(name: 'Mark Sanderson').total_points).to eq 65
+      expect(LAB::Brewer.find(name: 'Mark Sanderson').total_points).to eq 40
       expect(LAB::Brewer.find(name: 'Steve Smith').total_points).to eq 2.5
     end
   end
@@ -43,7 +43,7 @@ RSpec.describe LAB::Brewer do
       competition = LAB::Competition.find(name: 'Bexley Festival')
       competition_edition = competition.competition_editions.max_by(&:date)
 
-      expect(brewer.total_points_for_competition_edition(competition_edition)).to eq 50
+      expect(brewer.total_points_for_competition_edition(competition_edition)).to eq 25
     end
   end
 
@@ -75,7 +75,7 @@ RSpec.describe LAB::Brewer do
     it 'returns an array used for sorting and ranking brewers' do
       expect(LAB::Brewer.find(name: 'Mark Sanderson').sorter)
         .to eq(
-          [65, 1, 0, 0, 4, 0, 2]
+          [40, 1, 0, 0, 4, 0, 2]
         )
     end
   end

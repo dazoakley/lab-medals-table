@@ -5,6 +5,7 @@ abbr_name: Briarbank
 full_name: Briarbank Homebrew Competition
 location: Briarbank Brewery, Ipswich
 guidelines: SIBA
+smaller_competition: true
 winners:
   - name: Mark Sanderson
     flight:
