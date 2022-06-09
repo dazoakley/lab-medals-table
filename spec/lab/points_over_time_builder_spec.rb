@@ -13,7 +13,7 @@ RSpec.describe LAB::PointsOverTimeBuilder do
 
       expect(csv).to_not be_empty
       expect(csv).to include('Mick Harrison,0,0,2.5,2.5,2.5,2.5')
-      expect(csv).to include('Mark Sanderson,0,50,50,62.5,62.5,65.0')
+      expect(csv).to include('Mark Sanderson,0,25,25,37.5,37.5,40')
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.describe LAB::PointsOverTimeBuilder do
 
       expect(data.keys.count).to eq(17)
       expect(data['Mick Harrison']).to eq([0, 0, 2.5, 0, 0, 0])
-      expect(data['Mark Sanderson']).to eq([0, 50, 0, 12.5, 0, 2.5])
+      expect(data['Mark Sanderson']).to eq([0, 25, 0, 12.5, 0, 2.5])
     end
 
     it 'should not include brewers with zero points overall' do
@@ -39,7 +39,7 @@ RSpec.describe LAB::PointsOverTimeBuilder do
 
       expect(data.keys.count).to eq(17)
       expect(data['Mick Harrison']).to eq([0, 0, 2.5, 2.5, 2.5, 2.5])
-      expect(data['Mark Sanderson']).to eq([0, 50, 50, 62.5, 62.5, 65])
+      expect(data['Mark Sanderson']).to eq([0, 25, 25, 37.5, 37.5, 40])
     end
 
     it 'should not include brewers with zero points overall' do

@@ -27,8 +27,12 @@ module LAB
         abbr_name = data['abbr_name'] || name
 
         # puts "name: #{name}, abbreviated_name: #{abbr_name}"
-        competition = Competition.find_or_create(name: name, abbreviated_name: abbr_name,
-                                                 points_eligible: data.fetch('points_eligible', true))
+        competition = Competition.find_or_create(
+          name: name,
+          abbreviated_name: abbr_name,
+          points_eligible: data.fetch('points_eligible', true),
+          smaller_competition: data.fetch('smaller_competition', false)
+        )
 
         load_edition(competition, data)
       end

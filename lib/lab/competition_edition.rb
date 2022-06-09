@@ -15,6 +15,10 @@ module LAB
       competition.points_eligible?
     end
 
+    def smaller_competition?
+      competition.smaller_competition?
+    end
+
     def table_display_name
       "#{date.year} - #{competition.abbreviated_name}"
     end
