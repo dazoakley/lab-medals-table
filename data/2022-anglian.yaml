@@ -1,0 +1,56 @@
+---
+year: 2022
+date: 09-07-2022
+abbr_name: ACB
+full_name: Anglian Craft Brewers Homebrew Competition
+location: 'Colchester, UK'
+guidelines: BJCP 2015
+winners:
+  - name: Lee Immins
+    bos:
+      silver:
+        - name: The Dark Prince (Oaked)
+          style: 33A
+    flight:
+      gold:
+        - name: The Dark Prince (Oaked)
+          style: 33A
+  - name: James Wilson
+    bos:
+      HM:
+        - name: 'Seriously, Who Makes A 1a?'
+          style: 1A
+    flight:
+      gold:
+        - name: 'Seriously, Who Makes A 1a?'
+          style: 1A
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Rusty Droid
+          style: 7A
+  - name: Ken Bazley
+    flight:
+      HM:
+        - name: Hop Off You Cone
+          style: 21A
+  - name: Ed Jackson
+    flight:
+      bronze:
+        - name: Dark Ruby
+          style: 17A
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: Cabin Fever
+          style: 22C
+  - name: Joell Leskin
+    flight:
+      bronze:
+        - name: Smokester
+          style: 6B
+  - name: Stew Horne
+    flight:
+      gold:
+        - name: Homage To Lukas
+          style: 19A
