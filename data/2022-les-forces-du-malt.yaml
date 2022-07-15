@@ -1,0 +1,16 @@
+---
+year: 2022
+date: 09-07-2022
+abbr_name: FDMBA
+full_name: Les Forces du Malt
+location: 'Toulouse, France'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      gold:
+        - name: Bread And Butters
+          style: 29A
+      silver:
+        - name: Marmottor
+          style: 9A
