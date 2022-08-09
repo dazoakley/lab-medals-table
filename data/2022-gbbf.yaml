@@ -1,0 +1,33 @@
+---
+year: 2022
+date: 02-08-2022
+abbr_name: GBBF
+full_name: Great British Beer Festival
+location: London Olympia
+smaller_competition: false
+guidelines: CAMRA
+winners:
+  - name: Mark Sanderson
+    bos:
+      gold:
+        - name: Crooner
+          style: Mild
+    flight:
+      gold:
+        - name: Crooner
+          style: Mild
+  - name: Les Manley
+    flight:
+      gold:
+        - name: The Full English
+          style: Premium Bitter
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: Lonely and Old
+          style: Brown and Red Ales, Old Ales and Strong Milds
+  - name: Chris Pinnock
+    flight:
+      gold:
+        - name: Barley Wine 2022
+          style: Barley Wines and Strong Ales

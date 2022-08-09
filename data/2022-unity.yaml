@@ -1,0 +1,14 @@
+---
+year: 2022
+date: 29-07-2022
+abbr_name: Unity
+full_name: Unity Conflux Competition
+location: 'Unity Brewing, Southampton'
+smaller_competition: true
+guidelines: BJCP 2015
+winners:
+  - name: Raphael Clegg-Vinell
+    flight:
+      silver:
+        - name: Gold 'n' Blue
+          style: 1D
