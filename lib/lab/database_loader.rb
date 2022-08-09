@@ -39,9 +39,10 @@ module LAB
     end
 
     def load_guidelines
+      Guideline.find_or_create(name: 'CAMRA')
+      Guideline.find_or_create(name: 'Local Guidelines')
       Guideline.find_or_create(name: 'NGWBJ')
       Guideline.find_or_create(name: 'SIBA')
-      Guideline.find_or_create(name: 'Local Guidelines')
 
       # BJCP guidelines
       Dir["#{guidelines_dir}*.json"].each do |file|
