@@ -1,0 +1,14 @@
+---
+year: 2022
+date: 14-08-2022
+abbr_name: Spruce Rising
+full_name: Spruce Rising
+location: Reading
+smaller_competition: true
+guidelines: BJCP 2021
+winners:
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: Path Of The Witch
+          style: 19C
