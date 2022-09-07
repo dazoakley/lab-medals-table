@@ -111,6 +111,7 @@
               <select class="form-control" id="guidelines">
                 <option>BJCP 2008</option>
                 <option>BJCP 2015</option>
+                <option>BJCP 2021</option>
                 <option>CAMRA</option>
                 <option>NGWBJ</option>
                 <option>SIBA</option>
@@ -215,11 +216,15 @@
     // load up BJCP guidelines
     var bjcp_2008 = {};
     var bjcp_2015 = {};
+    var bjcp_2021 = {};
     $.getJSON("bjcp-2008.json", function (data) {
       bjcp_2008 = data;
     });
     $.getJSON("bjcp-2015.json", function (data) {
       bjcp_2015 = data;
+    });
+    $.getJSON("bjcp-2021.json", function (data) {
+      bjcp_2021 = data;
     });
 
     // setup result template and counters
@@ -271,6 +276,8 @@
         return bjcp_2008;
       } else if (guidelines == "BJCP 2015") {
         return bjcp_2015;
+      } else if (guidelines == "BJCP 2021") {
+        return bjcp_2021;
       } else {
         return null;
       }

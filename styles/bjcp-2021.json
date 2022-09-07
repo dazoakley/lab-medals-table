@@ -1,0 +1,848 @@
+{
+  "name": "BJCP 2021",
+  "children": [
+    {
+      "name": "Beer",
+      "children": [
+        {
+          "name": "Standard American Beer",
+          "number": 1,
+          "children": [
+            {
+              "name": "American Light Lager",
+              "letter": "A"
+            },
+            {
+              "name": "American Lager",
+              "letter": "B"
+            },
+            {
+              "name": "Cream Ale",
+              "letter": "C"
+            },
+            {
+              "name": "American Wheat Beer",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "International Lager",
+          "number": 2,
+          "children": [
+            {
+              "name": "International Pale Lager",
+              "letter": "A"
+            },
+            {
+              "name": "International Amber Lager",
+              "letter": "B"
+            },
+            {
+              "name": "International Dark Lager",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Czech Lager",
+          "number": 3,
+          "children": [
+            {
+              "name": "Czech Pale Lager",
+              "letter": "A"
+            },
+            {
+              "name": "Czech Premium Pale Lager",
+              "letter": "B"
+            },
+            {
+              "name": "Czech Amber Lager",
+              "letter": "C"
+            },
+            {
+              "name": "Czech Dark Lager",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Pale Malty European Lager",
+          "number": 4,
+          "children": [
+            {
+              "name": "Munich Helles",
+              "letter": "A"
+            },
+            {
+              "name": "Festbier",
+              "letter": "B"
+            },
+            {
+              "name": "Helles Bock",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Pale Bitter European Beer",
+          "number": 5,
+          "children": [
+            {
+              "name": "German Leichtbier",
+              "letter": "A"
+            },
+            {
+              "name": "Kölsch",
+              "letter": "B"
+            },
+            {
+              "name": "German Helles Exportbier",
+              "letter": "C"
+            },
+            {
+              "name": "German Pils",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Amber Malty European Lager",
+          "number": 6,
+          "children": [
+            {
+              "name": "Märzen",
+              "letter": "A"
+            },
+            {
+              "name": "Rauchbier",
+              "letter": "B"
+            },
+            {
+              "name": "Dunkles Bock",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Amber Bitter European Beer",
+          "number": 7,
+          "children": [
+            {
+              "name": "Vienna Lager",
+              "letter": "A"
+            },
+            {
+              "name": "Altbier",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Dark European Lager",
+          "number": 8,
+          "children": [
+            {
+              "name": "Munich Dunkel",
+              "letter": "A"
+            },
+            {
+              "name": "Schwarzbier",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Strong European Beer",
+          "number": 9,
+          "children": [
+            {
+              "name": "Doppelbock",
+              "letter": "A"
+            },
+            {
+              "name": "Eisbock",
+              "letter": "B"
+            },
+            {
+              "name": "Baltic Porter",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "German Wheat Beer",
+          "number": 10,
+          "children": [
+            {
+              "name": "Weissbier",
+              "letter": "A"
+            },
+            {
+              "name": "Dunkles Weissbier",
+              "letter": "B"
+            },
+            {
+              "name": "Weizenbock",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "British Bitter",
+          "number": 11,
+          "children": [
+            {
+              "name": "Ordinary Bitter",
+              "letter": "A"
+            },
+            {
+              "name": "Best Bitter",
+              "letter": "B"
+            },
+            {
+              "name": "Strong Bitter",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Pale Commonwealth Beer",
+          "number": 12,
+          "children": [
+            {
+              "name": "British Golden Ale",
+              "letter": "A"
+            },
+            {
+              "name": "Australian Sparkling Ale",
+              "letter": "B"
+            },
+            {
+              "name": "English IPA",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Brown British Beer",
+          "number": 13,
+          "children": [
+            {
+              "name": "Dark Mild",
+              "letter": "A"
+            },
+            {
+              "name": "British Brown Ale",
+              "letter": "B"
+            },
+            {
+              "name": "English Porter",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Scottish Ale",
+          "number": 14,
+          "children": [
+            {
+              "name": "Scottish Light",
+              "letter": "A"
+            },
+            {
+              "name": "Scottish Heavy",
+              "letter": "B"
+            },
+            {
+              "name": "Scottish Export",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Irish Beer",
+          "number": 15,
+          "children": [
+            {
+              "name": "Irish Red Ale",
+              "letter": "A"
+            },
+            {
+              "name": "Irish Stout",
+              "letter": "B"
+            },
+            {
+              "name": "Irish Extra Stout",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Dark British Beer",
+          "number": 16,
+          "children": [
+            {
+              "name": "Sweet Stout",
+              "letter": "A"
+            },
+            {
+              "name": "Oatmeal Stout",
+              "letter": "B"
+            },
+            {
+              "name": "Tropical Stout",
+              "letter": "C"
+            },
+            {
+              "name": "Foreign Extra Stout",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Strong British Ale",
+          "number": 17,
+          "children": [
+            {
+              "name": "British Strong Ale",
+              "letter": "A"
+            },
+            {
+              "name": "Old Ale",
+              "letter": "B"
+            },
+            {
+              "name": "Wee Heavy",
+              "letter": "C"
+            },
+            {
+              "name": "English Barleywine",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Pale American Ale",
+          "number": 18,
+          "children": [
+            {
+              "name": "Blonde Ale",
+              "letter": "A"
+            },
+            {
+              "name": "American Pale Ale",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Amber and Brown American Beer",
+          "number": 19,
+          "children": [
+            {
+              "name": "American Amber Ale",
+              "letter": "A"
+            },
+            {
+              "name": "California Common",
+              "letter": "B"
+            },
+            {
+              "name": "American Brown Ale",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "American Porter and Stout",
+          "number": 20,
+          "children": [
+            {
+              "name": "American Porter",
+              "letter": "A"
+            },
+            {
+              "name": "American Stout",
+              "letter": "B"
+            },
+            {
+              "name": "Imperial Stout",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "IPA",
+          "number": 21,
+          "children": [
+            {
+              "name": "American IPA",
+              "letter": "A"
+            },
+            {
+              "name": "Specialty IPA",
+              "letter": "B"
+            },
+            {
+              "name": "Specialty IPA: Belgian IPA",
+              "letter": "B-belgian"
+            },
+            {
+              "name": "Specialty IPA: Black IPA",
+              "letter": "B-black"
+            },
+            {
+              "name": "Specialty IPA: Brown IPA",
+              "letter": "B-brown"
+            },
+            {
+              "name": "Specialty IPA: Brut IPA",
+              "letter": "B-brut"
+            },
+            {
+              "name": "Specialty IPA: Red IPA",
+              "letter": "B-red"
+            },
+            {
+              "name": "Specialty IPA: Rye IPA",
+              "letter": "B-rye"
+            },
+            {
+              "name": "Specialty IPA: White IPA",
+              "letter": "B-white"
+            },
+            {
+              "name": "Hazy IPA",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Strong American Ale",
+          "number": 22,
+          "children": [
+            {
+              "name": "Double IPA",
+              "letter": "A"
+            },
+            {
+              "name": "American Strong Ale",
+              "letter": "B"
+            },
+            {
+              "name": "American Barleywine",
+              "letter": "C"
+            },
+            {
+              "name": "Wheatwine",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "European Sour Ale",
+          "number": 23,
+          "children": [
+            {
+              "name": "Berliner Weisse",
+              "letter": "A"
+            },
+            {
+              "name": "Flanders Red Ale",
+              "letter": "B"
+            },
+            {
+              "name": "Oud Bruin",
+              "letter": "C"
+            },
+            {
+              "name": "Lambic",
+              "letter": "D"
+            },
+            {
+              "name": "Gueuze",
+              "letter": "E"
+            },
+            {
+              "name": "Fruit Lambic",
+              "letter": "F"
+            },
+            {
+              "name": "Gose",
+              "letter": "G"
+            }
+          ]
+        },
+        {
+          "name": "Belgian Ale",
+          "number": 24,
+          "children": [
+            {
+              "name": "Witbier",
+              "letter": "A"
+            },
+            {
+              "name": "Belgian Pale Ale",
+              "letter": "B"
+            },
+            {
+              "name": "Bière de Garde",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Strong Belgian Ale",
+          "number": 25,
+          "children": [
+            {
+              "name": "Belgian Blond Ale",
+              "letter": "A"
+            },
+            {
+              "name": "Saison",
+              "letter": "B"
+            },
+            {
+              "name": "Belgian Golden Strong Ale",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Monastic Ale",
+          "number": 26,
+          "children": [
+            {
+              "name": "Belgian Single",
+              "letter": "A"
+            },
+            {
+              "name": "Belgian Dubbel",
+              "letter": "B"
+            },
+            {
+              "name": "Belgian Tripel",
+              "letter": "C"
+            },
+            {
+              "name": "Belgian Dark Strong Ale",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Historical Beer",
+          "number": 27,
+          "children": [
+            {
+              "name": "Historical Beer: Kellerbier",
+              "letter": "A-kellerbier"
+            },
+            {
+              "name": "Historical Beer: Kentucky Common",
+              "letter": "A-kentucky-common"
+            },
+            {
+              "name": "Historical Beer: Lichtenhainer",
+              "letter": "A-lichtenhainer"
+            },
+            {
+              "name": "Historical Beer: London Brown Ale",
+              "letter": "A-london-brown-ale"
+            },
+            {
+              "name": "Historical Beer: Piwo Grodziskie",
+              "letter": "A-piwo-grodziskie"
+            },
+            {
+              "name": "Historical Beer: Pre-Prohibition Lager",
+              "letter": "A-pre-prohibition-lager"
+            },
+            {
+              "name": "Historical Beer: Pre-Prohibition Porter",
+              "letter": "A-pre-prohibition-porter"
+            },
+            {
+              "name": "Historical Beer: Roggenbier",
+              "letter": "A-roggenbier"
+            },
+            {
+              "name": "Historical Beer: Sahti",
+              "letter": "A-sahti"
+            }
+          ]
+        },
+        {
+          "name": "American Wild Ale",
+          "number": 28,
+          "children": [
+            {
+              "name": "Brett Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Mixed-Fermentation Sour Beer",
+              "letter": "B"
+            },
+            {
+              "name": "Wild Specialty Beer",
+              "letter": "C"
+            },
+            {
+              "name": "Straight Sour Beer",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Fruit Beer",
+          "number": 29,
+          "children": [
+            {
+              "name": "Fruit Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Fruit and Spice Beer",
+              "letter": "B"
+            },
+            {
+              "name": "Specialty Fruit Beer",
+              "letter": "C"
+            },
+            {
+              "name": "Grape Ale",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Spiced Beer",
+          "number": 30,
+          "children": [
+            {
+              "name": "Spice, Herb, or Vegetable Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Autumn Seasonal Beer",
+              "letter": "B"
+            },
+            {
+              "name": "Winter Seasonal Beer",
+              "letter": "C"
+            },
+            {
+              "name": "Specialty Spice Beer",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "name": "Alternative Fermentables Beer",
+          "number": 31,
+          "children": [
+            {
+              "name": "Alternative Grain Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Alternative Sugar Beer",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Smoked Beer",
+          "number": 32,
+          "children": [
+            {
+              "name": "Classic Style Smoked Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Specialty Smoked Beer",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Wood Beer",
+          "number": 33,
+          "children": [
+            {
+              "name": "Wood-Aged Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Specialty Wood-Aged Beer",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Specialty Beer",
+          "number": 34,
+          "children": [
+            {
+              "name": "Commercial Specialty Beer",
+              "letter": "A"
+            },
+            {
+              "name": "Mixed-Style Beer",
+              "letter": "B"
+            },
+            {
+              "name": "Experimental Beer",
+              "letter": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mead",
+      "children": [
+        {
+          "name": "Traditional Mead",
+          "number": "M1",
+          "children": [
+            {
+              "name": "Dry Mead",
+              "letter": "A"
+            },
+            {
+              "name": "Semi-Sweet Mead",
+              "letter": "B"
+            },
+            {
+              "name": "Sweet Mead",
+              "letter": "C"
+            }
+          ]
+        },
+        {
+          "name": "Fruit Mead",
+          "number": "M2",
+          "children": [
+            {
+              "name": "Cyser",
+              "letter": "A"
+            },
+            {
+              "name": "Pyment",
+              "letter": "B"
+            },
+            {
+              "name": "Berry Mead",
+              "letter": "C"
+            },
+            {
+              "name": "Stone Fruit Mead",
+              "letter": "D"
+            },
+            {
+              "name": "Melomel",
+              "letter": "E"
+            }
+          ]
+        },
+        {
+          "name": "Spiced Mead",
+          "number": "M3",
+          "children": [
+            {
+              "name": "Fruit and Spice Mead",
+              "letter": "A"
+            },
+            {
+              "name": "Spice, Herb or Vegetable Mead",
+              "letter": "B"
+            }
+          ]
+        },
+        {
+          "name": "Specialty Mead",
+          "number": "M4",
+          "children": [
+            {
+              "name": "Braggot",
+              "letter": "A"
+            },
+            {
+              "name": "Historical Mead",
+              "letter": "B"
+            },
+            {
+              "name": "Experimental Mead",
+              "letter": "C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cider",
+      "children": [
+        {
+          "name": "Standard Cider and Perry",
+          "number": "C1",
+          "children": [
+            {
+              "name": "New World Cider",
+              "letter": "A"
+            },
+            {
+              "name": "English Cider",
+              "letter": "B"
+            },
+            {
+              "name": "French Cider",
+              "letter": "C"
+            },
+            {
+              "name": "New World Perry",
+              "letter": "D"
+            },
+            {
+              "name": "Traditional Perry",
+              "letter": "E"
+            }
+          ]
+        },
+        {
+          "name": "Specialty Cider and Perry",
+          "number": "C2",
+          "children": [
+            {
+              "name": "New England Cider",
+              "letter": "A"
+            },
+            {
+              "name": "Cider with Other Fruit",
+              "letter": "B"
+            },
+            {
+              "name": "Applewine",
+              "letter": "C"
+            },
+            {
+              "name": "Ice Cider",
+              "letter": "D"
+            },
+            {
+              "name": "Cider with Herbs/Spices",
+              "letter": "E"
+            },
+            {
+              "name": "Specialty Cider/Perry",
+              "letter": "F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
