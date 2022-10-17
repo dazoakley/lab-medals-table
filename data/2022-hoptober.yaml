@@ -1,0 +1,23 @@
+---
+year: 2022
+date: 15-10-2022
+abbr_name: Hoptober
+full_name: Norwich Amateur Brewers Hoptober Competition
+location: 'Ampersand Brew Co, Diss'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Admiral On The Bus
+          style: 12C
+  - name: Joe Hickey
+    flight:
+      silver:
+        - name: Bobus Maximus
+          style: 18B
+  - name: Mark Hopkins
+    flight:
+      bronze:
+        - name: Crazy Horse
+          style: 18B

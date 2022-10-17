@@ -1,0 +1,18 @@
+---
+year: 2022
+date: 08-10-2022
+abbr_name: Brew Con
+full_name: Brew Con World Series V
+location: 'Wild Card Brewery, London'
+guidelines: BJCP 2015
+winners:
+  - name: Jacques Marais
+    flight:
+      silver:
+        - name: Boars Boars Boars 2
+          style: 20C
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Black Barley Wine To Dine A Fine Swine
+          style: 33A
