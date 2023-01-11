@@ -1,0 +1,18 @@
+---
+year: 2022
+date: 26-11-2022
+abbr_name: Heart of England
+full_name: Heart of England Home Brew Competition
+location: 'Dudley, England'
+guidelines: BJCP 2021
+winners:
+  - name: Ken Bazley
+    flight:
+      bronze:
+        - name: Better Brew Something Sharpish
+          style: 13A
+  - name: Luke Russell
+    flight:
+      silver:
+        - name: St. Senan's Stout
+          style: 15B

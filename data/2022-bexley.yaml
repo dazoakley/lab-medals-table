@@ -1,0 +1,18 @@
+---
+year: 2022
+date: 26-03-2022
+abbr_name: Bexley
+full_name: Bexley Festival
+location: Bexley
+guidelines: NGWBJ
+smaller_competition: true
+winners:
+  - name: Mark Sanderson
+    bos:
+      gold:
+        - name: London Brown Ale
+    flight:
+      gold:
+        - name: London Brown Ale
+      silver:
+        - name: Smoked Helles
