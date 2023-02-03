@@ -1,0 +1,36 @@
+---
+year: 2023
+date: 28-01-2023
+abbr_name: SCB
+full_name: Scottish National Homebrew Competition
+location: Edinburgh
+guidelines: BJCP 2021
+winners:
+  - name: Lee Immins
+    flight:
+      bronze:
+        - name: Immolator
+          style: 9A
+      gold:
+        - name: Oaked Black Barley Wine
+          style: 33A
+  - name: Mark Hopkins
+    flight:
+      bronze:
+        - name: Crazy Horse
+          style: 18B
+  - name: Les Manley
+    flight:
+      silver:
+        - name: Butterfly Effect
+          style: 22A
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Checkpoint Charlie
+          style: 23A
+  - name: Joe Hickey
+    flight:
+      bronze:
+        - name: Bob Ryeder On The Storm
+          style: 31A
