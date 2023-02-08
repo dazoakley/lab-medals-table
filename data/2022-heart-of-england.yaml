@@ -16,3 +16,9 @@ winners:
       silver:
         - name: St. Senan's Stout
           style: 15B
+  - name: Phill Turner
+    flight:
+      bronze:
+        - name: County Barley Wine
+          style: 17D
+          asst_brewer: Steve Plampton
