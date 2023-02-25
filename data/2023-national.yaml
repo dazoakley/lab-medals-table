@@ -1,0 +1,49 @@
+---
+year: 2023
+date: 18-02-2023
+abbr_name: UK NHC
+full_name: UK National Homebrewing Competition
+location: Bristol
+guidelines: BJCP 2021
+winners:
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Checkpoint Charlie
+          style: 23A
+      gold:
+        - name: Bluto's Beard
+          style: 13C
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Red Cortina
+          style: 15A
+  - name: Lucas Stolarczyk
+    flight:
+      HM:
+        - name: Expert Patrols
+          style: 18B
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Cabin Fever
+          style: 22C
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Horsmonden Strong Bitter
+          style: 11C
+      bronze:
+        - name: Whitbread 1850
+          style: "27A: Historical Beer"
+  - name: Lee Immins
+    flight:
+      gold:
+        - name: Ooldveek Tripel
+          style: 26C
+  - name: Jacques Marais
+    flight:
+      silver:
+        - name: Death's Quad
+          style: 26D
