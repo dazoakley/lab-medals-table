@@ -1,0 +1,33 @@
+---
+year: 2023
+date: 05-03-2023
+abbr_name: Lager Than Life
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Stormin' Norman
+          style: 8B
+  - name: James Wilson
+    flight:
+      HM:
+        - name: Winner Winner Marzen Dinner
+          style: 6A
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: Czechs On Fire
+          style: 32A
+  - name: Richard Farr
+    flight:
+      bronze:
+        - name: Adjuicator
+          style: 9A
+  - name: Stuart Loynton
+    flight:
+      silver:
+        - name: Garage Pilsner
+          style: 3B
