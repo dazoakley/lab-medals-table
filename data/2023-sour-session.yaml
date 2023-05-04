@@ -1,0 +1,42 @@
+---
+year: 2023
+date: 29-04-2023
+abbr_name: Sour & Session
+full_name: Sour & Session
+location: Reading
+guidelines: BJCP 2021
+winners:
+  - name: Mark Hopkins
+    bos:
+      silver:
+        - name: Cousin Sam
+          style: 20A
+    flight:
+      silver:
+        - name: Cousin Sam
+          style: 20A
+  - name: Mark Sanderson
+    bos:
+      HM:
+        - name: Mild Mannered
+          style: 13A
+    flight:
+      gold:
+        - name: Mild Mannered
+          style: 13A
+  - name: Luke Russell
+    flight:
+      silver:
+        - name: Red Cortina
+          style: 15A
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: Anything Geueze
+          style: 23E
+      silver:
+        - name: Raspberry Dream
+          style: 23F
+      bronze:
+        - name: Why Not You Just Saison?
+          style: 25B
