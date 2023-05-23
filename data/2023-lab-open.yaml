@@ -1,0 +1,70 @@
+---
+year: 2023
+date: 14-05-2023
+abbr_name: LAB Open
+full_name: LAB Open
+location: 'Hammerton Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: Serge Savin
+    bos:
+      4th:
+        - name: Salty Paradise
+          style: 29A
+    flight:
+      gold:
+        - name: Salty Paradise
+          style: 29A
+  - name: Jerome Clegg
+    flight:
+      silver:
+        - name: Transmission
+          style: 21A
+  - name: James Wilson
+    flight:
+      bronze:
+        - name: That Scene From Interstellar
+          style: 21C
+      4th:
+        - name: Ebb
+          style: 11B
+  - name: Antony Hawkerr
+    flight:
+      silver:
+        - name: Maebure
+          style: 24B
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: 'How Now, Brown Ale?'
+          style: 27A-london-brown-ale
+  - name: James Cross
+    flight:
+      silver:
+        - name: Marching Lager
+          style: 6A
+  - name: Mick Harrison
+    flight:
+      silver:
+        - name: Spell Caster
+          style: 13C
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Marmottor
+          style: 33A
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Saisonstein
+          style: 25B
+  - name: Joe Hickey
+    flight:
+      silver:
+        - name: Bobspresso Delight
+          style: 30A
+  - name: Jacob Liddle
+    flight:
+      4th:
+        - name: Fizzy Peach Sour
+          style: 29A
