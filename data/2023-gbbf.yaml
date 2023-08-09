@@ -1,0 +1,30 @@
+---
+year: 2023
+date: 04-08-2023
+abbr_name: GBBF
+full_name: Great British Beer Festival
+location: London Olympia
+guidelines: CAMRA
+winners:
+  - name: James Wilson
+    flight:
+      silver:
+        - name: Epsom Special Bitter
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: The Quest For Glory
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: Kenn's Brown Ale
+  - name: James Cross
+    flight:
+      gold:
+        - name: Warped Porter
+  - name: Jacques Marais
+    flight:
+      silver:
+        - name: A Black Habsburg
+      bronze:
+        - name: Pomum Fumi
