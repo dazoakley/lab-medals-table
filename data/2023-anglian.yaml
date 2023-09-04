@@ -1,0 +1,52 @@
+---
+year: 2023
+date: 02-09-2023
+abbr_name: ACB
+full_name: Anglian Craft Brewers Homebrew Competition
+location: Ipswich
+guidelines: BJCP 2021
+winners:
+  - name: Les Manley
+    flight:
+      gold:
+        - name: Pirate Pale
+          style: 12A
+  - name: Phill Turner
+    flight:
+      bronze:
+        - name: County Barley Wine
+          style: 17D
+  - name: Guy Asaert
+    flight:
+      gold:
+        - name: Belwit
+          style: 24A
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Calm and Light
+          style: 26C
+      gold:
+        - name: Balefire
+          style: 21B-belgian
+  - name: Mark Hopkins
+    flight:
+      bronze:
+        - name: Cousin Sam
+          style: 20A
+      silver:
+        - name: Rye Not
+          style: 21B-rye
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Punt the Boat Out
+          style: 11B
+      HM:
+        - name: Stormin' Norman
+          style: 8B
+  - name: Mark Sanderson
+    flight:
+      gold:
+        - name: Czech Your Pants
+          style: 3D
