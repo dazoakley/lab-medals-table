@@ -1,0 +1,62 @@
+---
+year: 2023
+date: 23-09-2023
+abbr_name: Welsh
+full_name: Welsh National
+location: Cardiff
+guidelines: BJCP 2021
+winners:
+  - name: Robert Read
+    bos:
+      gold:
+        - name: Rob The Younger
+          style: 18B
+    flight:
+      gold:
+        - name: Rob The Younger
+          style: 18B
+  - name: Ian Cosier
+    bos:
+      silver:
+        - name: Entre Deux Meres
+          style: 17D
+    flight:
+      gold:
+        - name: Entre Deux Meres
+          style: 17D
+        - name: Cabin Fever
+          style: 33A
+  - name: James Wilson
+    bos:
+      bronze:
+        - name: Identity Crisis
+          style: 21B-belgian
+    flight:
+      gold:
+        - name: Identity Crisis
+          style: 21B-belgian
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Admiral On The Bus
+          style: 12C
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: The Quest For Clairvoyance
+          style: 12C
+  - name: Jacques Marais
+    flight:
+      HM:
+        - name: The Dark One
+          style: 26B
+  - name: Guy Asaert
+    flight:
+      silver:
+        - name: Full Circle
+          style: 25B
+  - name: Mark Hopkins
+    flight:
+      silver:
+        - name: Cousin Sam
+          style: 20A
