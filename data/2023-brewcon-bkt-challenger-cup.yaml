@@ -1,0 +1,41 @@
+---
+year: 2023
+date: 07-10-2023
+abbr_name: Brewcon
+full_name: Brewcon 'BREW KEG TAP' Club Challenger Cup
+location: 'Hackney, London'
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    bos:
+      gold:
+        - name: Entre Deux Mères
+          style: 17D
+    flight:
+      gold:
+        - name: Entre Deux Mères
+          style: 17D
+  - name: Mark Sanderson
+    bos:
+      HM:
+        - name: Lacey Gaaardens
+          style: 24A
+    flight:
+      gold:
+        - name: Czech Your Pants
+          style: 3D
+        - name: Lacey Gaaardens
+          style: 24A
+      HM:
+        - name: Herr Kerler
+          style: 6B
+  - name: Serge Savin
+    flight:
+      HM:
+        - name: Illegal Things
+          style: 10A
+  - name: Laurence McHauser
+    flight:
+      bronze:
+        - name: Sunset Now
+          style: 12A
