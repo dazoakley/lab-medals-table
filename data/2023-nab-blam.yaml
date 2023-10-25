@@ -1,0 +1,25 @@
+---
+year: 2023
+date: 14-10-2023
+abbr_name: NAB BLAM
+full_name: Norwich Amateur Brewers Brew Like a Monk
+location: 'Ampersand Brew Co, Diss'
+guidelines: BJCP 2021
+winners:
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: Cuvee(Ish) Of The King
+          style: 26D
+        - name: It Still Geueze On
+          style: 23E
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: El-331er
+          style: 24A
+  - name: Guy Asaert
+    flight:
+      bronze:
+        - name: Belwit
+          style: 24A
