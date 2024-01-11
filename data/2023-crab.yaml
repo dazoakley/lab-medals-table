@@ -1,0 +1,16 @@
+---
+year: 2023
+date: 02-12-2023
+abbr_name: CRAB
+full_name: 4th CRAB Amateur Brewing Competition
+location: 'Rennes, France'
+guidelines: BJCP 2015
+winners:
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Green Run
+          style: 12C
+        - name: Divorce Precursor
+          style: 17C
+          asst_brewer: Lee Immins
