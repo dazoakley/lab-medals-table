@@ -1,0 +1,41 @@
+---
+year: 2024
+date: 27-01-2024
+abbr_name: SNHC
+full_name: Scottish National Homebrew Competition
+location: Edinburth
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    bos:
+      silver:
+        - name: White Out
+          style: 21C
+    flight:
+      gold:
+        - name: Green Run
+          style: 12C
+        - name: White Out
+          style: 21C
+  - name: Les Manley
+    flight:
+      silver:
+        - name: 49'er
+          style: 13C
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Hills And Hangovers
+          style: 14A
+        - name: Smoke Without Fire
+          style: 32A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Red Cortina
+          style: 15A
+  - name: Read Robert
+    flight:
+      silver:
+        - name: Screen Burn
+          style: 16D
