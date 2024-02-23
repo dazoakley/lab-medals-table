@@ -1,0 +1,35 @@
+---
+year: 2024
+date: 17-02-2024
+abbr_name: UK NHC
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2021
+winners:
+  - name: Les Manley
+    flight:
+      bronze:
+        - name: 49'er
+          style: 13C
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Hills And Hangovers
+          style: 14A
+        - name: Stormin' Normal
+          style: 8B
+  - name: Mark Hopkins
+    flight:
+      HM:
+        - name: Lagtra
+          style: 2A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Andechs Gon' Give It To Ya
+          style: 4C
+  - name: Craig Agnor
+    flight:
+      bronze:
+        - name: Accidental Amber
+          style: 19A
