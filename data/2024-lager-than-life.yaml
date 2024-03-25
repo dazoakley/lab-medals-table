@@ -1,0 +1,23 @@
+---
+year: 2024
+date: 23-03-2024
+abbr_name: LTL
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: James Wilson
+    flight:
+      silver:
+        - name: Winner Winner Marzen Dinner
+          style: 6A
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: Hector's House
+          style: 6A
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Stormin' Norman
+          style: 8B
