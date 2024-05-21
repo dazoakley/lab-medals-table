@@ -31,9 +31,8 @@ winners:
         - name: Saikou!
           style: 2A
       gold:
-        - name: ''
+        - name: 'Straight Outta Epsom'
           style: 21A
-          asst_brewer: Straight Outta Epsom
   - name: Arthur Olcot
     flight:
       bronze:
