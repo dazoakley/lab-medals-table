@@ -1,0 +1,65 @@
+---
+year: 2024
+date: 19-05-2024
+abbr_name: LAB Open
+full_name: LAB Open
+location: 'Hammerton Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: Luke Russell
+    bos:
+      silver:
+        - name: Unser Britisches Dunkel
+          style: 8A
+    flight:
+      gold:
+        - name: Unser Britisches Dunkel
+          style: 8A
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Mayday Leap
+          style: 4C
+  - name: Darren Oakley
+    flight:
+      gold:
+        - name: Tmave
+          style: 3D
+  - name: James Wilson
+    flight:
+      silver:
+        - name: Saikou!
+          style: 2A
+      gold:
+        - name: 'Straight Outta Epsom'
+          style: 21A
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: The Glass Of Art
+          style: 11B
+  - name: Les Manley
+    flight:
+      gold:
+        - name: Pirate Pale
+          style: 12A
+  - name: Mark Hopkins
+    flight:
+      HM:
+        - name: Crazy Palomeno
+          style: 18B
+  - name: Jacques Marais
+    flight:
+      silver:
+        - name: Passion
+          style: 29A
+  - name: Lucas Stolarczyk
+    flight:
+      4th:
+        - name: I Love That Show
+          style: 29A
+  - name: Lee Immins
+    flight:
+      HM:
+        - name: Paradise Porter
+          style: 29B
