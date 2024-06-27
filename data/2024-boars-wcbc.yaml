@@ -1,0 +1,14 @@
+---
+year: 2024
+date: 22-06-2024
+abbr_name: Boars WCBC
+full_name: Beer Boars - West Coast Best Coast
+location: 'Jawbone Brewing, London'
+smaller_competition: true
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: Freshly Squeezed
+          style: 18B
