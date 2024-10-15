@@ -1,0 +1,15 @@
+---
+year: 2024
+date: 12-10-2024
+abbr_name: Welsh NHC
+full_name: Welsh National Homebrew Competition
+location: 'Mad Dog Brewery Co, Cardiff'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: Source Of Truth
+          style: 8B
+        - name: Midday Maibock
+          style: 4C

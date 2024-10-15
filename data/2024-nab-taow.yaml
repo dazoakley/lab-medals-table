@@ -1,0 +1,53 @@
+---
+year: 2024
+date: 12-10-2024
+abbr_name: NAB AoW
+full_name: Norwich Amateur Brewers These Ales of Wonder
+location: 'Ampersand Brew Co, Diss'
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    flight:
+      gold:
+        - name: Rondy's Ramble
+          style: 11B
+      silver:
+        - name: Green Run
+          style: 12C
+          asst_brewer: Marie Coppet & Fede Garcia
+  - name: Guy Asaert
+    flight:
+      HM:
+        - name: Sussex Bitter Bonanza
+          style: 11B
+  - name: Joe Hickey
+    flight:
+      bronze:
+        - name: Citra Go-Go
+          style: 12A
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Now You're One Of Us
+          style: 11C
+      silver:
+        - name: Stingo
+          style: 27A-london-brown-ale
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: King AEthelwulf
+          style: 17D
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Crooner
+          style: 13A
+  - name: Luke Russell
+    flight:
+      gold:
+        - name: To Win Just Once
+          style: 15C
+      silver:
+        - name: Red Cortina
+          style: 15A
