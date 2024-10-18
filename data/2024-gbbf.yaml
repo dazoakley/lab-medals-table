@@ -1,0 +1,20 @@
+---
+year: 2024
+date: 02-10-2024
+abbr_name: CAMRA
+full_name: CAMRA Champion Homebrewer of the Year
+location: 'Bohemia Brewing Co, London'
+guidelines: CAMRA
+winners:
+  - name: James Cross
+    flight:
+      gold:
+        - name: Old Oak Common
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: Arf's Gold
+  - name: Les Manley
+    flight:
+      bronze:
+        - name: Pirate Pale
