@@ -1,0 +1,15 @@
+---
+year: 2024
+date: 20-04-2024
+abbr_name: NAWB
+full_name: National Association of Wine and Beer Makers
+location: Coventry
+guidelines: NGWBJ
+winners:
+  - name: Mick Harrison
+    flight:
+      gold:
+        - name: Barley Wine
+        - name: American Pale Ale - Circle the Wagons
+      bronze:
+        - name: American IPA - Independence
