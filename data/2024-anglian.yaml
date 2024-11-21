@@ -1,0 +1,18 @@
+---
+year: 2024
+date: 16-11-2024
+abbr_name: ACB
+full_name: All American ACB Showdown
+location: 'Briarbank Brewing, Ipswich'
+guidelines: BJCP 2021
+winners:
+  - name: Craig Agnor
+    flight:
+      bronze:
+        - name: Strong Medicine
+          style: 22B
+  - name: Mark Hopkins
+    flight:
+      bronze:
+        - name: Second Cousin Sam
+          style: 20A
