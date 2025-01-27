@@ -1,0 +1,34 @@
+---
+year: 2025
+date: 25-01-2025
+abbr_name: SNHC
+full_name: Scottish National Homebrew Competition
+location: Edinburgh
+guidelines: BJCP 2021
+winners:
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Warrior Queen
+          style: 11A
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Green Run
+          style: 12C
+          asst_brewer: Marie Coppet & Fede Garcia
+  - name: Arthur Olcot
+    flight:
+      HM:
+        - name: Bigger Hills And Hangovers
+          style: 14B
+  - name: Lucas Stolarczyk
+    flight:
+      bronze:
+        - name: The Midnight Snack
+          style: 19C
+  - name: Mark Hopkins
+    flight:
+      gold:
+        - name: Pineapple Pony
+          style: 18B
