@@ -1,0 +1,24 @@
+---
+year: 2025
+date: 22-02-2024
+abbr_name: UK NHC
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: Claustrophobic Astronaut
+          style: 13C
+  - name: James Cross
+    flight:
+      silver:
+        - name: Old But Gold
+          style: 17B
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: Green Run
+          style: 12C
+          asst_brewer: Marie Coppet & Fede Garcia
