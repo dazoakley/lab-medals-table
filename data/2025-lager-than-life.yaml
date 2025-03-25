@@ -1,0 +1,42 @@
+---
+year: 2025
+date: 22-03-2025
+abbr_name: LTL
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: Rob Gallagher
+    bos:
+      bronze:
+        - name: Karl's Indomitable Oak
+          style: 33A
+    flight:
+      gold:
+        - name: Karl's Indomitable Oak
+          style: 33A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Share The Darkness
+          style: 8A
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Out Of The Blue Porter
+          style: 9C
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: May Day Leap
+          style: 4C
+  - name: Lucas Stolarczyk
+    flight:
+      silver:
+        - name: Authorities Should Be Involved
+          style: 32A
+  - name: Mark Sanderson
+    flight:
+      bronze:
+        - name: The Third Rauch
+          style: 6B
