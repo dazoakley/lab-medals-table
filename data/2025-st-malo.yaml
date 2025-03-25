@@ -1,0 +1,13 @@
+---
+year: 2025
+date: 22-03-2025
+abbr_name: St Malo
+full_name: 6E CONCOURS DU SAINT-MALO CRAFT BEER EXPO
+location: St Malo
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: Meleze
+          style: 22A
