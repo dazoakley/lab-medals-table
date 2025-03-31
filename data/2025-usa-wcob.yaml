@@ -1,0 +1,16 @@
+---
+year: 2025
+date: 29-03-2025
+abbr_name: WCoB
+full_name: World Cup of Beer
+location: 'Alameda CA, USA'
+guidelines: BJCP 2021
+winners:
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: Passion
+          style: 29A
+      silver:
+        - name: Willy Tonka
+          style: 30A
