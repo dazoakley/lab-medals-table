@@ -1,0 +1,20 @@
+---
+year: 2025
+date: 29-03-2025
+abbr_name: NHCI
+full_name: NHC Ireland Homebrew Competition
+location: 'Dublin, Ireland'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: Out Of The Blue
+          style: 9C
+        - name: Ordinary Men's Club
+          style: 11A
+  - name: Ian Cosier
+    flight:
+      gold:
+        - name: Midnight Feast Volume 11
+          style: 19C
