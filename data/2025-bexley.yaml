@@ -1,0 +1,35 @@
+---
+year: 2025
+date: 12-04-2025
+abbr_name: Bexley
+full_name: Bexley Homebrew Festival
+location: Bexley
+smaller_competition: true
+guidelines: NGWBJ
+winners:
+  - name: Mark Sanderson
+    bos:
+      gold:
+        - name: Rauchbier
+      bronze:
+        - name: Best Bitter
+    flight:
+      gold:
+        - name: Rauchbier
+        - name: Best Bitter
+  - name: Mann Birdi
+    flight:
+      bronze:
+        - name: Ginger beer
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: Belgian single
+  - name: Phill Turner
+    flight:
+      silver:
+        - name: Bitter
+  - name: Paul Evans
+    flight:
+      silver:
+        - name: Wine

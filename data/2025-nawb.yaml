@@ -1,0 +1,13 @@
+---
+year: 2025
+date: 05-04-2025
+abbr_name: NAWB
+full_name: National Association of Wine and Beer Makers
+location: Coventry
+guidelines: NGWBJ
+winners:
+  - name: Mick Harrison
+    flight:
+      gold:
+        - name: Saison
+        - name: Barleywine
