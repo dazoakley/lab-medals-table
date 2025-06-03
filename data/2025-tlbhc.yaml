@@ -1,0 +1,13 @@
+---
+year: 2025
+date: 28-05-2025
+abbr_name: TLBHC
+full_name: Twickenham's Lost Breweries Homebrew Competition
+location: Twickenham
+smaller_competition: true
+guidelines: NGWBJ
+winners:
+  - name: Ken Bazley
+    bos:
+      gold:
+        - name: X Light Mild
