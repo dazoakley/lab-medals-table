@@ -7,16 +7,6 @@ location: Bexley
 smaller_competition: true
 guidelines: NGWBJ
 winners:
-  - name: Mark Sanderson
-    bos:
-      gold:
-        - name: Rauchbier
-      bronze:
-        - name: Best Bitter
-    flight:
-      gold:
-        - name: Rauchbier
-        - name: Best Bitter
   - name: Mann Birdi
     flight:
       bronze:
