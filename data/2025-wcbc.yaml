@@ -1,0 +1,25 @@
+---
+year: 2025
+date: 21-06-2025
+abbr_name: WCBC
+full_name: West Coast Best Coast
+location: Twickenham
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    bos:
+      silver:
+        - name: Midnight Feast Vol. 11
+          style: 19C
+    flight:
+      gold:
+        - name: Midnight Feast Vol. 11
+          style: 19C
+      bronze:
+        - name: Meleze
+          style: 22A
+  - name: Mark Hopkins
+    flight:
+      silver:
+        - name: Pineapple Pony
+          style: 18B
