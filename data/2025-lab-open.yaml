@@ -1,0 +1,61 @@
+---
+year: 2025
+date: 06-07-2025
+abbr_name: LAB Open
+full_name: LAB Open
+location: 'Bohem Brewery Taproom (Queens Arms), London'
+guidelines: BJCP 2021
+winners:
+  - name: Craig Agnor
+    bos:
+      gold:
+        - name: Frank
+          style: 25A
+    flight:
+      gold:
+        - name: Frank
+          style: 25A
+  - name: Ian Cosier
+    bos:
+      silver:
+        - name: Meleze
+          style: 22A
+    flight:
+      gold:
+        - name: Meleze
+          style: 22A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Share The Darkness
+          style: 8A
+  - name: Les Manley
+    flight:
+      bronze:
+        - name: The Full English
+          style: 11B
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Claustrophobic Astronaut V2
+          style: 13C
+  - name: Jacques Marais
+    flight:
+      HM:
+        - name: Willy Tonka
+          style: 30A
+  - name: Joe Hickey
+    flight:
+      gold:
+        - name: Bob The Krusher
+          style: 18B
+  - name: Mark Hopkins
+    flight:
+      silver:
+        - name: Mahogany Mule
+          style: 19C
+  - name: Lucas Stolarczyk
+    flight:
+      HM:
+        - name: How About The Interior?
+          style: 26A
