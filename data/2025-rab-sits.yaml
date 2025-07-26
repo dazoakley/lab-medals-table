@@ -1,0 +1,35 @@
+---
+year: 2025
+date: 19-07-2025
+abbr_name: RAB SITS
+full_name: Reading Amateur Brewers Sours in the Sun II
+location: 'Padworth, Reading'
+guidelines: BJCP 2021
+winners:
+  - name: Jacques Marais
+    bos:
+      gold:
+        - name: You Gueuze Too Far
+          style: 23E
+    flight:
+      gold:
+        - name: You Gueuze Too Far
+          style: 23E
+      HM:
+        - name: All Red? Aye
+          style: 23F
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Desert Plain
+          style: 23D
+  - name: Guy Asaert
+    flight:
+      gold:
+        - name: Only Time Can Tell
+          style: 33B
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: Perpetual Old Ale
+          style: 33A
