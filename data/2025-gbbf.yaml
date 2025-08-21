@@ -1,0 +1,30 @@
+---
+year: 2025
+date: 22-07-2025
+abbr_name: CAMRA
+full_name: CAMRA Champion Home Brewer of the Year
+location: Birmingham
+guidelines: CAMRA
+winners:
+  - name: James Cross
+    flight:
+      bronze:
+        - name: Something Mild
+      silver:
+        - name: 'Bitter This, Bitter That'
+  - name: Phill Turner
+    flight:
+      gold:
+        - name: Harlequin & Jester Bitter
+  - name: Les Manley
+    flight:
+      gold:
+        - name: The Full English
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Better Bitter
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Beer 1
