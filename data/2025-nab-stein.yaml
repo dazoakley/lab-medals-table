@@ -1,0 +1,25 @@
+---
+year: 2025
+date: 11-10-2025
+abbr_name: NAB
+full_name: Stein Masters Norwich Amateur Brewers
+location: 'Ampersand Brew Co, Diss'
+guidelines: BJCP 2021
+winners:
+  - name: Luke Russell
+    flight:
+      silver:
+        - name: Simple Things
+          style: 4A
+  - name: Ken Bazley
+    flight:
+      silver:
+        - name: MmmAlt
+          style: 7B
+  - name: Ian Cosier
+    flight:
+      silver:
+        - name: Lille Leap
+          style: 4C
+        - name: Malty McMaltface
+          style: 9A
