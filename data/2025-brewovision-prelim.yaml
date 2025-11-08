@@ -1,0 +1,24 @@
+---
+year: 2025
+date: 07-09-2025
+abbr_name: BrewoVision
+full_name: 'BrewoVision Preliminaries (UK, Wales and Northern Ireland)'
+location: 'Beermerchants Tap, London'
+smaller_competition: true
+guidelines: BJCP 2021
+winners:
+  - name: Craig Agnor
+    flight:
+      silver:
+        - name: Frank
+          style: 25A
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: Bruggenhout
+          style: 26C
+  - name: Serge Savin
+    flight:
+      bronze:
+        - name: Omnipresent Authority Figure
+          style: 20C
