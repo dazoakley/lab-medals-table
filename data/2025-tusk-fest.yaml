@@ -1,0 +1,22 @@
+---
+year: 2025
+date: 30-11-2025
+abbr_name: Tusk
+full_name: Tusk Fest
+location: 'Mash Paddle Brewery, London'
+smaller_competition: true
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Rhine And Shine
+          style: 5D
+      silver:
+        - name: Claustrophobic Astronaut
+          style: 13C
+  - name: Ben Quinton
+    flight:
+      silver:
+        - name: Hopping Mad Hazy IPA
+          style: 21C
