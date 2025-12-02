@@ -1,0 +1,13 @@
+---
+year: 2025
+date: 29-11-2025
+abbr_name: 2025 CRAB
+full_name: 'Concours de Brassage Amateur du CRAB #6'
+location: 'Rennes, France'
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: It's All Ball Bearings Nowadays
+          style: 9A
