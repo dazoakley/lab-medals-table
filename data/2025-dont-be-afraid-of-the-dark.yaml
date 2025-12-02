@@ -1,0 +1,38 @@
+---
+year: 2025
+date: 22-11-2025
+abbr_name: DBAD
+full_name: Don't Be Afraid of the Dark
+location: 'Briarbank Brewing Company, Ipswich'
+guidelines: BJCP 2021
+winners:
+  - name: Paul Cousins
+    flight:
+      bronze:
+        - name: Mix Me A Midnight Cocktail
+          style: 21B-black
+  - name: James Cross
+    flight:
+      bronze:
+        - name: No Oysters Were Smoked
+          style: 32B
+  - name: Guy Asaert
+    flight:
+      gold:
+        - name: Quadable
+          style: 26D
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Orla's Original
+          style: 15B
+  - name: Mark Hopkins
+    flight:
+      HM:
+        - name: Sir Ivor
+          style: 17D
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: A Brief History Of Time
+          style: 33A
