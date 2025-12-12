@@ -1,0 +1,20 @@
+---
+year: 2025
+date: 08-11-2025
+abbr_name: Wee JCGE
+full_name: Wee Just Can't Ghent Enough
+location: 'Co. Louth, Ireland'
+guidelines: BJCP 2021
+winners:
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Lambic De Saison
+          style: 23D
+  - name: Jacques Marais
+    flight:
+      bronze:
+        - name: '180'
+          style: 26D
+        - name: Bruggenhout
+          style: 26C
