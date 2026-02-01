@@ -1,0 +1,43 @@
+---
+year: 2026
+date: 25-01-2026
+abbr_name: SNHC
+full_name: Scottish National Homebrew Competition
+location: Edinburgh
+guidelines: BJCP 2021
+winners:
+  - name: Mark Hopkins
+    bos:
+      HM:
+        - name: Sir Ivor
+          style: 17D
+    flight:
+      gold:
+        - name: Sir Ivor
+          style: 17D
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Simple Things
+          style: 4A
+      silver:
+        - name: Fallon's Finest
+          style: 15C
+  - name: Ian Cosier
+    flight:
+      HM:
+        - name: Apres-Festbier
+          style: 4B
+  - name: Les Manley
+    flight:
+      bronze:
+        - name: Green Bullion
+          style: 11B
+      silver:
+        - name: Green Cascade
+          style: 12A
+  - name: Paul Cousins
+    flight:
+      bronze:
+        - name: Mix Me A Midnight Cocktail
+          style: 21B
