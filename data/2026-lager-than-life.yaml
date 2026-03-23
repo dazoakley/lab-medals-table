@@ -1,0 +1,33 @@
+---
+year: 2026
+date: 21-03-2026
+abbr_name: LTL
+full_name: Lager Than Life
+location: 'Pillars Brewery, London'
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    flight:
+      gold:
+        - name: It's All Ball Bearings Nowadays
+          style: 33A
+  - name: Luke Sanderson
+    flight:
+      silver:
+        - name: LemonOS
+          style: 2A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Decoctorists
+          style: 6C
+  - name: Ken Bazley
+    flight:
+      bronze:
+        - name: Arpeggiator
+          style: 9A
+  - name: Joe Hickey
+    flight:
+      4th:
+        - name: Bobský Tmavý Ležák
+          style: 3D
