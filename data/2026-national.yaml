@@ -1,0 +1,33 @@
+---
+year: 2026
+date: 28-02-2026
+abbr_name: UK NHC
+full_name: UK National Homebrew Competition
+location: Bristol
+guidelines: BJCP 2021
+winners:
+  - name: James Cross
+    flight:
+      gold:
+        - name: Fortior Quam Credis
+          style: 26D
+  - name: Jacques Marais
+    flight:
+      gold:
+        - name: The Heart Of Sour
+          style: 23E
+  - name: Luke Russell
+    flight:
+      silver:
+        - name: Decoctorists
+          style: 6C
+  - name: Joe Hickey
+    flight:
+      bronze:
+        - name: Everything's Kölschty
+          style: 5B
+  - name: Mark Charlwood
+    flight:
+      bronze:
+        - name: Local Approved
+          style: 12B
