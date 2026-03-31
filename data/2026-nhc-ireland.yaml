@@ -1,0 +1,13 @@
+---
+year: 2026
+date: 28-03-2026
+abbr_name: NHCI
+full_name: NHC Ireland National Homebrew Championship
+location: 'Rascals Brewing Company, Dublin'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      gold:
+        - name: Rhine And Shine
+          style: 5D
