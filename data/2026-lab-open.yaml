@@ -1,0 +1,56 @@
+---
+year: 2026
+date: 16-05-2026
+abbr_name: LAB Open
+full_name: LAB Open
+location: 'Bohem Brewery Taproom (Queens Arms), London'
+guidelines: BJCP 2021
+winners:
+  - name: Steven Blackery
+    flight:
+      gold:
+        - name: Railway Porker
+          style: 13C
+  - name: James Wilson
+    flight:
+      gold:
+        - name: West Coast Red
+          style: 21B4
+  - name: Serge Savin
+    flight:
+      silver:
+        - name: Jon Bobstone
+          style: 260H
+  - name: Jacques Marais
+    flight:
+      silver:
+        - name: Tripel Heart
+          style: 26C
+      bronze:
+        - name: Mein Herz Raucht
+          style: 6B
+  - name: James Cross
+    flight:
+      silver:
+        - name: Black Rock
+          style: 32A
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Rhine And Shine
+          style: 5D
+  - name: Phill Turner
+    flight:
+      bronze:
+        - name: Glass Blowers Lager
+          style: 3A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Please Insert Coffee
+          style: 30A
+  - name: Guy Asaert
+    flight:
+      HM:
+        - name: Long Live The Lambic
+          style: 23D
