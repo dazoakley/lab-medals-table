@@ -1,0 +1,43 @@
+---
+year: 2026
+date: 20-06-2026
+abbr_name: WCBC
+full_name: West Coast Best Coast
+location: Twickenham
+guidelines: BJCP 2021
+winners:
+  - name: Ian Cosier
+    bos:
+      silver:
+        - name: Vallee Noir
+          style: 21B-black
+    flight:
+      gold:
+        - name: Vallee Noir
+          style: 21B-black
+        - name: Meleze
+          style: 22A
+  - name: James Wilson
+    bos:
+      bronze:
+        - name: Straight Outta Epsom
+          style: 21A
+    flight:
+      gold:
+        - name: Straight Outta Epsom
+          style: 21A
+  - name: Luke Russell
+    flight:
+      bronze:
+        - name: Somewhere Far Away
+          style: WC01
+  - name: Ben Quinton
+    flight:
+      silver:
+        - name: Evil Gwenpire
+          style: 22A
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Caniava Bagel Face
+          style: WC2
