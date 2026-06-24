@@ -30,7 +30,7 @@ winners:
     flight:
       bronze:
         - name: Somewhere Far Away
-          style: WC01
+          style: "WC1: Other West Coast Styles"
   - name: Ben Quinton
     flight:
       silver:
@@ -40,4 +40,4 @@ winners:
     flight:
       bronze:
         - name: Caniava Bagel Face
-          style: WC2
+          style: "WC2: West Coast Pilsner"
