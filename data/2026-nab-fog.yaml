@@ -1,0 +1,42 @@
+---
+year: 2026
+date: 17-10-2026
+abbr_name: NAB FoG
+full_name: Norwich Amateur Brewers Fields of Gold
+location: 'Ampersand Brew Co, Diss'
+guidelines: BJCP 2021
+winners:
+  - name: Steven Blackery
+    flight:
+      gold:
+        - name: Quad Damage
+          style: 26D
+    bos:
+      HM:
+        - name: Quad Damage
+          style: 26D
+  - name: Arthur Olcot
+    flight:
+      silver:
+        - name: Bigger Hills and Hangovers
+          style: 14B
+  - name: Mark Sanderson
+    flight:
+      silver:
+        - name: Cause Of Our Joy
+          style: 18A
+  - name: Ian Cosier
+    flight:
+      bronze:
+        - name: May Day Leap
+          style: 4C
+  - name: Guy Asaert
+    flight:
+      bronze:
+        - name: Dubbel Standard
+          style: 26B
+  - name: Jacques Marais
+    flight:
+      HM:
+        - name: Oerspronklikke bier
+          style: 23C
