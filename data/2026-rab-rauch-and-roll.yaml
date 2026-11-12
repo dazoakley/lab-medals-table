@@ -1,0 +1,18 @@
+---
+year: 2026
+date: 07-11-2026
+abbr_name: RAB Rauch and Roll
+full_name: Reading Amateur Brewers Rauch and Roll
+location: 'Castle Tap, Reading'
+guidelines: BJCP 2021
+winners:
+  - name: James Cross
+    flight:
+      silver:
+        - name: Black Rock
+          style: 50A
+  - name: Ken Bazley
+    flight:
+      bronze:
+        - name: Old Ale Will Never Die But You Will
+          style: 33A
