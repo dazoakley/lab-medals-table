@@ -1,0 +1,13 @@
+---
+year: 2026
+date: 21-11-2026
+abbr_name: ACB
+full_name: ACB Brewers of the Realm
+location: 'The Victoria Inn, Colchester'
+guidelines: BJCP 2021
+winners:
+  - name: Arthur Olcot
+    flight:
+      bronze:
+        - name: Mildly Mannered
+          style: 13A
